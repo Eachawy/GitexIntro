@@ -22,10 +22,9 @@ export const App = (props: IAppProps) => {
   useEffect(() => {
   }, []);
 
-  const paddingTop = '60px';
   return (
     <Router basename={baseHref}>
-      <div className="app-container" style={{ paddingTop }}>
+      <div className="contentView">
         <ToastContainer position={toast.POSITION.TOP_LEFT} className="toastify-container" toastClassName="toastify-toast" />
         <ErrorBoundary>
           <Header
@@ -33,12 +32,10 @@ export const App = (props: IAppProps) => {
             onLocaleChange={props.setLocale}
           />
         </ErrorBoundary>
-        <div className="container-fluid view-container" id="app-view-container">
-          <Card className="jh-card">
-            <ErrorBoundary>
-              <AppRoutes />
-            </ErrorBoundary>
-          </Card>
+        <div className="gitexContainer" id="app-view-container">
+          <ErrorBoundary>
+            <AppRoutes />
+          </ErrorBoundary>
         </div>
       </div>
     </Router>

@@ -1,5 +1,3 @@
-import './header.scss';
-
 import React, { useState, useEffect } from 'react';
 import { Translate, Storage, translate } from 'react-jhipster';
 
@@ -24,11 +22,15 @@ const Header = (props: IHeaderProps) => {
   };
 
   return (
-    <div id="app-header">
-      <a className="switchLanguage" onClick={handleLocaleChange}>
+    <header>
+
+      <div className="RTA" />
+      <div className="Dubai" />
+
+      {/* <a className="switchLanguage" onClick={handleLocaleChange}>
         {translate('global.language')}
-      </a>
-    </div>
+      </a> */}
+    </header>
   );
 };
 

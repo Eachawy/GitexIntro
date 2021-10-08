@@ -3,4 +3,123 @@
 @import './scss/slick-theme.min.scss';
 @import './scss/primeReact.scss';
 
+body {
+  background: #fff;
+  .contentView {
+    padding: 110px;
+    .gitexContainer {
+      padding-top: 32px;
+    }
+  }
+}
+
+header {
+  position: relative;
+  height: 50px;
+  > div {
+    position: absolute;
+    top: 0;
+  }
+  .RTA {
+    width: 245.81px;
+    height: 48px;
+    background: url('../content/images/RTA_Logo.svg') no-repeat;
+    right: 0;
+  }
+  .Dubai {
+    width: 110px;
+    height: 48px;
+    background: url('../content/images/Dubai_Logo.svg') no-repeat;
+    left: 0;
+  }
+}
+
+.backAction {
+  width: 40px;
+  height: 40px;
+  background: url('../content/images/Back.svg') no-repeat;
+  cursor: pointer;
+  position: absolute;
+}
+
+.btnAction {
+  background: #171c8f;
+  font: 1em/21px 'RTA';
+  color: #fff;
+  padding: 16px 16px 12px 16px;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 8px;
+  text-decoration: none !important;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.movingDubai {
+  text-align: center;
+  padding-top: 96px;
+  h1 {
+    font: 4em/70px 'RTA-Light';
+    color: #222222;
+    margin-bottom: 16px;
+  }
+  h3 {
+    font: 1.8em/40px 'RTA';
+    color: #222222;
+    margin-bottom: 32px;
+  }
+}
+
+.userForm {
+  text-align: center;
+  padding: 96px 25% 0 25%;
+  label {
+    font: 2em/21px 'RTA-Light';
+    color: #222222;
+    display: block;
+    text-align: left;
+    padding-bottom: 8px;
+  }
+  input {
+    width: 100%;
+    border: 0.5px solid #d7d7d7;
+    background: #fbfbfb;
+    font: 1.3em/25px 'RTA-Light';
+    color: #222222;
+    height: 50px;
+    padding: 6px 16px 0 16px;
+    border-radius: 4px;
+    &:focus {
+      border-color: #171c8f;
+      box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 19%);
+      -webkit-box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 19%);
+      -moz-box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 19%);
+    }
+  }
+}
+.p-autocomplete-items {
+  border: 0.5px solid #d7d7d7;
+  border-top: 0;
+  margin-top: 16px;
+}
+.p-autocomplete {
+  width: 100%;
+}
+.countryItem {
+  border-top: 0.5px solid #d7d7d7;
+  padding: 8px;
+  > span,
+  div {
+    display: inline-block;
+  }
+  > span {
+    margin: 0 5px;
+  }
+  > div {
+    font: 1em/21px 'RTA-Light';
+    color: #222;
+  }
+}
+
 @import './gitex_ar.scss';
