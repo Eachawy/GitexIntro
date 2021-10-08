@@ -1,7 +1,7 @@
 {
-  "name": "dls-portal-frontend",
+  "name": "gitex-portal-frontend",
   "version": "0.0.1-SNAPSHOT",
-  "description": "Description for dlsPortalFrontend",
+  "description": "Description for gitexFrontend",
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [

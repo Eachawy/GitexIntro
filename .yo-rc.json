@@ -5,7 +5,7 @@
     },
     "jhipsterVersion": "6.10.4",
     "applicationType": "monolith",
-    "baseName": "dlsPortalFrontend",
+    "baseName": "gitexFrontend",
     "useSass": true,
     "clientPackageManager": "npm",
     "clientFramework": "react",
