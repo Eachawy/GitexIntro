@@ -26,7 +26,7 @@ const Header = (props: IHeaderProps) => {
   return (
     <div id="app-header">
       <a className="switchLanguage" onClick={handleLocaleChange}>
-        {translate('header.links.language')}
+        {translate('global.language')}
       </a>
     </div>
   );
