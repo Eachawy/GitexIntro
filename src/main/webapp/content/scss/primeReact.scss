@@ -1,0 +1,80 @@
+.p-datatable {
+  .p-datatable-scrollable-header {
+    background: transparent !important;
+  }
+
+  .p-datatable-thead {
+    tr {
+      th {
+        padding: 0 !important;
+        border: 0 !important;
+        font-weight: 0 !important;
+        color: transparent !important;
+        background: transparent !important;
+        text-align: left !important;
+      }
+    }
+  }
+
+  .p-datatable-tbody {
+    tr {
+      background: transparent !important;
+
+      td {
+        border: 0 !important;
+        padding: 0 !important;
+      }
+    }
+  }
+
+  .p-datatable-footer {
+    background-color: transparent !important;
+    color: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+}
+
+.MuiIconButton-root {
+  border-radius: 0 !important;
+}
+
+body {
+  .p-dropdown {
+    border-radius: 0;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #707070;
+
+    .p-dropdown-item {
+      padding: 5px 15px !important;
+    }
+    .p-dropdown-panel {
+      z-index: 99 !important;
+    }
+    .p-dropdown-label {
+      border: 0 !important;
+      padding: 10px 0 !important;
+      height: 38px;
+    }
+    .p-dropdown-filter,
+    .p-dropdown-filter:focus {
+      border: 0 !important;
+      border-radius: 0 !important;
+      outline: 0 !important;
+      box-shadow: none !important;
+    }
+    .p-dropdown-filter-icon {
+      font-size: 1em !important;
+    }
+
+    .p-dropdown-clear-icon {
+      right: 10%;
+      font-size: 14px;
+    }
+    .pi {
+      font-size: 1em;
+    }
+  }
+}

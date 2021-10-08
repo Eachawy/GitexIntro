@@ -65,7 +65,7 @@ html[dir='rtl'] {
   .col-xl-10,
   .col-xl-11,
   .col-xl-12 {
-    float: right;
+    float: right !important;
   }
   body {
     text-align: right;
@@ -159,4 +159,57 @@ html[dir='rtl'] {
       }
     }
   }
+}
+
+html[dir='rtl'] .smart-body .ss-services__logo {
+  float: right !important;
+}
+
+html[dir='rtl'] .smart-body .ss-services__body {
+  margin-right: 55px !important;
+  margin-left: 20px !important;
+}
+
+html[dir='rtl'] .smart-body .ss-services__title,
+html[dir='rtl'] .smart-body .ss-services__description,
+html[dir='rtl'] .smart-body .row,
+html[dir='rtl'] .smart-body .table-block__value {
+  text-align: right !important;
+}
+
+html[dir='rtl'] .smart-body .page-header_icon > i {
+  left: auto;
+  right: 26px;
+}
+
+html[dir='rtl'] .smart-body .ss-header__number {
+  float: right !important;
+}
+
+html[dir='rtl'] .smart-body .ss-header__body {
+  margin-left: 0px !important;
+  margin-right: 50px !important;
+}
+
+html[dir='rtl'] .smart-body .page-header h1 {
+  margin-right: 90px !important;
+}
+
+html[dir='rtl'] .smart-body .smart-step_ready:before {
+  right: auto !important;
+  left: 20px !important;
+}
+
+html[dir='rtl'] .smart-body .list-check > li {
+  padding: 8px 36px 8px 0;
+}
+
+html[dir='rtl'] .smart-body .list-check > li:before {
+  right: 0 !important;
+  left: auto !important;
+}
+
+html[dir='rtl'] .smart-body .form-control-select:before {
+  right: auto;
+  left: 0;
 }

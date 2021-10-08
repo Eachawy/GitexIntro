@@ -6,7 +6,7 @@ TranslatorContext.setDefaultLocale('en');
 TranslatorContext.setRenderInnerTextForMissingKeys(false);
 
 export const languages: any = {
-  'ar-ly': { name: 'العربية', rtl: true },
+  ar: { name: 'العربية', rtl: true },
   en: { name: 'English' },
   // jhipster-needle-i18n-language-key-pipe - JHipster will add/remove languages in this object
 };
