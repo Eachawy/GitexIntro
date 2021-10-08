@@ -279,9 +279,14 @@ const NationalityComponent = props => {
         );
     }
 
+    const onAutoCompleteChanged = (e: any) => {
+        setSelectedCountry(e.value);
+        // props.history.push('/takePhoto');
+    }
+
     return (
         <>
-            <Link to="/" className="backAction" />
+            <Link to="/username" className="backAction" />
             <div className="userForm">
                 <label>Nationality</label>
                 <AutoComplete
@@ -291,7 +296,8 @@ const NationalityComponent = props => {
                     field="name"
                     forceSelection
                     itemTemplate={itemTemplate}
-                    onChange={(e) => { setSelectedCountry(e.value); }}
+                    onChange={(e) => onAutoCompleteChanged(e)}
+                    placeholder={'Search Country'}
                 />
             </div>
         </>
