@@ -24,7 +24,7 @@
     "otherModules": [],
     "enableTranslation": true,
     "nativeLanguage": "en",
-    "languages": ["en", "ar-ly"],
+    "languages": ["en", "ar"],
     "blueprints": [],
     "skipServer": true
   }
