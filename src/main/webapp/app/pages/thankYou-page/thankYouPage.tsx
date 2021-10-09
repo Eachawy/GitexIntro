@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const ThankYouComponent = props => {
     return (
         <>
-            <Link to="/takePhoto" className="backAction" />
+            <Link to="/uploadLicense" className="backAction" />
             <div className="thankYou">
                 <div className="profile">
                     <h3>Your learner’s profile</h3>

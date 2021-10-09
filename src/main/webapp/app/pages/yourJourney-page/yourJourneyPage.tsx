@@ -65,7 +65,7 @@ const YourJourneyComponent = props => {
                         </div>
                     </div>
                     <div>
-                        <Link to="/Lectures" className="continue">
+                        <Link to="/finishLessons" className="continue">
                             <h3>Continue</h3>
                         </Link>
                     </div>

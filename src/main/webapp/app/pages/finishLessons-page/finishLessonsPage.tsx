@@ -8,7 +8,7 @@ const FinishLessonsComponent = props => {
             <Link to="/takePhoto" className="backAction" />
             <div className="finishLessons">
                 <h1>Finish all your lessons from the comfort of, your home</h1>
-                <Link to="/username" className="btnAction">Continue</Link>
+                <Link to="/Lectures" className="btnAction">Continue</Link>
             </div>
         </>
     );

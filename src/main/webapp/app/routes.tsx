@@ -24,11 +24,8 @@ const Routes = () => (
       <ErrorBoundaryRoute exact path="/uploadLicense" component={UploadLicensePage} />
       <ErrorBoundaryRoute exact path="/thankYou" component={ThankYouPage} />
       <ErrorBoundaryRoute exact path="/yourJourney" component={YourJourneyPage} />
-      <ErrorBoundaryRoute exact path="/Lectures" component={LecturesPage} />
-
-
-
       <ErrorBoundaryRoute exact path="/finishLessons" component={FinishLessonsPage} />
+      <ErrorBoundaryRoute exact path="/Lectures" component={LecturesPage} />
       <ErrorBoundaryRoute component={PageNotFound} />
     </Switch>
   </div>

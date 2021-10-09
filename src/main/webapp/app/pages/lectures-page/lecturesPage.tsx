@@ -25,7 +25,7 @@ const LecturesComponent = props => {
     };
     return (
         <>
-            <Link to="/yourJourney" className="backAction" />
+            <Link to="/finishLessons" className="backAction" />
             <div className="yourLectures">
                 <h2>Overview of the 8 RTA mandatory lectures</h2>
                 <Slider {...settings}>
