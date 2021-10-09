@@ -1,6 +1,5 @@
 import React from "react";
 import { translate } from "react-jhipster";
-import { InputText } from 'primereact/inputtext';
 import { Link } from "react-router-dom";
 
 const UploadLicenseComponent = props => {
@@ -16,7 +15,7 @@ const UploadLicenseComponent = props => {
                     <div className="lic_front" />
                     <div className="lic_back" />
                 </div>
-                <Link to="/username" className="btnAction">Submit</Link>
+                <Link to="/thankYou" className="btnAction">Submit</Link>
             </div>
         </>
     );

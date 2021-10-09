@@ -73,8 +73,8 @@ header {
 }
 
 .userForm {
-  text-align: center;
-  padding: 96px 25% 0 25%;
+  text-align: left;
+  padding: 96px 20% 0 20%;
   label {
     font: 2em/21px 'RTA-Light';
     color: #222222;
@@ -91,6 +91,7 @@ header {
     height: 50px;
     padding: 6px 16px 0 16px;
     border-radius: 4px;
+    height: 65px;
     &:focus {
       border-color: #171c8f;
       box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 19%);
@@ -98,15 +99,20 @@ header {
       -moz-box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 19%);
     }
   }
+  .p-autocomplete {
+    width: 68%;
+  }
+  .btnAction {
+    display: inline-block;
+    text-align: center;
+  }
 }
 .p-autocomplete-items {
   border: 0.5px solid #d7d7d7;
   border-top: 0;
   margin-top: 16px;
 }
-.p-autocomplete {
-  width: 100%;
-}
+
 .countryItem {
   border-top: 0.5px solid #d7d7d7;
   padding: 8px;
@@ -267,6 +273,185 @@ header {
     font: 1.8em/40px 'RTA';
     color: #222222;
     margin-bottom: 32px;
+  }
+}
+
+.thankYou {
+  height: 630px;
+  .profile {
+    position: fixed;
+    width: 50%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: #eeeeee;
+    z-index: -1;
+    padding: 300px 0 0 110px;
+    h3 {
+      color: #222;
+      font: 1.5em/21px 'RTA';
+      margin-bottom: 16px;
+    }
+    .imgProfile {
+      margin: 8px 0;
+      img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+      }
+    }
+    .profileData {
+      > div {
+        padding-bottom: 16px;
+      }
+      label,
+      span {
+        font: 1.3em/21px 'RTA';
+        display: inline-block;
+      }
+      label {
+        color: #53565a;
+        padding-right: 8px;
+      }
+      span {
+        color: #222;
+      }
+    }
+    .license {
+      > div {
+        display: inline-block;
+        width: 200px;
+        height: 157px;
+        margin: 0 8px 0 0;
+      }
+    }
+  }
+
+  .message {
+    position: fixed;
+    width: 50%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    padding: 300px 110px 0 0;
+    text-align: center;
+    h1 {
+      font: 4em/80px 'RTA-Kight';
+      padding: 0 21%;
+    }
+  }
+}
+
+.yourJourney {
+  text-align: center;
+  padding: 96px 0 0 0;
+  // position: relative;
+  // right: -110px;
+  // left: -110px;
+  // .slick-track {
+  //   width: 2070px !important;
+  // }
+  // .slick-slide {
+  //   width: 345px !important;
+  // }
+  h2 {
+    color: #222;
+    font: 1.5em/30px 'RTA';
+  }
+  .j_1,
+  .j_2,
+  .j_3,
+  .j_4,
+  .j_5,
+  .j_6,
+  .continue {
+    width: 325px;
+    height: 400px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 34%);
+    -webkit-box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 34%);
+    -moz-box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 34%);
+    margin: 20px;
+    cursor: pointer;
+    text-align: left;
+    padding: 310px 16px 16px 16px;
+    h3 {
+      font: 1.5em/30px 'RTA';
+      color: #333;
+    }
+    p {
+      font: 1em/21px 'RTA';
+      color: #333;
+    }
+  }
+  .j_1 {
+    background: url('../content/images/journey/1.svg') no-repeat;
+  }
+  .j_2 {
+    background: url('../content/images/journey/2.svg') no-repeat;
+  }
+  .j_3 {
+    background: url('../content/images/journey/3.svg') no-repeat;
+  }
+  .j_4 {
+    background: url('../content/images/journey/4.svg') no-repeat;
+  }
+  .j_5 {
+    background: url('../content/images/journey/5.svg') no-repeat;
+  }
+  .j_6 {
+    background: url('../content/images/journey/6.svg') no-repeat;
+  }
+  .continue {
+    border: 1px solid #171c8f;
+    background: url('../content/images/Back_blue.svg') no-repeat center;
+    padding-top: 245px;
+    text-align: center;
+    display: block;
+    text-decoration: none !important;
+    h3 {
+      color: #171c8f;
+    }
+  }
+}
+
+.yourLectures {
+  text-align: center;
+  padding: 96px 0 0 0;
+  .lec {
+    width: 325px;
+    height: 400px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 34%);
+    -webkit-box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 34%);
+    -moz-box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 34%);
+    margin: 20px;
+    cursor: pointer;
+    text-align: left;
+    padding: 32px 16px 16px 16px;
+    background: url('../content/images/\ check.svg') no-repeat center 195px;
+    background-size: 170px;
+    h6 {
+      font: 1em/30px 'RTA';
+      color: #53565a;
+    }
+    p {
+      font: 1.5em/34px 'RTA';
+      color: #333;
+      padding-top: 8px;
+    }
+    &.continue {
+      border: 1px solid #171c8f;
+      background: url('../content/images/Back_blue.svg') no-repeat center;
+      padding-top: 245px;
+      text-align: center;
+      display: block;
+      text-decoration: none !important;
+      h3 {
+        color: #171c8f;
+      }
+    }
   }
 }
 

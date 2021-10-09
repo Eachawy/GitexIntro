@@ -299,6 +299,9 @@ const NationalityComponent = props => {
                     onChange={(e) => onAutoCompleteChanged(e)}
                     placeholder={'Search Country'}
                 />
+                {selectedCountry &&
+                    <Link to="/takePhoto" className="btnAction">Next</Link>
+                }
             </div>
         </>
     );
