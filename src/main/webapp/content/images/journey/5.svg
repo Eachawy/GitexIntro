@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="325px" height="288px" viewBox="0 0 325 288" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #171C8F;">
-    <title>Image/J5</title>
+    <title>GTX/Image/Journey5</title>
     <defs>
         <rect id="path-1" x="0" y="0" width="325" height="288"></rect>
         <polygon id="path-3" points="0 215 552 215 552 0 0 0"></polygon>
@@ -153,12 +153,12 @@
         <path d="M3.52741315,0 C0.834017158,0 -0.833120437,3.11196069 0.429475469,5.61881791 L0.429475469,5.61881791 C0.529546308,5.81763762 0.631746314,6.01429625 0.725429652,6.21311596 L0.725429652,6.21311596 L9.49972599,24.7811481 C9.88063393,25.528667 10.6401077,25.9989188 11.4692053,26 L11.4692053,26 L62.7821249,26 C63.3437991,26.0004316 63.8846074,25.7843232 64.2951108,25.3955442 L64.2951108,25.3955442 C65.1904254,24.5481832 65.2393963,23.1244612 64.40455,22.2159416 L64.40455,22.2159416 L46.4790948,2.76618728 C44.8622055,1.00209456 42.5952816,0 40.2212607,0 L40.2212607,0 L3.52741315,0 Z" id="path-297"></path>
     </defs>
     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Image/J5">
+        <g id="GTX/Image/Journey5">
             <rect fill="#171C8F" x="0" y="0" width="325" height="288"></rect>
             <mask id="mask-2" fill="white">
                 <use xlink:href="#path-1"></use>
             </mask>
-            <use id="Rectangle" fill="#171C8F" xlink:href="#path-1"></use>
+            <use id="Rectangle" fill="#8B8EC7" xlink:href="#path-1"></use>
             <g id="Group-607" mask="url(#mask-2)">
                 <g transform="translate(-95.000000, 73.000000)">
                     <g id="Group-159">
