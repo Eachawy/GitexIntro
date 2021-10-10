@@ -1,5 +1,10 @@
 import React from "react";
 import { translate } from "react-jhipster";
+
+import { connect } from 'react-redux';
+import { IRootState } from 'app/shared/reducers';
+import { setNationality } from 'app/pages/nationality-page/nationality.reducer';
+
 import { AutoComplete } from 'primereact/autocomplete';
 import { Link } from "react-router-dom";
 
@@ -254,6 +259,7 @@ const NationalityComponent = props => {
             { "name": "Zimbabwe", "code": "ZW" }
         ]);
 
+
     const searchCountry = (event: { query: string }) => {
         setTimeout(() => {
             let _filteredCountries;
@@ -281,13 +287,17 @@ const NationalityComponent = props => {
 
     const onAutoCompleteChanged = (e: any) => {
         setSelectedCountry(e.value);
-        // props.history.push('/takePhoto');
     }
+
+    const onNext = () => {
+        props.setNationality(selectedCountry);
+    }
+
 
     return (
         <>
             <Link to="/username" className="backAction" />
-            <div className="userForm">
+            <div className={`userForm ${selectedCountry ? 'active' : null}`}>
                 <label>Nationality</label>
                 <AutoComplete
                     value={selectedCountry}
@@ -300,11 +310,19 @@ const NationalityComponent = props => {
                     placeholder={'Search Country'}
                 />
                 {selectedCountry &&
-                    <Link to="/takePhoto" className="btnAction">Next</Link>
+                    <Link to="/takePhoto" className="btnAction" onClick={onNext}>Next</Link>
                 }
             </div>
         </>
     );
 }
 
-export default NationalityComponent;
+const mapStateToProps = ({ nationality }: IRootState) => ({
+    currentNationality: nationality
+});
+const mapDispatchToProps = { setNationality };
+
+type StateProps = ReturnType<typeof mapStateToProps>;
+type DispatchProps = typeof mapDispatchToProps;
+
+export default connect(mapStateToProps, mapDispatchToProps)(NationalityComponent);

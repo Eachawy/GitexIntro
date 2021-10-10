@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Translate, Storage, translate } from 'react-jhipster';
 
 import { isRTL } from 'app/config/translation';
+import { Link } from 'react-router-dom';
 
 
 export interface IHeaderProps {
@@ -23,13 +24,18 @@ const Header = (props: IHeaderProps) => {
 
   return (
     <header>
+      <div className="logos">
+        <div className="RTA" />
+        <div className="Dubai" />
+      </div>
+      <div className="menu">
+        <Link to={'/'} className="home" />
+        <div className="switchLanguage" onClick={handleLocaleChange}>
+          {translate('global.language')}
+        </div>
+      </div>
 
-      <div className="RTA" />
-      <div className="Dubai" />
 
-      {/* <a className="switchLanguage" onClick={handleLocaleChange}>
-        {translate('global.language')}
-      </a> */}
     </header>
   );
 };

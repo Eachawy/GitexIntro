@@ -1,25 +1,44 @@
 import React from "react";
 import { translate } from "react-jhipster";
+import { connect } from 'react-redux';
+import { IRootState } from 'app/shared/reducers';
 import { Link } from "react-router-dom";
 
 const ThankYouComponent = props => {
+    const [user, setUser] = React.useState(null);
+    const [image, setImage] = React.useState(null);
+    const [nationality, setNationality] = React.useState(null);
+
+    React.useEffect(() => {
+        setUser(props.username);
+        setImage(props.imageprofile);
+        setNationality(props.nationality);
+    }, []);
+
     return (
         <>
             <Link to="/uploadLicense" className="backAction" />
-            <div className="thankYou">
+            <div className="row thankYou">
                 <div className="profile">
                     <h3>Your learner’s profile</h3>
                     <div className="imgProfile">
-                        <img src="../../../content/images/avatar/1.svg" />
+                        {props.imageprofile &&
+                            <img src={props.imageprofile} />
+                        }
                     </div>
                     <div className="profileData">
                         <div>
                             <label>Name:</label>
-                            <span>Gustave Momal</span>
+                            <span>{props.username ? props.username : null}</span>
                         </div>
                         <div>
                             <label>Nationality:</label>
-                            <span>Angola</span>
+                            {props.nationality && <span>
+                                <span className={`flag-icon flag-icon-${props.nationality.code.toLowerCase()}`} />
+                                {props.nationality.name}
+                            </span>
+                            }
+
                         </div>
                         <div>
                             <label>Traffic code:</label>
@@ -43,4 +62,12 @@ const ThankYouComponent = props => {
     );
 }
 
-export default ThankYouComponent;
+const mapStateToProps = ({ profileimage, username, nationality }: IRootState) => ({
+    imageprofile: profileimage.currentImage,
+    username: username.currentUsarName,
+    nationality: nationality.currentNationality
+});
+
+type StateProps = ReturnType<typeof mapStateToProps>;
+
+export default connect(mapStateToProps, null)(ThankYouComponent);

@@ -1,6 +1,8 @@
 import React from "react";
 import { translate } from "react-jhipster";
-import { InputText } from 'primereact/inputtext';
+import { connect } from 'react-redux';
+import { IRootState } from 'app/shared/reducers';
+import { setProfileImage } from 'app/pages/takePhoto-page/takePhoto.reducer';
 import { Link } from "react-router-dom";
 
 const TakePhotoComponent = props => {
@@ -14,6 +16,10 @@ const TakePhotoComponent = props => {
             reader.readAsBinaryString(file);
             reader.onload = () => { setAvatar(`data:image/jpeg;base64,${btoa(reader.result)}`) };
         }
+    }
+
+    const onSubmit = () => {
+        props.setProfileImage(avatar);
     }
 
     return (
@@ -42,10 +48,18 @@ const TakePhotoComponent = props => {
                     <li className="avatar _5" onClick={() => setAvatar('../../../content/images/avatar/5.svg')} />
                     <li className="avatar _6" onClick={() => setAvatar('../../../content/images/avatar/6.svg')} />
                 </ul>
-                <Link to="/uploadLicense" className="btnAction">Next</Link>
+                <Link to="/uploadLicense" className="btnAction" onClick={onSubmit}>Next</Link>
             </div>
         </>
     );
 }
 
-export default TakePhotoComponent;
+const mapStateToProps = ({ nationality }: IRootState) => ({
+    currentNationality: nationality.currentNationality
+});
+const mapDispatchToProps = { setProfileImage };
+
+type StateProps = ReturnType<typeof mapStateToProps>;
+type DispatchProps = typeof mapDispatchToProps;
+
+export default connect(mapStateToProps, mapDispatchToProps)(TakePhotoComponent);

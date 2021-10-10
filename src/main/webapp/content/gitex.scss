@@ -6,17 +6,22 @@
 body {
   background: #fff;
   .contentView {
-    padding: 110px;
     .gitexContainer {
       padding-top: 32px;
+      position: relative;
     }
   }
 }
 
 header {
   position: relative;
-  height: 50px;
-  > div {
+  .logos {
+    display: block;
+    position: relative;
+    margin: 32px 70px;
+    height: 35px;
+  }
+  .logos > div {
     position: absolute;
     top: 0;
   }
@@ -32,14 +37,39 @@ header {
     background: url('../content/images/Dubai_Logo.svg') no-repeat;
     left: 0;
   }
+  .menu {
+    height: 50px;
+    background: #ee0000;
+    padding: 10px 70px 0 70px;
+    position: relative;
+    .home {
+      background: url('../content/images/home.svg') no-repeat;
+      width: 31px;
+      height: 31px;
+      display: inline-block;
+      background-size: 100%;
+      margin-left: 55px;
+    }
+    .switchLanguage {
+      display: inline-block;
+      color: #fff;
+      font: 1.2em/30px 'RTA-Light';
+      cursor: pointer;
+      position: absolute;
+      right: 70px;
+    }
+  }
 }
 
 .backAction {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background: url('../content/images/Back.svg') no-repeat;
   cursor: pointer;
   position: absolute;
+  top: -38px;
+  left: 70px;
+  background-size: 100%;
 }
 
 .btnAction {
@@ -51,7 +81,7 @@ header {
   cursor: pointer;
   margin-top: 32px;
   text-decoration: none !important;
-  min-width: 200px;
+  min-width: 190px;
   &:hover {
     color: #fff;
   }
@@ -59,16 +89,16 @@ header {
 
 .movingDubai {
   text-align: center;
-  padding-top: 96px;
+  padding-top: 16%;
   h1 {
     font: 4em/70px 'RTA-Light';
     color: #222222;
     margin-bottom: 16px;
   }
   h3 {
-    font: 1.8em/40px 'RTA';
+    font: 2.5em/40px 'RTA-Light';
     color: #222222;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
   }
 }
 
@@ -76,7 +106,7 @@ header {
   text-align: left;
   padding: 96px 20% 0 20%;
   label {
-    font: 2em/21px 'RTA-Light';
+    font: 2em/40px 'RTA-Light';
     color: #222222;
     display: block;
     text-align: left;
@@ -100,13 +130,22 @@ header {
     }
   }
   .p-autocomplete {
-    width: 68%;
+    width: 100%;
   }
   .btnAction {
     display: inline-block;
     text-align: center;
+    margin-top: 0;
+    padding: 24px 11% 16px 11%;
+    min-width: auto;
+  }
+  &.active {
+    .p-autocomplete {
+      width: 68%;
+    }
   }
 }
+
 .p-autocomplete-items {
   border: 0.5px solid #d7d7d7;
   border-top: 0;
@@ -182,8 +221,8 @@ header {
   }
   .imgProf {
     img {
-      width: 92px;
-      height: 92px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
     }
   }
@@ -256,18 +295,21 @@ header {
     margin-bottom: 16px;
   }
   p {
-    font: 1.3em/21px 'RTA-Light';
-    color: #333333;
-    margin-bottom: 16px;
+    font: 1.5em/21px 'RTA-Light';
+    color: #53565a;
+    margin-bottom: 32px;
   }
 }
 
 .license {
   > div {
     display: inline-block;
-    width: 240px;
+    width: 215px;
     height: 157px;
     margin: 0 8px;
+    @media only screen and (max-width: 768px) {
+      width: 210px;
+    }
   }
   .lic_front {
     background: url('../content/images/lic_front.svg') no-repeat;
@@ -295,23 +337,31 @@ header {
 }
 
 .thankYou {
-  height: 630px;
+  margin: 0;
+  position: relative;
+  top: -32px;
+  height: 626px;
+  @media only screen and (max-height: 1024px) {
+    height: 875px;
+  }
+  @media only screen and (max-height: 1366px) {
+    height: 1218px;
+  }
   .profile {
-    position: fixed;
     width: 50%;
     top: 0;
     left: 0;
     bottom: 0;
     background: #eeeeee;
     z-index: -1;
-    padding: 300px 0 0 110px;
+    padding: 50px 0 0 70px;
     h3 {
       color: #222;
       font: 1.5em/21px 'RTA';
       margin-bottom: 16px;
     }
     .imgProfile {
-      margin: 8px 0;
+      margin: 24px 0;
       img {
         border-radius: 50%;
         width: 150px;
@@ -333,30 +383,33 @@ header {
       }
       span {
         color: #222;
+        .flag-icon {
+          padding-right: 39px;
+          display: inline-block;
+          background-position: left;
+        }
       }
     }
     .license {
       > div {
         display: inline-block;
-        width: 200px;
-        height: 157px;
+        width: 45%;
+        height: 183px; //157px
         margin: 0 8px 0 0;
       }
     }
   }
-
   .message {
-    position: fixed;
     width: 50%;
     top: 0;
     right: 0;
     bottom: 0;
     z-index: 2;
-    padding: 300px 110px 0 0;
+    padding: 100px 70px 0 0;
     text-align: center;
     h1 {
       font: 4em/80px 'RTA-Kight';
-      padding: 0 21%;
+      padding: 0 5%;
     }
   }
 }
