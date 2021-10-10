@@ -15,11 +15,14 @@ body {
 
 header {
   position: relative;
+  padding-top: 32px;
+  background: #fff;
   .logos {
     display: block;
     position: relative;
     margin: 32px 70px;
     height: 35px;
+    margin-top: 0;
   }
   .logos > div {
     position: absolute;
@@ -340,12 +343,16 @@ header {
   margin: 0;
   position: relative;
   top: -32px;
-  height: 626px;
-  @media only screen and (max-height: 1024px) {
-    height: 875px;
-  }
-  @media only screen and (max-height: 1366px) {
-    height: 1218px;
+
+  &:before {
+    content: '';
+    background: #eeeeee;
+    width: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
   }
   .profile {
     width: 50%;
