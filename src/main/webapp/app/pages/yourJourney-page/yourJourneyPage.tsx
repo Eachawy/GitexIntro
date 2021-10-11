@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import Slider from "react-slick";
 
 
+
 const YourJourneyComponent = props => {
+    const [slider, setSlider] = React.useState(null);
     const settings = {
         // // dots: true,
         // infinite: false,
@@ -19,16 +21,24 @@ const YourJourneyComponent = props => {
         // centerMode: true,
         infinite: false,
         centerPadding: "0px",
-        slidesToShow: 2,
-        speed: 500,
+        slidesToShow: 4,
+        speed: 700,
         // dots: true,
     };
+    // const intervalFN = setInterval(() => {
+    //     slider ? slider.slickNext() : null;
+    // }, 1000);
     return (
         <>
             <Link to="/thankYou" className="backAction" />
             <div className="yourJourney">
                 <h2>Your journey to obtaining a Dubai driving license</h2>
-                <Slider {...settings}>
+                <Slider ref={(slide: any) => { setSlider(slide) }} {...settings}>
+
+                    <div>
+                        <div className="empty" />
+                    </div>
+
                     <div>
                         <div className="j_1">
                             <h3>Theory Lessons</h3>
@@ -70,6 +80,9 @@ const YourJourneyComponent = props => {
                         </Link>
                     </div>
 
+                    <div>
+                        <div className="empty" />
+                    </div>
                 </Slider>
             </div>
         </>

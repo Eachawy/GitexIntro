@@ -2,33 +2,37 @@ import React from "react";
 import { translate } from "react-jhipster";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
-
+import $ from 'jquery';
 
 const LecturesComponent = props => {
+    const [slider, setSlider] = React.useState(null);
     const settings = {
-        // // dots: true,
-        // infinite: false,
-        // className: "center",
-        // centerMode: true,
-        // speed: 500,
-        // slidesToShow: 3,
-        // // slidesToScroll: 1,
-        // rows: 1,
-        // // slidesPerRow: 2
         className: "center",
-        // centerMode: true,
         infinite: false,
         centerPadding: "0px",
-        slidesToShow: 2,
-        speed: 500,
-        // dots: true,
+        slidesToShow: 4,
+        speed: 700,
+        /*eslint object-shorthand: "error"*/
+        beforeChange: (currentSlide: any, nextSlide: any) => {
+            $(`.slick-track > div[data-index="${nextSlide}"]`).find('.lec').addClass('checked');
+            nextSlide === 5 ? $(`.slick-track > div[data-index="${nextSlide + 1}"]`).find('.lec').addClass('checked') : null;
+        },
     };
+    const intervalFN = setInterval(() => {
+        slider ? slider.slickNext() : null;
+    }, 1000);
+    setTimeout(() => {
+        clearInterval(intervalFN);
+    }, 6000);
     return (
         <>
             <Link to="/finishLessons" className="backAction" />
             <div className="yourLectures">
                 <h2>Overview of the 8 RTA mandatory lectures</h2>
-                <Slider {...settings}>
+                <Slider ref={(slide: any) => { setSlider(slide) }} {...settings}>
+                    <div>
+                        <div className="empty" />
+                    </div>
                     <div>
                         <div className="lec">
                             <h6>Lecture 1</h6>
@@ -70,7 +74,9 @@ const LecturesComponent = props => {
                             <h3>Continue</h3>
                         </Link>
                     </div>
-
+                    <div>
+                        <div className="empty" />
+                    </div>
                 </Slider>
             </div>
         </>

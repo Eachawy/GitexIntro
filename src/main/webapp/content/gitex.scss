@@ -437,32 +437,7 @@ header {
     color: #222;
     font: 1.5em/30px 'RTA';
   }
-  .j_1,
-  .j_2,
-  .j_3,
-  .j_4,
-  .j_5,
-  .j_6,
-  .continue {
-    width: 325px;
-    height: 400px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 34%);
-    -webkit-box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 34%);
-    -moz-box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 34%);
-    margin: 20px;
-    cursor: pointer;
-    text-align: left;
-    padding: 310px 16px 16px 16px;
-    h3 {
-      font: 1.5em/30px 'RTA';
-      color: #333;
-    }
-    p {
-      font: 1em/21px 'RTA';
-      color: #333;
-    }
-  }
+
   .j_1 {
     background: url('../content/images/journey/1.svg') no-repeat;
   }
@@ -492,14 +467,56 @@ header {
       color: #171c8f;
     }
   }
+  .j_1,
+  .j_2,
+  .j_3,
+  .j_4,
+  .j_5,
+  .j_6,
+  .continue,
+  .empty {
+    width: 225px;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 34%);
+    -webkit-box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 34%);
+    -moz-box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 34%);
+    margin: 20px;
+    cursor: pointer;
+    text-align: left;
+    padding: 210px 16px 16px 16px;
+    background-size: 100% !important;
+    h3 {
+      font: 1.5em/30px 'RTA';
+      color: #333;
+    }
+    p {
+      font: 0.9em/21px 'RTA';
+      color: #333;
+    }
+  }
+  .continue {
+    background-size: 30% !important;
+    text-align: center;
+  }
+  .empty {
+    box-shadow: none !important;
+    background: none !important;
+  }
 }
 
 .yourLectures {
   text-align: center;
   padding: 96px 0 0 0;
-  .lec {
-    width: 325px;
-    height: 400px;
+  h2 {
+    color: #222;
+    font: 1.5em/30px 'RTA';
+  }
+  .lec,
+  .empty {
+    transition: all 0.5s;
+    width: 225px;
+    height: 300px;
     border-radius: 8px;
     box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 34%);
     -webkit-box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 34%);
@@ -508,14 +525,14 @@ header {
     cursor: pointer;
     text-align: left;
     padding: 32px 16px 16px 16px;
-    background: url('../content/images/\ check.svg') no-repeat center 195px;
-    background-size: 170px;
+    background: url('../content/images/\ check.svg') no-repeat center 175px;
+    background-size: 0;
     h6 {
       font: 1em/30px 'RTA';
       color: #53565a;
     }
     p {
-      font: 1.5em/34px 'RTA';
+      font: 1.2em/27px 'RTA';
       color: #333;
       padding-top: 8px;
     }
@@ -529,6 +546,13 @@ header {
       h3 {
         color: #171c8f;
       }
+    }
+    &.empty {
+      box-shadow: none !important;
+      background: none !important;
+    }
+    &.checked {
+      background-size: 90px !important;
     }
   }
 }
