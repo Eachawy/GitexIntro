@@ -7,8 +7,8 @@ const FinishLessonsComponent = props => {
         <>
             <Link to="/yourJourney" className="backAction" />
             <div className="finishLessons">
-                <h1>Finish all your lessons from the comfort of, your home</h1>
-                <Link to="/Lectures" className="btnAction">Continue</Link>
+                <h1>Finish all your lessons<br /> from the comfort of<br /> your home</h1>
+                <Link to="/lectures" className="btnAction">Continue</Link>
             </div>
         </>
     );

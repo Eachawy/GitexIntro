@@ -2,13 +2,55 @@
 @import './scss/slick.scss';
 @import './scss/slick-theme.min.scss';
 @import './scss/primeReact.scss';
+html {
+  position: relative;
+}
 
 body {
   background: #fff;
   .contentView {
     .gitexContainer {
-      padding-top: 32px;
-      position: relative;
+      position: fixed;
+      top: 150px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 91;
+      &.halfScreenMode {
+        &:before {
+          content: '';
+          background: #eeeeee;
+          width: 50%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          z-index: -1;
+        }
+      }
+      &.halfScreenModeright {
+        &:before {
+          content: '';
+          background: #eeeeee;
+          width: 50%;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          z-index: -1;
+        }
+      }
+      .view-routes {
+        min-height: 100%;
+        height: 100%;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        padding-top: 150px;
+        @media only screen and (max-width: 1080px) {
+          padding-top: 70px;
+        }
+      }
     }
   }
 }
@@ -17,6 +59,7 @@ header {
   position: relative;
   padding-top: 32px;
   background: #fff;
+  z-index: 9;
   .logos {
     display: block;
     position: relative;
@@ -70,7 +113,7 @@ header {
   background: url('../content/images/Back.svg') no-repeat;
   cursor: pointer;
   position: absolute;
-  top: -38px;
+  top: -40px;
   left: 70px;
   background-size: 100%;
 }
@@ -82,32 +125,56 @@ header {
   padding: 24px 16px 16px 16px;
   display: inline-block;
   cursor: pointer;
-  margin-top: 32px;
+  margin-top: 16px;
   text-decoration: none !important;
   min-width: 190px;
   &:hover {
     color: #fff;
   }
 }
+.movingDubai,
+.userForm,
+.takePhoto,
+.uploadLicense,
+.finishLessons {
+  padding: 0 20%;
+}
 
 .movingDubai {
   text-align: center;
-  padding-top: 16%;
+  // padding-top: 100px;
+  position: relative;
+  z-index: 9999;
+  .view-routes {
+    min-height: 100%;
+    height: 100%;
+  }
   h1 {
-    font: 4em/70px 'RTA-Light';
+    font: 4.5em/70px 'RTA-Light';
     color: #222222;
     margin-bottom: 16px;
   }
   h3 {
-    font: 2.5em/40px 'RTA-Light';
+    font: 2.5em/50px 'RTA-Light';
     color: #222222;
-    margin-bottom: 16px;
+    width: 700px;
+    margin: 0 auto 16px auto;
+  }
+  + div {
+    .movingDubaiAnim {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      z-index: 99;
+    }
   }
 }
 
 .userForm {
   text-align: left;
-  padding: 96px 20% 0 20%;
+  width: 100%;
   label {
     font: 2em/40px 'RTA-Light';
     color: #222222;
@@ -158,7 +225,7 @@ header {
 
 .countryItem {
   border-top: 0.5px solid #d7d7d7;
-  padding: 8px;
+  padding: 12px;
   > span,
   div {
     display: inline-block;
@@ -178,7 +245,6 @@ header {
 
 .takePhoto {
   text-align: center;
-  padding: 96px 20% 0 20%;
   .launchCamera {
     border: 0.5px solid #d7d7d7;
     background: #fbfbfb;
@@ -226,7 +292,7 @@ header {
     img {
       width: 120px;
       height: 120px;
-      border-radius: 50%;
+      // border-radius: 50%;
     }
   }
 }
@@ -237,6 +303,7 @@ header {
   height: 70px;
   margin: 0 5px;
   cursor: pointer;
+  border-radius: 100%;
   &.large {
     width: 120px;
     height: 120px;
@@ -275,7 +342,7 @@ header {
   position: relative;
   width: 73px;
   display: block;
-  margin: 16px auto;
+  margin: 8px auto 4px auto;
   cursor: pointer;
   &:before {
     content: '';
@@ -289,9 +356,9 @@ header {
     left: 0;
   }
 }
+
 .uploadLicense {
   text-align: center;
-  padding: 96px 20% 0 20%;
   h1 {
     font: 2.3em/30px 'RTA-Light';
     color: #222222;
@@ -317,6 +384,14 @@ header {
   .lic_front {
     background: url('../content/images/lic_front.svg') no-repeat;
     background-size: 100%;
+    position: relative;
+    img {
+      position: absolute;
+      left: 14px;
+      top: 50px;
+      width: 64px;
+      border-radius: 9px;
+    }
   }
   .lic_back {
     background: url('../content/images/lic_back.svg') no-repeat;
@@ -326,7 +401,6 @@ header {
 
 .finishLessons {
   text-align: center;
-  padding: 96px 20% 0 20%;
   h1 {
     font: 3em/60px 'RTA-Light';
     color: #222222;
@@ -340,28 +414,14 @@ header {
 }
 
 .thankYou {
-  margin: 0;
-  position: relative;
-  top: -32px;
-
-  &:before {
-    content: '';
-    background: #eeeeee;
-    width: 50%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-  }
   .profile {
     width: 50%;
     top: 0;
     left: 0;
     bottom: 0;
     background: #eeeeee;
-    z-index: -1;
-    padding: 50px 0 0 70px;
+    padding: 0 0 0 110px;
+    position: relative;
     h3 {
       color: #222;
       font: 1.5em/21px 'RTA';
@@ -400,10 +460,23 @@ header {
     .license {
       > div {
         display: inline-block;
-        width: 45%;
+        width: 215px; //45%;
         height: 183px; //157px
         margin: 0 8px 0 0;
+        @media only screen and (max-width: 1080px) {
+          width: 180px;
+          img {
+            width: 50px;
+            top: 45px;
+            left: 13px;
+          }
+        }
       }
+    }
+    .animation {
+      position: absolute;
+      left: -50px;
+      top: 75px;
     }
   }
   .message {
@@ -412,30 +485,25 @@ header {
     right: 0;
     bottom: 0;
     z-index: 2;
-    padding: 100px 70px 0 0;
-    text-align: center;
+    padding: 0px 70px 0 110px;
+    text-align: left;
     h1 {
       font: 4em/80px 'RTA-Kight';
-      padding: 0 5%;
+    }
+    .btnAction {
+      text-align: center;
     }
   }
 }
 
 .yourJourney {
   text-align: center;
-  padding: 96px 0 0 0;
-  // position: relative;
-  // right: -110px;
-  // left: -110px;
-  // .slick-track {
-  //   width: 2070px !important;
-  // }
-  // .slick-slide {
-  //   width: 345px !important;
-  // }
   h2 {
     color: #222;
-    font: 1.5em/30px 'RTA';
+    font: 2em/30px 'RTA';
+    margin-bottom: 16px;
+    padding-left: 290px;
+    text-align: left;
   }
 
   .j_1 {
@@ -507,10 +575,12 @@ header {
 
 .yourLectures {
   text-align: center;
-  padding: 96px 0 0 0;
   h2 {
     color: #222;
-    font: 1.5em/30px 'RTA';
+    font: 2em/30px 'RTA';
+    margin-bottom: 16px;
+    padding-left: 290px;
+    text-align: left;
   }
   .lec,
   .empty {
@@ -525,8 +595,7 @@ header {
     cursor: pointer;
     text-align: left;
     padding: 32px 16px 16px 16px;
-    background: url('../content/images/\ check.svg') no-repeat center 175px;
-    background-size: 0;
+    background-size: 100% !important;
     h6 {
       font: 1em/30px 'RTA';
       color: #53565a;
@@ -542,6 +611,7 @@ header {
       padding-top: 245px;
       text-align: center;
       display: block;
+      background-size: 40% !important;
       text-decoration: none !important;
       h3 {
         color: #171c8f;
@@ -551,8 +621,216 @@ header {
       box-shadow: none !important;
       background: none !important;
     }
-    &.checked {
-      background-size: 90px !important;
+    // &.checked {
+    //   background-size: 90px !important;
+    // }
+
+    &._1 {
+      background: url('../content/images/theoryLectures/inactive_1.svg') no-repeat center bottom;
+      &.active {
+        background: url('../content/images/theoryLectures/active_1.svg') no-repeat center bottom;
+      }
+    }
+    &._2 {
+      background: url('../content/images/theoryLectures/inactive_2.svg') no-repeat center bottom;
+      &.active {
+        background: url('../content/images/theoryLectures/active_2.svg') no-repeat center bottom;
+      }
+    }
+    &._3 {
+      background: url('../content/images/theoryLectures/inactive_3.svg') no-repeat center bottom;
+      &.active {
+        background: url('../content/images/theoryLectures/active_3.svg') no-repeat center bottom;
+      }
+    }
+    &._4 {
+      background: url('../content/images/theoryLectures/inactive_4.svg') no-repeat center bottom;
+      &.active {
+        background: url('../content/images/theoryLectures/active_4.svg') no-repeat center bottom;
+      }
+    }
+    &._5 {
+      background: url('../content/images/theoryLectures/inactive_5.svg') no-repeat center bottom;
+      &.active {
+        background: url('../content/images/theoryLectures/active_5.svg') no-repeat center bottom;
+      }
+    }
+    &._6 {
+      background: url('../content/images/theoryLectures/inactive_6.svg') no-repeat center bottom;
+      &.active {
+        background: url('../content/images/theoryLectures/active_6.svg') no-repeat center bottom;
+      }
+    }
+    &._7 {
+      background: url('../content/images/theoryLectures/inactive_7.svg') no-repeat center bottom;
+      &.active {
+        background: url('../content/images/theoryLectures/active_7.svg') no-repeat center bottom;
+      }
+    }
+    &._8 {
+      background: url('../content/images/theoryLectures/inactive_8.svg') no-repeat center bottom;
+      &.active {
+        background: url('../content/images/theoryLectures/active_8.svg') no-repeat center bottom;
+      }
+    }
+  }
+}
+
+.congratulations {
+  text-align: left;
+  padding-left: 110px;
+  h1 {
+    font: 3em/60px 'RTA-Light';
+    color: #222222;
+    margin-bottom: 16px;
+    padding-right: 300px;
+  }
+  .btnAction {
+    text-align: center;
+  }
+  + div {
+    padding-left: 110px;
+    > div {
+      position: relative;
+    }
+    p {
+      font: 1.2em/30px 'RTA';
+      color: #222;
+      padding-top: 32px;
+    }
+    .drivingLicens {
+      width: 390px;
+      height: 275px;
+      background: url('../content/images/drivingLicens_F.svg') no-repeat;
+      background-size: 100%;
+      position: relative;
+      img {
+        position: absolute;
+        top: 85px;
+        left: 24px;
+        width: 72px;
+        border-radius: 5px;
+      }
+      .userName {
+        position: absolute;
+        top: 104px;
+        right: 91px;
+        font: 0.8em/21px 'RTA';
+      }
+      .nationality {
+        position: absolute;
+        top: 138px;
+        right: 0;
+        font: 0.8em/21px 'RTA';
+        width: 300px;
+        display: block;
+        text-align: center;
+      }
+    }
+    .congratulationsAnim {
+      width: 450px;
+      position: absolute;
+      left: 327px;
+      bottom: -70px;
+    }
+  }
+}
+
+.driveSafe {
+  text-align: left;
+  padding-left: 110px;
+  position: relative;
+  h1 {
+    font: 3em/60px 'RTA-Light';
+    color: #222222;
+    margin-bottom: 16px;
+    padding-right: 300px;
+  }
+  .btnAction {
+    text-align: center;
+  }
+  .vehicleLicense {
+    background: url('../content/images/vehicleLicense.svg') no-repeat;
+    width: 439px;
+    height: 275px;
+  }
+
+  .driveSafeAnim {
+    position: absolute;
+    left: 563px;
+    top: -54px;
+    width: 553px;
+    height: 556px;
+  }
+}
+
+.yourCar {
+  text-align: center;
+  .car,
+  .profile {
+    width: 250px;
+    // height: 300px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 34%);
+    -webkit-box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 34%);
+    -moz-box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 34%);
+    margin: 20px;
+    cursor: pointer;
+    text-align: left;
+    padding: 0px 16px 16px 16px;
+    h6 {
+      font: 1.3em/30px 'RTA';
+      color: #222;
+      margin-bottom: 8px;
+      span {
+        display: block;
+        font: 0.6em/16px 'RTA';
+        color: #53565a;
+      }
+    }
+    img {
+      width: 100%;
+      height: 175px;
+    }
+    a {
+      display: block;
+      padding: 8px;
+      text-decoration: none !important;
+      h6 {
+        color: #fff;
+        font: 1.1em/27px 'RTA';
+        margin-bottom: 0;
+      }
+      p {
+        color: #fff;
+        font: 0.9em/17px 'RTA-Light';
+      }
+      &.buy {
+        background: #00b0b9;
+      }
+      &.rent {
+        background: #171c8f;
+      }
+    }
+  }
+  .profile {
+    padding-top: 64px;
+    width: 250px;
+    text-align: center;
+    h2 {
+      color: #222;
+      font: 1em/30px 'RTA';
+    }
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      margin-bottom: 16px;
+      margin: 16px auto;
+    }
+    p {
+      color: #333;
+      font: 0.8em/21px 'RTA';
     }
   }
 }

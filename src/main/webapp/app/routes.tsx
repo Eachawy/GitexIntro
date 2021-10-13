@@ -14,6 +14,14 @@ import ThankYouPage from 'app/pages/thankYou-page/thankYouPage';
 import YourJourneyPage from 'app/pages/yourJourney-page/yourJourneyPage';
 import LecturesPage from 'app/pages/lectures-page/lecturesPage';
 
+import TakeYourTestPage from 'app/pages/takeYourTest-page/takeYourTestPage';
+import WellDonePage from 'app/pages/wellDone-page/wellDonePage';
+import YoureAllSetPage from 'app/pages/youreAllSet-page/youreAllSetPage';
+import CongratulationsPage from 'app/pages/congratulations-page/congratulationsPage';
+import AfterYourLicensePage from 'app/pages/afterYourLicense-page/afterYourLicensePage';
+import SelectYourCarPage from 'app/pages/selectYourCar-page/selectYourCarPage';
+import driveSafePage from 'app/pages/driveSafePage/driveSafePage';
+
 const Routes = () => (
   <div className="view-routes">
     <Switch>
@@ -25,7 +33,18 @@ const Routes = () => (
       <ErrorBoundaryRoute exact path="/thankYou" component={ThankYouPage} />
       <ErrorBoundaryRoute exact path="/yourJourney" component={YourJourneyPage} />
       <ErrorBoundaryRoute exact path="/finishLessons" component={FinishLessonsPage} />
-      <ErrorBoundaryRoute exact path="/Lectures" component={LecturesPage} />
+      <ErrorBoundaryRoute exact path="/lectures" component={LecturesPage} />
+
+      <ErrorBoundaryRoute exact path="/takeYourTest" component={TakeYourTestPage} />
+      <ErrorBoundaryRoute exact path="/wellDone" component={WellDonePage} />
+      <ErrorBoundaryRoute exact path="/youreAllSet" component={YoureAllSetPage} />
+      <ErrorBoundaryRoute exact path="/congratulations" component={CongratulationsPage} />
+
+      <ErrorBoundaryRoute exact path="/afterYourLicense" component={AfterYourLicensePage} />
+      <ErrorBoundaryRoute exact path="/selectYourCar" component={SelectYourCarPage} />
+
+      <ErrorBoundaryRoute exact path="/driveSafe" component={driveSafePage} />
+
       <ErrorBoundaryRoute component={PageNotFound} />
     </Switch>
   </div>

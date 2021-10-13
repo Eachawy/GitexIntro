@@ -7,24 +7,39 @@ import Slider from "react-slick";
 
 const YourJourneyComponent = props => {
     const [slider, setSlider] = React.useState(null);
+
     const settings = {
-        // // dots: true,
-        // infinite: false,
-        // className: "center",
-        // centerMode: true,
-        // speed: 500,
-        // slidesToShow: 3,
-        // // slidesToScroll: 1,
-        // rows: 1,
-        // // slidesPerRow: 2
-        className: "center",
-        // centerMode: true,
+        dots: false,
         infinite: false,
-        centerPadding: "0px",
-        slidesToShow: 4,
+        className: "center",
         speed: 700,
-        // dots: true,
-    };
+        slidesToShow: 7,
+        slidesToScroll: 7,
+        responsive: [
+            {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 5,
+                },
+            },
+            {
+                breakpoint: 1270,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                },
+            },
+            {
+                breakpoint: 950,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                },
+            },
+        ],
+    }
+
     // const intervalFN = setInterval(() => {
     //     slider ? slider.slickNext() : null;
     // }, 1000);

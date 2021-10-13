@@ -2,7 +2,7 @@ import React from "react";
 import { translate } from "react-jhipster";
 import { connect } from 'react-redux';
 import { IRootState } from 'app/shared/reducers';
-import { Link } from "react-router-dom";
+import { Link, Prompt } from "react-router-dom";
 
 const ThankYouComponent = props => {
     const [user, setUser] = React.useState(null);
@@ -10,13 +10,19 @@ const ThankYouComponent = props => {
     const [nationality, setNationality] = React.useState(null);
 
     React.useEffect(() => {
+        document.querySelector('.gitexContainer').classList.add("halfScreenMode");
         setUser(props.username);
         setImage(props.imageprofile);
         setNationality(props.nationality);
+        return () => {
+            document.querySelector('.gitexContainer').classList.remove("halfScreenMode");
+        }
     }, []);
+
 
     return (
         <>
+
             <Link to="/uploadLicense" className="backAction" />
             <div className="row thankYou">
                 <div className="profile">
@@ -48,13 +54,17 @@ const ThankYouComponent = props => {
                             <label>License:</label>
                         </div>
                         <div className="license">
-                            <div className="lic_front" />
+                            <div className="lic_front">
+                                {props.imageprofile &&
+                                    <img src={props.imageprofile} />
+                                }
+                            </div>
                             <div className="lic_back" />
                         </div>
                     </div>
                 </div>
                 <div className="message">
-                    <h1>Thank you, Gustave</h1>
+                    <h1>Thank you,<br /> Gustave</h1>
                     <Link to="/yourJourney" className="btnAction">Continue</Link>
                 </div>
             </div>
