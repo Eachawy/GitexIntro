@@ -26,20 +26,20 @@ const TakePhotoComponent = props => {
         <>
             <Link to="/nationality" className="backAction" />
             <div className="takePhoto">
-                <h1>Take a photo</h1>
+                <h1>{translate("pages.photo.takePhoto")}</h1>
                 {!avatar &&
                     <div className="launchCamera">
-                        <span>Launch camera</span>
+                        <span>{translate("pages.photo.launchCamera")}</span>
                         <input type="file" accept="image/*" onChange={(e: any) => onChangeFile(e)} capture="camera"></input>
                     </div>
                 }
                 {avatar &&
                     <div className="imgProf">
                         <img src={avatar} />
-                        <div className="edit" onClick={() => setAvatar(null)}>Edit</div>
+                        <div className="edit" onClick={() => setAvatar(null)}>{translate("pages.button.edit")}</div>
                     </div>
                 }
-                <p>or choose an avatar</p>
+                <p>{translate("pages.photo.chooseAvatar")}</p>
                 <ul>
                     <li className="avatar _1" onClick={() => setAvatar('../../../content/images/avatar/1.svg')} />
                     <li className="avatar _2" onClick={() => setAvatar('../../../content/images/avatar/2.svg')} />
@@ -48,7 +48,7 @@ const TakePhotoComponent = props => {
                     <li className="avatar _5" onClick={() => setAvatar('../../../content/images/avatar/5.svg')} />
                     <li className="avatar _6" onClick={() => setAvatar('../../../content/images/avatar/6.svg')} />
                 </ul>
-                <Link to="/uploadLicense" className="btnAction" onClick={onSubmit}>Next</Link>
+                <Link to="/uploadLicense" className="btnAction" onClick={onSubmit}>{translate("pages.button.next")}</Link>
             </div>
         </>
     );

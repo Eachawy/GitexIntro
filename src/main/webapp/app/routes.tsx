@@ -21,6 +21,8 @@ import CongratulationsPage from 'app/pages/congratulations-page/congratulationsP
 import AfterYourLicensePage from 'app/pages/afterYourLicense-page/afterYourLicensePage';
 import SelectYourCarPage from 'app/pages/selectYourCar-page/selectYourCarPage';
 import driveSafePage from 'app/pages/driveSafePage/driveSafePage';
+import selectPlatePage from 'app/pages/selectPlate-page/selectPlatePage';
+import PreviewPage from 'app/pages/preview-page/previewPage';
 
 const Routes = () => (
   <div className="view-routes">
@@ -39,10 +41,10 @@ const Routes = () => (
       <ErrorBoundaryRoute exact path="/wellDone" component={WellDonePage} />
       <ErrorBoundaryRoute exact path="/youreAllSet" component={YoureAllSetPage} />
       <ErrorBoundaryRoute exact path="/congratulations" component={CongratulationsPage} />
-
       <ErrorBoundaryRoute exact path="/afterYourLicense" component={AfterYourLicensePage} />
       <ErrorBoundaryRoute exact path="/selectYourCar" component={SelectYourCarPage} />
-
+      <ErrorBoundaryRoute exact path="/selectPlate" component={selectPlatePage} />
+      <ErrorBoundaryRoute exact path="/Preview" component={PreviewPage} />
       <ErrorBoundaryRoute exact path="/driveSafe" component={driveSafePage} />
 
       <ErrorBoundaryRoute component={PageNotFound} />

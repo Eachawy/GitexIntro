@@ -40,9 +40,6 @@ const YourJourneyComponent = props => {
         ],
     }
 
-    // const intervalFN = setInterval(() => {
-    //     slider ? slider.slickNext() : null;
-    // }, 1000);
     return (
         <>
             <Link to="/thankYou" className="backAction" />

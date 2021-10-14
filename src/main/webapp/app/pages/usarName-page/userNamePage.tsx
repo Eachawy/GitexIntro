@@ -1,11 +1,11 @@
 import React from "react";
-import { translate } from "react-jhipster";
 import { InputText } from 'primereact/inputtext';
 import { Link } from "react-router-dom";
 
 import { connect } from 'react-redux';
 import { IRootState } from 'app/shared/reducers';
 import { setUserName } from 'app/pages/usarName-page/userName.reducer';
+import { translate } from "react-jhipster";
 
 const UserNameComponent = props => {
 
@@ -23,8 +23,8 @@ const UserNameComponent = props => {
         <>
             <Link to="/" className="backAction" />
             <div className="userForm">
-                <label>Name</label>
-                <InputText value={value} onKeyDown={onHandleKeyDown} onChange={(e) => setValue(e.target.value)} placeholder={'Enter your name'} />
+                <label>{translate('pages.user.name')}</label>
+                <InputText value={value} onKeyDown={onHandleKeyDown} onChange={(e) => setValue(e.target.value)} placeholder={translate('pages.user.enterYourName')} />
             </div>
         </>
     );

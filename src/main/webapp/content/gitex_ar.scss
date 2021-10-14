@@ -1,1 +1,329 @@
 @import './scss/rtl.scss';
+
+html[dir='rtl'] {
+  body {
+    .contentView {
+      .gitexContainer {
+        &.halfScreenMode {
+          &:before {
+            left: auto;
+            right: 0;
+          }
+        }
+        &.halfScreenModeright {
+          &:before {
+            right: auto;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  header {
+    .RTA {
+      right: auto;
+      left: 0;
+    }
+    .Dubai {
+      left: auto;
+      right: 0;
+    }
+    .menu {
+      .home {
+        margin-left: 0;
+        margin-right: 55px;
+      }
+      .switchLanguage {
+        right: auto;
+        left: 70px;
+      }
+    }
+  }
+
+  .backAction {
+    left: auto;
+    right: 70px;
+    transform: rotate(175deg);
+  }
+
+  .userForm {
+    text-align: right;
+    label {
+      text-align: right;
+    }
+  }
+
+  .takePhoto {
+    .launchCamera {
+      input[type='file' i] {
+        left: auto;
+        right: 0;
+      }
+      > span {
+        &:before {
+          right: auto;
+          left: 10px;
+        }
+      }
+    }
+  }
+
+  .edit {
+    padding: 5px 30px 5px 5px;
+    &:before {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  .thankYou {
+    .profile {
+      left: auto;
+      right: 0;
+      padding: 0 110px 0 0;
+      .profileData {
+        label {
+          padding-right: 0;
+          padding-left: 8px;
+        }
+        span {
+          .flag-icon {
+            padding-right: 0;
+            padding-left: 39px;
+            background-position: right;
+          }
+        }
+      }
+      .license {
+        > div {
+          margin: 0 0 0 8px;
+          @media only screen and (max-width: 1080px) {
+            img {
+              left: auto;
+              right: 13px;
+            }
+          }
+        }
+      }
+      .animation {
+        left: auto;
+        right: -50px;
+      }
+    }
+    .message {
+      right: auto;
+      left: 0;
+      padding: 0px 110px 0 70px;
+      text-align: right;
+    }
+  }
+
+  .yourJourney {
+    h2 {
+      padding-left: 0;
+      padding-right: 290px;
+      text-align: right;
+    }
+
+    .j_1,
+    .j_2,
+    .j_3,
+    .j_4,
+    .j_5,
+    .j_6,
+    .continue,
+    .empty {
+      text-align: right;
+    }
+    .continue {
+      text-align: center;
+    }
+  }
+
+  .yourLectures {
+    h2 {
+      padding-left: 0;
+      padding-right: 290px;
+      text-align: right;
+    }
+    .lec,
+    .empty {
+      text-align: right;
+    }
+    .continue {
+      text-align: center;
+    }
+  }
+
+  .congratulations {
+    text-align: right;
+    padding-left: 0;
+    padding-right: 110px;
+    h1 {
+      padding-right: 0px;
+      padding-left: 300px;
+    }
+    + div {
+      padding-left: 0;
+      padding-right: 110px;
+      .congratulationsAnim {
+        left: auto;
+        right: 390px;
+      }
+    }
+  }
+
+  .driveSafe {
+    text-align: right;
+    padding-left: 0;
+    padding-right: 110px;
+
+    h1 {
+      padding-right: 0;
+      padding-left: 300px;
+    }
+
+    .driveSafeAnim {
+      left: auto;
+      right: 563px;
+    }
+  }
+
+  .yourCar {
+    .car,
+    .profile {
+      text-align: right;
+    }
+    .profile {
+      text-align: center;
+    }
+  }
+
+  .selectPalte {
+    padding-left: 0;
+    padding-right: 110px;
+    .leftSide,
+    .rightSide {
+      float: right;
+    }
+    .rightSide {
+      padding-right: 40px;
+    }
+    .card {
+      text-align: right;
+      &.plateBox {
+        .plateComponent {
+          padding-left: 0;
+          padding-right: 40px;
+          margin: 0 22px 8px 0;
+        }
+      }
+    }
+    .profile {
+      text-align: center;
+    }
+  }
+
+  .plate {
+    text-align: left;
+    &:before {
+      left: auto;
+      right: 9px;
+    }
+
+    span {
+      left: auto;
+      right: 15px;
+    }
+
+    div {
+      right: auto;
+      left: 0;
+      text-align: right;
+    }
+
+    &.short {
+      span {
+        right: auto;
+        right: auto;
+      }
+    }
+    &.long {
+      &:after {
+        left: auto;
+        right: 65px;
+      }
+    }
+
+    &.coloured,
+    &.COLORED {
+      &.long {
+        &:after {
+          left: auto;
+          right: 65px;
+        }
+      }
+    }
+
+    &.expo,
+    &.EXPO {
+      &:after {
+        left: auto;
+        right: 53px;
+      }
+
+      &.short {
+        &:after {
+          left: auto;
+          right: 57px;
+        }
+      }
+      &.long {
+        &:after {
+          left: auto;
+          right: 65px;
+        }
+      }
+    }
+  }
+  .radioBtn {
+    left: auto;
+    right: 0;
+    input[type='radio'] + label {
+      &:before {
+        left: auto;
+        right: 0px;
+      }
+    }
+    input[type='radio'] {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  .preview {
+    .card {
+      text-align: right;
+      .plateComponent {
+        padding: 90px 40px 0 0;
+      }
+    }
+    .profile {
+      text-align: center;
+    }
+  }
+
+  .radioBtn {
+    margin: 0 0 0 20px;
+    input[type='radio'] + label {
+      &:before {
+        left: auto;
+        right: 0px;
+      }
+    }
+  }
+  .slick-slide {
+    float: left !important;
+  }
+}

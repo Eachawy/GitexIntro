@@ -61,7 +61,7 @@ const SelectYourCarComponent = props => {
                     </div>
                     <div>
                         <div className="car">
-                            <img src="../../../content/images/vehicles/vehicle1.svg" />
+                            <img src="../../../content/images/vehicles/vehicle1.jpeg" />
                             <h6>
                                 For Esco
                                 <span>2021</span>
@@ -70,7 +70,7 @@ const SelectYourCarComponent = props => {
                                 <h6>Rent</h6>
                                 <p>From AED 2,200/mo</p>
                             </Link>
-                            <Link to="/driveSafe" className="buy">
+                            <Link to="/selectPlate" className="buy">
                                 <h6>Buy</h6>
                                 <p>From AED 60,000</p>
                             </Link>
@@ -78,7 +78,7 @@ const SelectYourCarComponent = props => {
                     </div>
                     <div>
                         <div className="car">
-                            <img src="../../../content/images/vehicles/vehicle2.svg" />
+                            <img src="../../../content/images/vehicles/vehicle2.jpeg" />
                             <h6>
                                 Car two
                                 <span>2021</span>
@@ -87,7 +87,7 @@ const SelectYourCarComponent = props => {
                                 <h6>Rent</h6>
                                 <p>From AED 2,200/mo</p>
                             </Link>
-                            <Link to="/driveSafe" className="buy">
+                            <Link to="/selectPlate" className="buy">
                                 <h6>Buy</h6>
                                 <p>From AED 60,000</p>
                             </Link>
@@ -95,7 +95,7 @@ const SelectYourCarComponent = props => {
                     </div>
                     <div>
                         <div className="car">
-                            <img src="../../../content/images/vehicles/vehicle3.svg" />
+                            <img src="../../../content/images/vehicles/vehicle3.png" />
                             <h6>
                                 Car Three
                                 <span>2021</span>
@@ -104,7 +104,7 @@ const SelectYourCarComponent = props => {
                                 <h6>Rent</h6>
                                 <p>From AED 2,200/mo</p>
                             </Link>
-                            <Link to="/driveSafe" className="buy">
+                            <Link to="/selectPlate" className="buy">
                                 <h6>Buy</h6>
                                 <p>From AED 60,000</p>
                             </Link>
@@ -112,7 +112,7 @@ const SelectYourCarComponent = props => {
                     </div>
                     <div>
                         <div className="car">
-                            <img src="../../../content/images/vehicles/vehicle1.svg" />
+                            <img src="../../../content/images/vehicles/vehicle1.jpeg" />
                             <h6>
                                 For Esco
                                 <span>2021</span>
@@ -121,7 +121,7 @@ const SelectYourCarComponent = props => {
                                 <h6>Rent</h6>
                                 <p>From AED 2,200/mo</p>
                             </Link>
-                            <Link to="/driveSafe" className="buy">
+                            <Link to="/selectPlate" className="buy">
                                 <h6>Buy</h6>
                                 <p>From AED 60,000</p>
                             </Link>
@@ -129,7 +129,7 @@ const SelectYourCarComponent = props => {
                     </div>
                     <div>
                         <div className="car">
-                            <img src="../../../content/images/vehicles/vehicle2.svg" />
+                            <img src="../../../content/images/vehicles/vehicle2.jpeg" />
                             <h6>
                                 Car two
                                 <span>2021</span>
@@ -138,7 +138,7 @@ const SelectYourCarComponent = props => {
                                 <h6>Rent</h6>
                                 <p>From AED 2,200/mo</p>
                             </Link>
-                            <Link to="/driveSafe" className="buy">
+                            <Link to="/selectPlate" className="buy">
                                 <h6>Buy</h6>
                                 <p>From AED 60,000</p>
                             </Link>
@@ -146,7 +146,7 @@ const SelectYourCarComponent = props => {
                     </div>
                     <div>
                         <div className="car">
-                            <img src="../../../content/images/vehicles/vehicle3.svg" />
+                            <img src="../../../content/images/vehicles/vehicle3.png" />
                             <h6>
                                 Car Three
                                 <span>2021</span>
@@ -155,7 +155,7 @@ const SelectYourCarComponent = props => {
                                 <h6>Rent</h6>
                                 <p>From AED 2,200/mo</p>
                             </Link>
-                            <Link to="/driveSafe" className="buy">
+                            <Link to="/selectPlate" className="buy">
                                 <h6>Buy</h6>
                                 <p>From AED 60,000</p>
                             </Link>

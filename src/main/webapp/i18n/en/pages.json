@@ -1,5 +1,36 @@
 {
-    "pages":{
-        "intro":"Intro"
+  "pages": {
+    "button": {
+      "getStarted": "Get Started",
+      "next": "Next",
+      "edit": "Edit",
+      "submit": "Submit",
+      "continue": "Continue"
+    },
+    "intro": {
+      "swiftDrive": "RTA SwiftDrive",
+      "startDriving": "Start driving in Dubai within 3 days using our,blockchain powered platform!"
+    },
+    "user": {
+      "name": "Name",
+      "enterYourName": "Enter your name",
+      "nationality": "Nationality"
+    },
+    "photo": {
+      "takePhoto": "Take a photo",
+      "launchCamera": "Launch camera",
+      "chooseAvatar": "or choose an avatar"
+    },
+    "upload": {
+      "uploadlicense": "Upload license",
+      "takePhoto": "Take a photo of your home country driving license"
+    },
+    "thankYou": {
+      "yourLearner": "Your learner’s profile",
+      "trafficCode": "Traffic code",
+      "license": "License",
+      "thankYou": "Thank you,",
+      "gustave": "Gustave"
     }
+  }
 }

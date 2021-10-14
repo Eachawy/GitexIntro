@@ -1,5 +1,36 @@
 {
   "pages": {
-    "intro": "مقدمه"
+    "button": {
+      "getStarted": "البدء",
+      "next": "التالي",
+      "edit": "تعديل",
+      "submit": "إرسال",
+      "continue": "استمر"
+    },
+    "intro": {
+      "swiftDrive": "هيئة الطرق والمواصلات سويفت درايف",
+      "startDriving": "ابدأ القيادة في دبي في غضون 3 أيام باستخدام منصتنا المدعومة من blockchain!"
+    },
+    "user": {
+      "name": "الاسم",
+      "enterYourName": "أدخل أسمك",
+      "nationality": "الجنسيه"
+    },
+    "photo": {
+      "takePhoto": "التقاط صورة",
+      "launchCamera": "إطلاق الكاميرا",
+      "chooseAvatar": "أو اختر صورة رمزية"
+    },
+    "upload": {
+      "uploadlicense": "رخصة الرفع",
+      "takePhoto": "التقط صورة لرخصة القيادة في بلدك"
+    },
+    "thankYou": {
+      "yourLearner": "ملف المتعلم الخاص بك",
+      "trafficCode": "رمز المرور",
+      "license": "رخصة",
+      "thankYou": "شكرا لك،",
+      "gustave": "علي زيارتك"
+    }
   }
 }

@@ -298,7 +298,7 @@ const NationalityComponent = props => {
         <>
             <Link to="/username" className="backAction" />
             <div className={`userForm ${selectedCountry ? 'active' : null}`}>
-                <label>Nationality</label>
+                <label>{translate("pages.user.nationality")}</label>
                 <AutoComplete
                     value={selectedCountry}
                     suggestions={filteredCountries}
@@ -310,7 +310,7 @@ const NationalityComponent = props => {
                     placeholder={'Search Country'}
                 />
                 {selectedCountry &&
-                    <Link to="/takePhoto" className="btnAction" onClick={onNext}>Next</Link>
+                    <Link to="/takePhoto" className="btnAction" onClick={onNext}>{translate("pages.button.next")}</Link>
                 }
             </div>
         </>

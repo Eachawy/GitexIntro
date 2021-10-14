@@ -8,9 +8,9 @@ const MovingComponent = props => {
     return (
         <>
             <div className="movingDubai">
-                <h1>RTA SwiftDrive</h1>
-                <h3>Start driving in Dubai within 3 days using our,blockchain powered platform!</h3>
-                <Link to="/username" className="btnAction">Get Started</Link>
+                <h1>{translate("pages.intro.swiftDrive")}</h1>
+                <h3>{translate("pages.intro.startDriving")}</h3>
+                <Link to="/username" className="btnAction">{translate("pages.button.getStarted")}</Link>
             </div>
             <Player
                 autoplay

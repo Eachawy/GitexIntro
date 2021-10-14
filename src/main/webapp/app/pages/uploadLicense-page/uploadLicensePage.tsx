@@ -15,8 +15,8 @@ const UploadLicenseComponent = props => {
         <>
             <Link to="/takePhoto" className="backAction" />
             <div className="uploadLicense">
-                <h1>Upload license</h1>
-                <p>Take a photo of your home country driving license</p>
+                <h1>{translate("pages.upload.uploadlicense")}</h1>
+                <p>{translate("pages.upload.takePhoto")}</p>
                 <div className="license">
                     <div className="lic_front">
                         {props.imageprofile &&
@@ -25,7 +25,7 @@ const UploadLicenseComponent = props => {
                     </div>
                     <div className="lic_back" />
                 </div>
-                <Link to="/thankYou" className="btnAction">Submit</Link>
+                <Link to="/thankYou" className="btnAction">{translate("pages.button.submit")}</Link>
             </div>
         </>
     );

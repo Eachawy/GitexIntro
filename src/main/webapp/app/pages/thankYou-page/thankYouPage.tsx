@@ -26,7 +26,7 @@ const ThankYouComponent = props => {
             <Link to="/uploadLicense" className="backAction" />
             <div className="row thankYou">
                 <div className="profile">
-                    <h3>Your learner’s profile</h3>
+                    <h3>{translate("pages.thankYou.yourLearner")}</h3>
                     <div className="imgProfile">
                         {props.imageprofile &&
                             <img src={props.imageprofile} />
@@ -34,11 +34,11 @@ const ThankYouComponent = props => {
                     </div>
                     <div className="profileData">
                         <div>
-                            <label>Name:</label>
+                            <label>{translate("pages.user.name")}:</label>
                             <span>{props.username ? props.username : null}</span>
                         </div>
                         <div>
-                            <label>Nationality:</label>
+                            <label>{translate("pages.user.nationality")}:</label>
                             {props.nationality && <span>
                                 <span className={`flag-icon flag-icon-${props.nationality.code.toLowerCase()}`} />
                                 {props.nationality.name}
@@ -47,11 +47,11 @@ const ThankYouComponent = props => {
 
                         </div>
                         <div>
-                            <label>Traffic code:</label>
+                            <label>{translate("pages.thankYou.trafficCode")}:</label>
                             <span>0123456</span>
                         </div>
                         <div>
-                            <label>License:</label>
+                            <label>{translate("pages.thankYou.license")}:</label>
                         </div>
                         <div className="license">
                             <div className="lic_front">
@@ -64,8 +64,8 @@ const ThankYouComponent = props => {
                     </div>
                 </div>
                 <div className="message">
-                    <h1>Thank you,<br /> Gustave</h1>
-                    <Link to="/yourJourney" className="btnAction">Continue</Link>
+                    <h1>{translate("pages.thankYou.thankYou")}<br /> {translate("pages.thankYou.gustave")}</h1>
+                    <Link to="/yourJourney" className="btnAction">{translate("pages.button.continue")}</Link>
                 </div>
             </div>
         </>

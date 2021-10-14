@@ -28,6 +28,7 @@ const CongratulationsComponent = props => {
             <div className="row">
                 <div className="col-3">
                     <p>Try this service on RTA.ae</p>
+                    <div className="qrCode" />
                 </div>
                 <div className="col-9">
                     <div className="drivingLicens">
@@ -35,7 +36,11 @@ const CongratulationsComponent = props => {
                             <img src={props.imageprofile} />
                         }
                         <span className="userName">{props.username ? props.username : null}</span>
+                        <span className="licenseNo">12345</span>
                         <span className="nationality">{props.nationality.name}</span>
+                        <span className="dateBirth">22/05/1990</span>
+                        <span className="issueDate">11/12/2021</span>
+                        <span className="exDate">11/12/2023</span>
                     </div>
 
                     <Player

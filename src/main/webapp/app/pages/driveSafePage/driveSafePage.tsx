@@ -18,13 +18,17 @@ const DriveSafeComponent = props => {
 
     return (
         <>
-            <Link to="/selectYourCar" className="backAction" />
+            <Link to="/Preview" className="backAction" />
             <div className="row driveSafe">
                 <div className="col">
                     <h1>Drive safe, <br />Gustave</h1>
                     <div className="vehicleLicense">
-                        <span>{props.username ? props.username : null}</span>
-                        {props.nationality.name}
+                        <span className="platenum">AA / 12345</span>
+                        <span className="placeIssue">Dubai</span>
+                        <span className="plateType">--</span>
+                        <span className="tcNo">12345678</span>
+                        <span className="username">{props.username ? props.username : null}</span>
+                        <span className="nationality">{props.nationality.name}</span>
                     </div>
                     <Link to="/" className="btnAction">Done</Link>
                 </div>
