@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { IRootState } from 'app/shared/reducers';
 import { Link } from 'react-router-dom';
+import { translate } from 'react-jhipster';
 
 
 const SelectPlateComponent = props => {
@@ -116,14 +117,16 @@ const SelectPlateComponent = props => {
                     <div className="card car">
                         <img src="../../../content/images/vehicles/vehicle1.jpeg" />
                         <h6>
-                            For Esco
+                            {translate("pages.selectYourPage.carOne")}
                             <span>2021</span>
-                            <p>From AED 60,000</p>
+                            <p>{translate("pages.selectYourPage.from1", {
+                                amount: "60,000"
+                            })}</p>
                         </h6>
                     </div>
 
                     <div className="card profile">
-                        <h2>Your RTA profile</h2>
+                        <h2>{translate("pages.selectYourPage.yourRTAProfile")}</h2>
                         {props.imageprofile &&
                             <img src={props.imageprofile} />
                         }
@@ -134,8 +137,8 @@ const SelectPlateComponent = props => {
                 </div>
                 <div className="rightSide">
                     <div className="card plateBox">
-                        <h3>Select plate number</h3>
-                        <p>Personalised plates for you</p>
+                        <h3>{translate("pages.selectPlate.selectPlateNumber")}</h3>
+                        <p>{translate("pages.selectPlate.personalised")}</p>
                         <div>
                             <div className="plateComponent">
                                 <div className="radioBtn">
@@ -152,7 +155,7 @@ const SelectPlateComponent = props => {
                                     <span>AA</span>
                                     <div>24876</div>
                                 </div>
-                                <span className="lbl">Paid</span>
+                                <span className="lbl">{translate("pages.selectPlate.paid")}</span>
                             </div>
                             <div className="plateComponent">
                                 <div className="radioBtn">
@@ -169,7 +172,7 @@ const SelectPlateComponent = props => {
                                     <span>AA</span>
                                     <div>24876</div>
                                 </div>
-                                <span className="lbl">Paid</span>
+                                <span className="lbl">{translate("pages.selectPlate.paid")}</span>
                             </div>
                             <div className="plateComponent">
                                 <div className="radioBtn">
@@ -186,10 +189,10 @@ const SelectPlateComponent = props => {
                                     <span>AA</span>
                                     <div>24876</div>
                                 </div>
-                                <span className="lbl">Paid</span>
+                                <span className="lbl">{translate("pages.selectPlate.paid")}</span>
                             </div>
                         </div>
-                        <h4>Regular plates</h4>
+                        <h4>{translate("pages.selectPlate.regularPlates")}</h4>
                         <div>
                             <div className="plateComponent">
                                 <div className="radioBtn">
@@ -206,7 +209,7 @@ const SelectPlateComponent = props => {
                                     <span>AA</span>
                                     <div>12345</div>
                                 </div>
-                                <span className="lbl">Free</span>
+                                <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
                             <div className="plateComponent">
                                 <div className="radioBtn">
@@ -223,7 +226,7 @@ const SelectPlateComponent = props => {
                                     <span>AA</span>
                                     <div>12345</div>
                                 </div>
-                                <span className="lbl">Free</span>
+                                <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
                             <div className="plateComponent">
                                 <div className="radioBtn">
@@ -240,7 +243,7 @@ const SelectPlateComponent = props => {
                                     <span>AA</span>
                                     <div>12345</div>
                                 </div>
-                                <span className="lbl">Free</span>
+                                <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
                             <div className="plateComponent">
                                 <div className="radioBtn">
@@ -257,7 +260,7 @@ const SelectPlateComponent = props => {
                                     <span>AA</span>
                                     <div>12345</div>
                                 </div>
-                                <span className="lbl">Free</span>
+                                <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
                             <div className="plateComponent">
                                 <div className="radioBtn">
@@ -274,7 +277,7 @@ const SelectPlateComponent = props => {
                                     <span>AA</span>
                                     <div>12345</div>
                                 </div>
-                                <span className="lbl">Free</span>
+                                <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
                             <div className="plateComponent">
                                 <div className="radioBtn">
@@ -291,7 +294,7 @@ const SelectPlateComponent = props => {
                                     <span>AA</span>
                                     <div>12345</div>
                                 </div>
-                                <span className="lbl">Free</span>
+                                <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
                             <div className="plateComponent">
                                 <div className="radioBtn">
@@ -308,7 +311,7 @@ const SelectPlateComponent = props => {
                                     <span>AA</span>
                                     <div>12345</div>
                                 </div>
-                                <span className="lbl">Free</span>
+                                <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
                             <div className="plateComponent">
                                 <div className="radioBtn">
@@ -325,7 +328,7 @@ const SelectPlateComponent = props => {
                                     <span>AA</span>
                                     <div>12345</div>
                                 </div>
-                                <span className="lbl">Free</span>
+                                <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
                             <div className="plateComponent">
                                 <div className="radioBtn">
@@ -342,7 +345,7 @@ const SelectPlateComponent = props => {
                                     <span>AA</span>
                                     <div>12345</div>
                                 </div>
-                                <span className="lbl">Free</span>
+                                <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
                             <div className="plateComponent">
                                 <div className="radioBtn">
@@ -359,7 +362,7 @@ const SelectPlateComponent = props => {
                                     <span>AA</span>
                                     <div>12345</div>
                                 </div>
-                                <span className="lbl">Free</span>
+                                <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
                             <div className="plateComponent">
                                 <div className="radioBtn">
@@ -376,7 +379,7 @@ const SelectPlateComponent = props => {
                                     <span>AA</span>
                                     <div>12345</div>
                                 </div>
-                                <span className="lbl">Free</span>
+                                <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
                             <div className="plateComponent">
                                 <div className="radioBtn">
@@ -393,10 +396,10 @@ const SelectPlateComponent = props => {
                                     <span>AA</span>
                                     <div>12345</div>
                                 </div>
-                                <span className="lbl">Free</span>
+                                <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
                         </div>
-                        <Link to="/Preview" className="btnAction">Continue</Link>
+                        <Link to="/Preview" className="btnAction">{translate("pages.button.continue")}</Link>
                     </div>
 
                 </div>

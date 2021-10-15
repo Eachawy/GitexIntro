@@ -18,8 +18,8 @@ const TakeYourTestComponent = props => {
             <Link to="/lectures" className="backAction" />
             <div className="row thankYou">
                 <div className="message">
-                    <h1>Take your test<br /> from your own<br /> device,<br /> anywhere.</h1>
-                    <Link to="/wellDone" className="btnAction">Continue</Link>
+                    <h1>{translate("pages.takeYourTest.fromYourOwn")}</h1>
+                    <Link to="/wellDone" className="btnAction">{translate("pages.button.continue")}</Link>
                 </div>
                 <div className="profile">
                     <div className="animation">

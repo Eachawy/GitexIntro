@@ -21,7 +21,7 @@ const DriveSafeComponent = props => {
             <Link to="/Preview" className="backAction" />
             <div className="row driveSafe">
                 <div className="col">
-                    <h1>Drive safe, <br />Gustave</h1>
+                    <h1>{translate("pages.driveSafe.driveSafepar")}{props.username ? props.username : null}</h1>
                     <div className="vehicleLicense">
                         <span className="platenum">AA / 12345</span>
                         <span className="placeIssue">Dubai</span>
@@ -30,7 +30,7 @@ const DriveSafeComponent = props => {
                         <span className="username">{props.username ? props.username : null}</span>
                         <span className="nationality">{props.nationality.name}</span>
                     </div>
-                    <Link to="/" className="btnAction">Done</Link>
+                    <Link to="/" className="btnAction">{translate("pages.button.done")}</Link>
                 </div>
                 <Player
                     autoplay

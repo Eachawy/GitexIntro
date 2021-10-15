@@ -488,7 +488,7 @@ header {
     padding: 0px 70px 0 110px;
     text-align: left;
     h1 {
-      font: 4em/80px 'RTA-Kight';
+      font: 4em/80px 'RTA-Light';
     }
     .btnAction {
       text-align: center;
@@ -1282,7 +1282,7 @@ header {
   bottom: 0;
   z-index: 9999999;
   background: #000;
-  display: none !important;
+  display: none;
 }
 
 @import './gitex_ar.scss';

@@ -5,10 +5,13 @@
       "next": "Next",
       "edit": "Edit",
       "submit": "Submit",
-      "continue": "Continue"
+      "continue": "Continue",
+      "bookYourRoad": "Book your road test",
+      "selectCar": "Select a car",
+      "done": "Done"
     },
     "intro": {
-      "swiftDrive": "RTA SwiftDrive",
+      "swiftDrive": "RTA Swift Drive",
       "startDriving": "Start driving in Dubai within 3 days using our,blockchain powered platform!"
     },
     "user": {
@@ -29,8 +32,77 @@
       "yourLearner": "Your learner’s profile",
       "trafficCode": "Traffic code",
       "license": "License",
-      "thankYou": "Thank you,",
-      "gustave": "Gustave"
+      "thankYou": "Thank you,"
+    },
+
+    "ypurJourney": {
+      "journeyObtaining": "Your journey to obtaining a Dubai driving license",
+      "theoryLessons": "Theory Lessons",
+      "completeYour": "Complete your 8-hour lessons online",
+      "knowledgeTest": "Knowledge Test",
+      "bookPass": "Book and pass the RTA knowledge test online",
+      "eyeTest": "Eye Test",
+      "yourEyes": "Have your eyes tested at RTA authorized centers in Dubai",
+      "roadTest": "Road Test",
+      "bookAhead": "Book ahead and pass the RTA road test in Dubai",
+      "obtainDriving": "Obtain Driving License"
+    },
+    "finishLessons": {
+      "finishAll": "Finish all your lessons <br /> from the comfort of <br /> your home"
+    },
+    "yourLectures": {
+      "overviewRTA": "Overview of the 8 RTA mandatory lectures",
+      "lecture1": "Lecture 1",
+      "attitudeResponsibilities": "Attitude and Responsibilities of the Driver",
+      "lecture2": "Lecture 2",
+      "knowledgeTraffic": "Knowledge of Traffic Rules and Regulations",
+      "lecture3": "Lecture 3",
+      "characteristics": "Characteristics of Road Users",
+      "lecture4": "Lecture 4",
+      "driverCondition": "Driver Condition",
+      "lecture5": "Lecture 5",
+      "drivingEnvironment": "The Driving Environment",
+      "lecture6": "Lecture 6",
+      "freewaysTraffic": "Driving on Freeways, Traffic Violations & Route Planning",
+      "lecture7": "Lecture 7",
+      "lecture8": "Lecture 8",
+      "trafficAccidents": "Traffic Accidents, Case Studies and What to do in an Accident"
+    },
+    "takeYourTest": {
+      "fromYourOwn": "Take your test<br /> from your own<br /> device,<br /> anywhere."
+    },
+    "wellDone": {
+      "youDid": "Well done!<br />You did it on your first try."
+    },
+    "yourAllSet": {
+      "wellPick": "You’re all set. <br />We’ll pick you up for your <br />eye and road test."
+    },
+    "congratulations": {
+      "yourDubai": "Congratulations on getting<br /> your Dubai driving license",
+      "tryService": "Try this service on RTA.ae"
+    },
+    "afterYourLicense": {
+      "yourCarRightAway": "After your license, get<br /> your car right away"
+    },
+    "selectYourPage": {
+      "yourRTAProfile": "Your RTA profile",
+      "carOne": "Car one",
+      "carTwo": "Car Two",
+      "carThree": "Car Three",
+      "rent": "Rent",
+      "buy": "Buy",
+      "from1": "From AED {{amount}}",
+      "from2": "From AED {{amount}}"
+    },
+    "selectPlate": {
+      "selectPlateNumber": "Select plate number",
+      "personalised": "Personalised plates for you",
+      "paid": "Paid",
+      "free": "Free",
+      "regularPlates": "Regular plates"
+    },
+    "driveSafe": {
+      "driveSafepar": "Drive safe, <br />"
     }
   }
 }

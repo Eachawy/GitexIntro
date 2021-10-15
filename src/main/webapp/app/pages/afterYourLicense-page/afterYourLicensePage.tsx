@@ -7,8 +7,8 @@ const AfterYourLicenseComponent = props => {
         <>
             <Link to="/congratulations" className="backAction" />
             <div className="finishLessons">
-                <h1>After your license, get<br /> your car right away</h1>
-                <Link to="/selectYourCar" className="btnAction">Select a car</Link>
+                <h1>{translate("pages.afterYourLicense.yourCarRightAway")}</h1>
+                <Link to="/selectYourCar" className="btnAction">{translate("pages.button.selectCar")}</Link>
             </div>
         </>
     );

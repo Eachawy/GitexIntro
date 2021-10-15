@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { IRootState } from 'app/shared/reducers';
 import { Link } from 'react-router-dom';
+import { translate } from 'react-jhipster';
 
 
 const PreviewComponent = props => {
@@ -12,7 +13,7 @@ const PreviewComponent = props => {
             <div className="preview">
                 <div className="row">
                     <div className="card profile">
-                        <h2>Your RTA profile</h2>
+                        <h2>{translate("pages.selectYourPage.yourRTAProfile")}</h2>
                         {props.imageprofile &&
                             <img src={props.imageprofile} />
                         }
@@ -23,9 +24,11 @@ const PreviewComponent = props => {
                     <div className="card car">
                         <img src="../../../content/images/vehicles/vehicle1.jpeg" />
                         <h6>
-                            For Esco
+                            {translate("pages.selectYourPage.carOne")}
                             <span>2021</span>
-                            <p>From AED 60,000</p>
+                            <p>{translate("pages.selectYourPage.from1", {
+                                amount: "60,000"
+                            })}</p>
                         </h6>
                     </div>
                     <div className="card">
@@ -34,11 +37,11 @@ const PreviewComponent = props => {
                                 <span>AA</span>
                                 <div>24876</div>
                             </div>
-                            <span className="lbl">Paid</span>
+                            <span className="lbl">{translate("pages.selectPlate.paid")}</span>
                         </div>
                     </div>
                 </div>
-                <Link to="/driveSafe" className="btnAction">Continue</Link>
+                <Link to="/driveSafe" className="btnAction">{translate("pages.button.continue")}</Link>
             </div>
         </>
     );

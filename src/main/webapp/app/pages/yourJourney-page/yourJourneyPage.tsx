@@ -44,51 +44,44 @@ const YourJourneyComponent = props => {
         <>
             <Link to="/thankYou" className="backAction" />
             <div className="yourJourney">
-                <h2>Your journey to obtaining a Dubai driving license</h2>
+                <h2>{translate("pages.ypurJourney.journeyObtaining")}</h2>
                 <Slider ref={(slide: any) => { setSlider(slide) }} {...settings}>
-
                     <div>
                         <div className="empty" />
                     </div>
 
                     <div>
                         <div className="j_1">
-                            <h3>Theory Lessons</h3>
-                            <p>Complete your 8-hour lessons online</p>
+                            <h3>{translate("pages.ypurJourney.theoryLessons")}</h3>
+                            <p>{translate("pages.ypurJourney.completeYour")}</p>
                         </div>
                     </div>
                     <div>
                         <div className="j_2">
-                            <h3>Knowledge Test</h3>
-                            <p>Book and pass the RTA knowledge test online</p>
+                            <h3>{translate("pages.ypurJourney.knowledgeTest")}</h3>
+                            <p>{translate("pages.ypurJourney.bookPass")}</p>
                         </div>
                     </div>
                     <div>
                         <div className="j_3">
-                            <h3>Eye Test</h3>
-                            <p>Have your eyes tested at RTA authorized centers in Dubai</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div className="j_4">
-                            <h3>Practical Training</h3>
-                            <p>Attend your training in Dubai if you intend to book classes</p>
+                            <h3>{translate("pages.ypurJourney.eyeTest")}</h3>
+                            <p>{translate("pages.ypurJourney.yourEyes")}</p>
                         </div>
                     </div>
                     <div>
                         <div className="j_5">
-                            <h3>Road Test</h3>
-                            <p>Book ahead and pass the RTA road test in Dubai</p>
+                            <h3>{translate("pages.ypurJourney.roadTest")}</h3>
+                            <p>{translate("pages.ypurJourney.bookAhead")}</p>
                         </div>
                     </div>
                     <div>
                         <div className="j_6">
-                            <h3>Obtain Driving License</h3>
+                            <h3>{translate("pages.ypurJourney.obtainDriving")}</h3>
                         </div>
                     </div>
                     <div>
                         <Link to="/finishLessons" className="continue">
-                            <h3>Continue</h3>
+                            <h3>{translate("pages.button.continue")}</h3>
                         </Link>
                     </div>
 

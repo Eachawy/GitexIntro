@@ -53,62 +53,62 @@ const LecturesComponent = props => {
         <>
             <Link to="/finishLessons" className="backAction" />
             <div className="yourLectures">
-                <h2>Overview of the 8 RTA mandatory lectures</h2>
+                <h2>{translate("pages.yourLectures.overviewRTA")}</h2>
                 <Slider ref={(slide: any) => { setSlider(slide) }} {...settings}>
                     <div>
                         <div className="empty" />
                     </div>
                     <div>
                         <div className="lec _1">
-                            <h6>Lecture 1</h6>
-                            <p>Attitude and Responsibilities of the Driver</p>
+                            <h6>{translate("pages.yourLectures.lecture1")}</h6>
+                            <p>{translate("pages.yourLectures.attitudeResponsibilities")}</p>
                         </div>
                     </div>
                     <div>
                         <div className="lec _2">
-                            <h6>Lecture 2</h6>
-                            <p>Knowledge of Traffic Rules and Regulations</p>
+                            <h6>{translate("pages.yourLectures.lecture2")}</h6>
+                            <p>{translate("pages.yourLectures.knowledgeTraffic")}</p>
                         </div>
                     </div>
                     <div>
                         <div className="lec _3">
-                            <h6>Lecture 3</h6>
-                            <p>Characteristics of Road Users</p>
+                            <h6>{translate("pages.yourLectures.lecture3")}</h6>
+                            <p>{translate("pages.yourLectures.characteristics")}</p>
                         </div>
                     </div>
                     <div>
                         <div className="lec _4">
-                            <h6>Lecture 4</h6>
-                            <p>Driver Condition</p>
+                            <h6>{translate("pages.yourLectures.lecture4")}</h6>
+                            <p>{translate("pages.yourLectures.driverCondition")}</p>
                         </div>
                     </div>
                     <div>
                         <div className="lec _5">
-                            <h6>Lecture 5</h6>
-                            <p>The Driving Environment</p>
+                            <h6>{translate("pages.yourLectures.lecture5")}</h6>
+                            <p>{translate("pages.yourLectures.drivingEnvironment")}</p>
                         </div>
                     </div>
                     <div>
                         <div className="lec _6">
-                            <h6>Lecture 6</h6>
-                            <p>Driving on Freeways, Traffic Violations {'&'} Route Planning</p>
+                            <h6>{translate("pages.yourLectures.lecture6")}</h6>
+                            <p>{translate("pages.yourLectures.freewaysTraffic")}</p>
                         </div>
                     </div>
                     <div>
                         <div className="lec _7">
-                            <h6>Lecture 7</h6>
-                            <p>Driver Condition</p>
+                            <h6>{translate("pages.yourLectures.lecture7")}</h6>
+                            <p>{translate("pages.yourLectures.driverCondition")}</p>
                         </div>
                     </div>
                     <div>
                         <div className="lec _8">
-                            <h6>Lecture 8</h6>
-                            <p>Traffic Accidents, Case Studies and What to do in an Accident</p>
+                            <h6>{translate("pages.yourLectures.lecture8")}</h6>
+                            <p>{translate("pages.yourLectures.trafficAccidents")}</p>
                         </div>
                     </div>
                     <div>
                         <Link to="/takeYourTest" className="lec continue">
-                            <h3>Continue</h3>
+                            <h3>{translate("pages.button.continue")}</h3>
                         </Link>
                     </div>
                     <div>

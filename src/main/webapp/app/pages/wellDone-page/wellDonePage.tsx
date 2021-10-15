@@ -7,8 +7,8 @@ const WellDoneComponent = props => {
         <>
             <Link to="/takeYourTest" className="backAction" />
             <div className="finishLessons">
-                <h1>Well done!<br />You did it on your first try.</h1>
-                <Link to="/youreAllSet" className="btnAction">Book your road test</Link>
+                <h1>{translate("pages.wellDone.youDid")}</h1>
+                <Link to="/youreAllSet" className="btnAction">{translate("pages.button.bookYourRoad")}</Link>
             </div>
         </>
     );

@@ -22,12 +22,12 @@ const CongratulationsComponent = props => {
         <>
             <Link to="/youreAllSet" className="backAction" />
             <div className="congratulations">
-                <h1>Congratulations on getting<br /> your Dubai driving license</h1>
-                <Link to="/afterYourLicense" className="btnAction">Continue</Link>
+                <h1>{translate("pages.congratulations.yourDubai")}</h1>
+                <Link to="/afterYourLicense" className="btnAction">{translate("pages.button.continue")}</Link>
             </div>
             <div className="row">
                 <div className="col-3">
-                    <p>Try this service on RTA.ae</p>
+                    <p>{translate("pages.congratulations.tryService")}</p>
                     <div className="qrCode" />
                 </div>
                 <div className="col-9">

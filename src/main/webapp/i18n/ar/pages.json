@@ -1,36 +1,108 @@
 {
   "pages": {
     "button": {
-      "getStarted": "البدء",
+      "getStarted": "ابدء",
       "next": "التالي",
       "edit": "تعديل",
       "submit": "إرسال",
-      "continue": "استمر"
+      "continue": "استمر",
+      "bookYourRoad": "احجز اختبار الطريق الخاص بك",
+      "selectCar": "اختر سيارة",
+      "done": "انتهى"
     },
     "intro": {
       "swiftDrive": "هيئة الطرق والمواصلات سويفت درايف",
       "startDriving": "ابدأ القيادة في دبي في غضون 3 أيام باستخدام منصتنا المدعومة من blockchain!"
     },
     "user": {
-      "name": "الاسم",
+      "name": "الأسم",
       "enterYourName": "أدخل أسمك",
-      "nationality": "الجنسيه"
+      "nationality": "الجنسية"
     },
     "photo": {
       "takePhoto": "التقاط صورة",
-      "launchCamera": "إطلاق الكاميرا",
+      "launchCamera": "شغل الكاميرا",
       "chooseAvatar": "أو اختر صورة رمزية"
     },
     "upload": {
-      "uploadlicense": "رخصة الرفع",
+      "uploadlicense": "حمل الرخصه",
       "takePhoto": "التقط صورة لرخصة القيادة في بلدك"
     },
     "thankYou": {
       "yourLearner": "ملف المتعلم الخاص بك",
       "trafficCode": "رمز المرور",
-      "license": "رخصة",
-      "thankYou": "شكرا لك،",
-      "gustave": "علي زيارتك"
+      "license": "الرخصة",
+      "thankYou": "شكرا لك،"
+    },
+
+    "ypurJourney": {
+      "journeyObtaining": "رحلتك للحصول على رخصة قيادة دبي",
+      "theoryLessons": "دروس نظرية",
+      "completeYour": "أكمل دروسك لمدة 8 ساعات عبر الإنترنت",
+      "knowledgeTest": "اختبار المعرفة",
+      "bookPass": "احجز واجتياز اختبار المعرفة التابع لهيئة الطرق والمواصلات عبر الإنترنت",
+      "eyeTest": "اختبار النظر",
+      "yourEyes": "قم بفحص عينيك في المراكز المعتمدة لهيئة الطرق والمواصلات في دبي",
+      "roadTest": "اختبار الطريق",
+      "bookAhead": "احجز مسبقًا واجتاز اختبار الطريق الخاص بهيئة الطرق والمواصلات في دبي",
+      "obtainDriving": "الحصول على رخصة القيادة"
+    },
+    "finishLessons": {
+      "finishAll": "أنهِ جميع دروسك <br /> وأنت مستريح <br /> في منزلك"
+    },
+    "yourLectures": {
+      "overviewRTA": "لمحة عامة عن 8 محاضرات إلزامية لهيئة الطرق والمواصلات",
+      "lecture1": "محاضرة 1",
+      "attitudeResponsibilities": "موقف ومسؤوليات السائق",
+      "lecture2": "محاضرة ٢",
+      "knowledgeTraffic": "معرفة قواعد وأنظمة المرور",
+      "lecture3": "محاضرة ٣",
+      "characteristics": "خصائص مستخدمي الطريق",
+      "lecture4": "محاضرة ٤",
+      "driverCondition": "حالة السائق",
+      "lecture5": "محاضرة ٥",
+      "drivingEnvironment": "بيئة القيادة",
+      "lecture6": "محاضرة ٦",
+      "freewaysTraffic": "القيادة على الطرق السريعة والمخالفات المرورية وتخطيط الطريق",
+      "lecture7": "محاضرة ٧",
+      "lecture8": "محاضرة ٨",
+      "trafficAccidents": "حوادث المرور ودراسات الحالة وما يجب القيام به في حالة وقوع حادث"
+    },
+    "takeYourTest": {
+      "fromYourOwn": "خذ اختبارك <br /> من جهازك <br /> ، <br /> في أي مكان."
+    },
+    "wellDone": {
+      "youDid": "أحسنت! <br /> لقد فعلتها في المحاولة الأولى."
+    },
+    "yourAllSet": {
+      "wellPick": "أنت الآن على أتم استعداد. <be /> سننقلك لإجراء اختبار العين والطريق."
+    },
+    "congratulations": {
+      "yourDubai": "تهانينا على حصولك على <br /> رخصة القيادة في دبي",
+      "tryService": "استخدم هذه الخدمة على RTA.ae"
+    },
+    "afterYourLicense": {
+      "yourCarRightAway": "بعد الحصول على ترخيصك ، احصل على <br /> سيارتك على الفور"
+    },
+    "selectYourPage": {
+      "yourRTAProfile": "ملفك الشخصي في هيئة الطرق والمواصلات",
+      "carOne": "سيارة ١",
+      "carTwo": "سيارة ٢",
+      "carThree": "سيارة ٣",
+      "rent": "تأجير",
+      "buy": "شراء",
+      "from1": "من {{amount}} درهم إماراتي",
+      "from2": "من {{amount}} درهم إماراتي"
+    },
+    "selectPlate": {
+      "selectPlateNumber": "حدد رقم اللوحة",
+      "personalised": "لوحات مخصصة لك",
+      "paid": "دفع",
+      "free": "مجاني",
+      "regularPlates": "اللوحات العادية"
+    },
+    "driveSafe": {
+      "driveSafepar": "قد بأمان ، <br />"
     }
   }
 }

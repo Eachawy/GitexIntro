@@ -7,8 +7,8 @@ const YoureAllSetComponent = props => {
         <>
             <Link to="/wellDone" className="backAction" />
             <div className="finishLessons">
-                <h1>You’re all set. <br />We’ll pick you up for your <br />eye and road test.</h1>
-                <Link to="/congratulations" className="btnAction">Continue</Link>
+                <h1>{translate("pages.yourAllSet.wellPick")}</h1>
+                <Link to="/congratulations" className="btnAction">{translate("pages.button.continue")}</Link>
             </div>
         </>
     );
