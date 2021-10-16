@@ -51,6 +51,25 @@ html[dir='rtl'] {
     text-align: right;
     label {
       text-align: right;
+      &.icon {
+        .keyboardIcon {
+          right: auto;
+          left: 0;
+          border-radius: 4px 0 0 4px;
+        }
+      }
+    }
+    .p-autocomplete {
+      .p-autocomplete-dropdown {
+        border-radius: 4px 0 0 4px;
+        border-left: 0.5px solid #d7d7d7 !important;
+        border-right: 0 !important;
+      }
+      input {
+        border-left: 0 !important;
+        border-right: 0.5px solid #d7d7d7 !important;
+        border-radius: 0 4px 4px 0;
+      }
     }
   }
 
@@ -153,6 +172,10 @@ html[dir='rtl'] {
     .lec,
     .empty {
       text-align: right;
+      &:after {
+        right: auto;
+        left: 10px;
+      }
     }
     .continue {
       text-align: center;
@@ -243,7 +266,7 @@ html[dir='rtl'] {
     div {
       right: auto;
       left: 0;
-      text-align: right;
+      padding-left: 5px;
     }
 
     &.short {
@@ -328,5 +351,9 @@ html[dir='rtl'] {
   }
   .slick-slide {
     float: left !important;
+  }
+  .hg-theme-default * {
+    direction: ltr;
+    font: 1em/21px 'RTA';
   }
 }

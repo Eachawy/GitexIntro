@@ -33,6 +33,9 @@ export const App = (props: IAppProps) => {
     $('html').on("keypress", (event: any) => {
       $('.screenSever').fadeOut();
     });
+    $('html').on("touchend", (event: any) => {
+      $('.screenSever').fadeOut();
+    });
   }, []);
 
 

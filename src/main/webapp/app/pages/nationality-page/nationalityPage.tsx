@@ -14,249 +14,456 @@ const NationalityComponent = props => {
     const [filteredCountries, setFilteredCountries] = React.useState<any>(null);
     const [countries, setCountries] = React.useState<any>(
         [
-            { "name": "Afghanistan", "code": "af" },
-            { "name": "Åland Islands", "code": "ax" },
-            { "name": "Albania", "code": "al" },
-            { "name": "Algeria", "code": "dz" },
-            { "name": "American Samoa", "code": "as" },
-            { "name": "Andorra", "code": "ad" },
-            { "name": "Angola", "code": "ao" },
-            { "name": "Anguilla", "code": "ai" },
-            { "name": "Antarctica", "code": "aq" },
-            { "name": "Antigua and Barbuda", "code": "ag" },
-            { "name": "Argentina", "code": "ar" },
-            { "name": "Armenia", "code": "am" },
-            { "name": "Aruba", "code": "aw" },
-            { "name": "Australia", "code": "au" },
-            { "name": "Austria", "code": "at" },
-            { "name": "Azerbaijan", "code": "az" },
-            { "name": "Bahamas", "code": "bs" },
-            { "name": "Bahrain", "code": "bh" },
-            { "name": "Bangladesh", "code": "bd" },
-            { "name": "Barbados", "code": "bb" },
-            { "name": "Belarus", "code": "by" },
-            { "name": "Belgium", "code": "be" },
-            { "name": "Belize", "code": "bz" },
-            { "name": "Benin", "code": "bj" },
-            { "name": "Bermuda", "code": "bm" },
-            { "name": "Bhutan", "code": "bt" },
-            { "name": "Bolivia", "code": "bo" },
-            { "name": "Bosnia and Herzegovina", "code": "ba" },
-            { "name": "Botswana", "code": "bw" },
-            { "name": "Bouvet Island", "code": "bv" },
-            { "name": "Brazil", "code": "br" },
-            { "name": "British Indian Ocean Territory", "code": "io" },
-            { "name": "Brunei Darussalam", "code": "bn" },
-            { "name": "Bulgaria", "code": "bg" },
-            { "name": "Burkina Faso", "code": "bf" },
-            { "name": "Burundi", "code": "bi" },
-            { "name": "Cambodia", "code": "kh" },
-            { "name": "Cameroon", "code": "cm" },
-            { "name": "Canada", "code": "ca" },
-            { "name": "Cape Verde", "code": "cv" },
-            { "name": "Cayman Islands", "code": "ky" },
-            { "name": "Central African Republic", "code": "cf" },
-            { "name": "Chad", "code": "td" },
-            { "name": "Chile", "code": "cl" },
-            { "name": "China", "code": "cn" },
-            { "name": "Christmas Island", "code": "cx" },
-            { "name": "Cocos (Keeling) Islands", "code": "cc" },
-            { "name": "Colombia", "code": "co" },
-            { "name": "Comoros", "code": "km" },
-            { "name": "Congo", "code": "cg" },
-            { "name": "Congo, The Democratic Republic of the", "code": "cd" },
-            { "name": "Cook Islands", "code": "ck" },
-            { "name": "Costa Rica", "code": "cr" },
-            { "name": "Cote D\"Ivoire", "code": "ci" },
-            { "name": "Croatia", "code": "hr" },
-            { "name": "Cuba", "code": "cu" },
-            { "name": "Cyprus", "code": "cy" },
-            { "name": "Czech Republic", "code": "cz" },
-            { "name": "Denmark", "code": "dk" },
-            { "name": "Djibouti", "code": "dj" },
-            { "name": "Dominica", "code": "dm" },
-            { "name": "Dominican Republic", "code": "do" },
-            { "name": "Ecuador", "code": "ec" },
-            { "name": "Egypt", "code": "eg" },
-            { "name": "El Salvador", "code": "sv" },
-            { "name": "Equatorial Guinea", "code": "gq" },
-            { "name": "Eritrea", "code": "er" },
-            { "name": "Estonia", "code": "ee" },
-            { "name": "Ethiopia", "code": "et" },
-            { "name": "Falkland Islands (Malvinas)", "code": "fk" },
-            { "name": "Faroe Islands", "code": "fo" },
-            { "name": "Fiji", "code": "fj" },
-            { "name": "Finland", "code": "fi" },
-            { "name": "France", "code": "fr" },
-            { "name": "French Guiana", "code": "gf" },
-            { "name": "French Polynesia", "code": "pf" },
-            { "name": "French Southern Territories", "code": "tf" },
-            { "name": "Gabon", "code": "ga" },
-            { "name": "Gambia", "code": "gm" },
-            { "name": "Georgia", "code": "ge" },
-            { "name": "Germany", "code": "de" },
-            { "name": "Ghana", "code": "gh" },
-            { "name": "Gibraltar", "code": "gi" },
-            { "name": "Greece", "code": "gr" },
-            { "name": "Greenland", "code": "gl" },
-            { "name": "Grenada", "code": "gd" },
-            { "name": "Guadeloupe", "code": "gp" },
-            { "name": "Guam", "code": "gu" },
-            { "name": "Guatemala", "code": "gt" },
-            { "name": "Guernsey", "code": "gg" },
-            { "name": "Guinea", "code": "gn" },
-            { "name": "Guinea-Bissau", "code": "gw" },
-            { "name": "Guyana", "code": "gy" },
-            { "name": "Haiti", "code": "ht" },
-            { "name": "Heard Island and Mcdonald Islands", "code": "hm" },
-            { "name": "Holy See (Vatican City State)", "code": "va" },
-            { "name": "Honduras", "code": "hn" },
-            { "name": "Hong Kong", "code": "hk" },
-            { "name": "Hungary", "code": "hu" },
-            { "name": "Iceland", "code": "is" },
-            { "name": "India", "code": "in" },
-            { "name": "Indonesia", "code": "id" },
-            { "name": "Iran, Islamic Republic Of", "code": "ir" },
-            { "name": "Iraq", "code": "IQ" },
-            { "name": "Ireland", "code": "IE" },
-            { "name": "Isle of Man", "code": "IM" },
-            { "name": "Israel", "code": "IL" },
-            { "name": "Italy", "code": "IT" },
-            { "name": "Jamaica", "code": "JM" },
-            { "name": "Japan", "code": "JP" },
-            { "name": "Jersey", "code": "JE" },
-            { "name": "Jordan", "code": "JO" },
-            { "name": "Kazakhstan", "code": "KZ" },
-            { "name": "Kenya", "code": "KE" },
-            { "name": "Kiribati", "code": "KI" },
-            { "name": "Korea, Democratic People\"S Republic of", "code": "KP" },
-            { "name": "Korea, Republic of", "code": "KR" },
-            { "name": "Kuwait", "code": "KW" },
-            { "name": "Kyrgyzstan", "code": "KG" },
-            { "name": "Lao People\"S Democratic Republic", "code": "LA" },
-            { "name": "Latvia", "code": "LV" },
-            { "name": "Lebanon", "code": "LB" },
-            { "name": "Lesotho", "code": "LS" },
-            { "name": "Liberia", "code": "LR" },
-            { "name": "Libyan Arab Jamahiriya", "code": "LY" },
-            { "name": "Liechtenstein", "code": "LI" },
-            { "name": "Lithuania", "code": "LT" },
-            { "name": "Luxembourg", "code": "LU" },
-            { "name": "Macao", "code": "MO" },
-            { "name": "Macedonia, The Former Yugoslav Republic of", "code": "MK" },
-            { "name": "Madagascar", "code": "MG" },
-            { "name": "Malawi", "code": "MW" },
-            { "name": "Malaysia", "code": "MY" },
-            { "name": "Maldives", "code": "MV" },
-            { "name": "Mali", "code": "ML" },
-            { "name": "Malta", "code": "MT" },
-            { "name": "Marshall Islands", "code": "MH" },
-            { "name": "Martinique", "code": "MQ" },
-            { "name": "Mauritania", "code": "MR" },
-            { "name": "Mauritius", "code": "MU" },
-            { "name": "Mayotte", "code": "YT" },
-            { "name": "Mexico", "code": "MX" },
-            { "name": "Micronesia, Federated States of", "code": "FM" },
-            { "name": "Moldova, Republic of", "code": "MD" },
-            { "name": "Monaco", "code": "MC" },
-            { "name": "Mongolia", "code": "MN" },
-            { "name": "Montserrat", "code": "MS" },
-            { "name": "Morocco", "code": "MA" },
-            { "name": "Mozambique", "code": "MZ" },
-            { "name": "Myanmar", "code": "MM" },
-            { "name": "Namibia", "code": "NA" },
-            { "name": "Nauru", "code": "NR" },
-            { "name": "Nepal", "code": "NP" },
-            { "name": "Netherlands", "code": "NL" },
-            { "name": "Netherlands Antilles", "code": "AN" },
-            { "name": "New Caledonia", "code": "NC" },
-            { "name": "New Zealand", "code": "NZ" },
-            { "name": "Nicaragua", "code": "NI" },
-            { "name": "Niger", "code": "NE" },
-            { "name": "Nigeria", "code": "NG" },
-            { "name": "Niue", "code": "NU" },
-            { "name": "Norfolk Island", "code": "NF" },
-            { "name": "Northern Mariana Islands", "code": "MP" },
-            { "name": "Norway", "code": "NO" },
-            { "name": "Oman", "code": "OM" },
-            { "name": "Pakistan", "code": "PK" },
-            { "name": "Palau", "code": "PW" },
-            { "name": "Palestinian Territory, Occupied", "code": "PS" },
-            { "name": "Panama", "code": "PA" },
-            { "name": "Papua New Guinea", "code": "PG" },
-            { "name": "Paraguay", "code": "PY" },
-            { "name": "Peru", "code": "PE" },
-            { "name": "Philippines", "code": "PH" },
-            { "name": "Pitcairn", "code": "PN" },
-            { "name": "Poland", "code": "PL" },
-            { "name": "Portugal", "code": "PT" },
-            { "name": "Puerto Rico", "code": "PR" },
-            { "name": "Qatar", "code": "QA" },
-            { "name": "Reunion", "code": "RE" },
-            { "name": "Romania", "code": "RO" },
-            { "name": "Russian Federation", "code": "RU" },
-            { "name": "RWANDA", "code": "RW" },
-            { "name": "Saint Helena", "code": "SH" },
-            { "name": "Saint Kitts and Nevis", "code": "KN" },
-            { "name": "Saint Lucia", "code": "LC" },
-            { "name": "Saint Pierre and Miquelon", "code": "PM" },
-            { "name": "Saint Vincent and the Grenadines", "code": "VC" },
-            { "name": "Samoa", "code": "WS" },
-            { "name": "San Marino", "code": "SM" },
-            { "name": "Sao Tome and Principe", "code": "ST" },
-            { "name": "Saudi Arabia", "code": "SA" },
-            { "name": "Senegal", "code": "SN" },
-            { "name": "Serbia and Montenegro", "code": "CS" },
-            { "name": "Seychelles", "code": "SC" },
-            { "name": "Sierra Leone", "code": "SL" },
-            { "name": "Singapore", "code": "SG" },
-            { "name": "Slovakia", "code": "SK" },
-            { "name": "Slovenia", "code": "SI" },
-            { "name": "Solomon Islands", "code": "SB" },
-            { "name": "Somalia", "code": "SO" },
-            { "name": "South Africa", "code": "ZA" },
-            { "name": "South Georgia and the South Sandwich Islands", "code": "GS" },
-            { "name": "Spain", "code": "ES" },
-            { "name": "Sri Lanka", "code": "LK" },
-            { "name": "Sudan", "code": "SD" },
-            { "name": "Suriname", "code": "SR" },
-            { "name": "Svalbard and Jan Mayen", "code": "SJ" },
-            { "name": "Swaziland", "code": "SZ" },
-            { "name": "Sweden", "code": "SE" },
-            { "name": "Switzerland", "code": "CH" },
-            { "name": "Syrian Arab Republic", "code": "SY" },
-            { "name": "Taiwan, Province of China", "code": "TW" },
-            { "name": "Tajikistan", "code": "TJ" },
-            { "name": "Tanzania, United Republic of", "code": "TZ" },
-            { "name": "Thailand", "code": "TH" },
-            { "name": "Timor-Leste", "code": "TL" },
-            { "name": "Togo", "code": "TG" },
-            { "name": "Tokelau", "code": "TK" },
-            { "name": "Tonga", "code": "TO" },
-            { "name": "Trinidad and Tobago", "code": "TT" },
-            { "name": "Tunisia", "code": "TN" },
-            { "name": "Turkey", "code": "TR" },
-            { "name": "Turkmenistan", "code": "TM" },
-            { "name": "Turks and Caicos Islands", "code": "TC" },
-            { "name": "Tuvalu", "code": "TV" },
-            { "name": "Uganda", "code": "UG" },
-            { "name": "Ukraine", "code": "UA" },
-            { "name": "United Arab Emirates", "code": "AE" },
-            { "name": "United Kingdom", "code": "GB" },
-            { "name": "United States", "code": "US" },
-            { "name": "United States Minor Outlying Islands", "code": "UM" },
-            { "name": "Uruguay", "code": "UY" },
-            { "name": "Uzbekistan", "code": "UZ" },
-            { "name": "Vanuatu", "code": "VU" },
-            { "name": "Venezuela", "code": "VE" },
-            { "name": "Viet Nam", "code": "VN" },
-            { "name": "Virgin Islands, British", "code": "VG" },
-            { "name": "Virgin Islands, U.S.", "code": "VI" },
-            { "name": "Wallis and Futuna", "code": "WF" },
-            { "name": "Western Sahara", "code": "EH" },
-            { "name": "Yemen", "code": "YE" },
-            { "name": "Zambia", "code": "ZM" },
-            { "name": "Zimbabwe", "code": "ZW" }
+            { "name": { "en": "Afghanistan", "ar": "أفغانستان" }, "code": "af" },
+            { "name": { "en": "Åland Islands", "ar": "جزر آلاند" }, "code": "ax" },
+            { "name": { "en": "Albania", "ar": "ألبانيا" }, "code": "al" },
+            { "name": { "en": "Algeria", "ar": "الجزائر" }, "code": "dz" },
+            { "name": { "en": "American Samoa", "ar": "ساموا الأمريكية" }, "code": "as" },
+            { "name": { "en": "Andorra", "ar": "أندورا" }, "code": "ad" },
+            { "name": { "en": "Angola", "ar": "أنغولا" }, "code": "ao" },
+            { "name": { "en": "Anguilla", "ar": "أنغيلا" }, "code": "ai" },
+            { "name": { "en": "Antarctica", "ar": "أنتاركتيكا" }, "code": "aq" },
+            {
+                "name": { "en": "Antigua and Barbuda", "ar": "أنتيغوا وبربودا" },
+                "code": "ag"
+            },
+            { "name": { "en": "Argentina", "ar": "الأرجنتين" }, "code": "ar" },
+            { "name": { "en": "Armenia", "ar": "أرمينيا" }, "code": "am" },
+            { "name": { "en": "Aruba", "ar": "أروبا" }, "code": "aw" },
+            { "name": { "en": "Australia", "ar": "أستراليا" }, "code": "au" },
+            { "name": { "en": "Austria", "ar": "النمسا" }, "code": "at" },
+            { "name": { "en": "Azerbaijan", "ar": "أذربيجان" }, "code": "az" },
+            { "name": { "en": "Bahamas", "ar": "جزر البهاما" }, "code": "bs" },
+            { "name": { "en": "Bahrain", "ar": "البحرين" }, "code": "bh" },
+            { "name": { "en": "Bangladesh", "ar": "بنغلاديش" }, "code": "bd" },
+            { "name": { "en": "Barbados", "ar": "بربادوس" }, "code": "bb" },
+            { "name": { "en": "Belarus", "ar": "بيلاروسيا" }, "code": "by" },
+            { "name": { "en": "Belgium", "ar": "بلجيكا" }, "code": "be" },
+            { "name": { "en": "Belize", "ar": "بليز" }, "code": "bz" },
+            { "name": { "en": "Benin", "ar": "بنن" }, "code": "bj" },
+            { "name": { "en": "Bermuda", "ar": "برمودا" }, "code": "bm" },
+            { "name": { "en": "Bhutan", "ar": "بوتان" }, "code": "bt" },
+            { "name": { "en": "Bolivia", "ar": "بوليفيا" }, "code": "bo" },
+            {
+                "name": { "en": "Bosnia and Herzegovina", "ar": "البوسنة والهرسك" },
+                "code": "ba"
+            },
+            { "name": { "en": "Botswana", "ar": "بوتسوانا" }, "code": "bw" },
+            { "name": { "en": "Bouvet Island", "ar": "جزيرة بوفيت" }, "code": "bv" },
+            { "name": { "en": "Brazil", "ar": "البرازيل" }, "code": "br" },
+            {
+                "name": {
+                    "en": "British Indian Ocean Territory",
+                    "ar": "إقليم المحيط البريطاني الهندي"
+                },
+                "code": "io"
+            },
+            {
+                "name": { "en": "Brunei Darussalam", "ar": "بروناي دار السلام" },
+                "code": "bn"
+            },
+            { "name": { "en": "Bulgaria", "ar": "بلغاريا" }, "code": "bg" },
+            { "name": { "en": "Burkina Faso", "ar": "بوركينا فاسو" }, "code": "bf" },
+            { "name": { "en": "Burundi", "ar": "بوروندي" }, "code": "bi" },
+            { "name": { "en": "Cambodia", "ar": "كمبوديا" }, "code": "kh" },
+            { "name": { "en": "Cameroon", "ar": "الكاميرون" }, "code": "cm" },
+            { "name": { "en": "Canada", "ar": "كندا" }, "code": "ca" },
+            { "name": { "en": "Cape Verde", "ar": "الرأس الأخضر" }, "code": "cv" },
+            { "name": { "en": "Cayman Islands", "ar": "جزر كايمان" }, "code": "ky" },
+            {
+                "name": {
+                    "en": "Central African Republic",
+                    "ar": "جمهورية افريقيا الوسطى"
+                },
+                "code": "cf"
+            },
+            { "name": { "en": "Chad", "ar": "تشاد" }, "code": "td" },
+            { "name": { "en": "Chile", "ar": "شيلي" }, "code": "cl" },
+            { "name": { "en": "China", "ar": "الصين" }, "code": "cn" },
+            {
+                "name": { "en": "Christmas Island", "ar": "جزيرة الكريسماس" },
+                "code": "cx"
+            },
+            {
+                "name": { "en": "Cocos (Keeling) Islands", "ar": "جزر كوكوس (كيلينغ)" },
+                "code": "cc"
+            },
+            { "name": { "en": "Colombia", "ar": "كولومبيا" }, "code": "co" },
+            { "name": { "en": "Comoros", "ar": "جزر القمر" }, "code": "km" },
+            { "name": { "en": "Congo", "ar": "الكونغو" }, "code": "cg" },
+            {
+                "name": {
+                    "en": "Congo, The Democratic Republic of the",
+                    "ar": "جمهورية الكونغو الديمقراطية"
+                },
+                "code": "cd"
+            },
+            { "name": { "en": "Cook Islands", "ar": "جزر كوك" }, "code": "ck" },
+            { "name": { "en": "Costa Rica", "ar": "كوستا ريكا" }, "code": "cr" },
+            { "name": { "en": "Cote D\"Ivoire", "ar": "كوت دإيفوار " }, "code": "ci" },
+            { "name": { "en": "Croatia", "ar": "كرواتيا" }, "code": "hr" },
+            { "name": { "en": "Cuba", "ar": "كوبا" }, "code": "cu" },
+            { "name": { "en": "Cyprus", "ar": "قبرص" }, "code": "cy" },
+            {
+                "name": { "en": "Czech Republic", "ar": "الجمهورية التشيكية" },
+                "code": "cz"
+            },
+            { "name": { "en": "Denmark", "ar": "الدنمارك" }, "code": "dk" },
+            { "name": { "en": "Djibouti", "ar": "جيبوتي" }, "code": "dj" },
+            { "name": { "en": "Dominica", "ar": "دومينيكا" }, "code": "dm" },
+            {
+                "name": { "en": "Dominican Republic", "ar": "جمهورية الدومينيكان" },
+                "code": "do"
+            },
+            { "name": { "en": "Ecuador", "ar": "إكوادور" }, "code": "ec" },
+            { "name": { "en": "Egypt", "ar": "مصر" }, "code": "eg" },
+            { "name": { "en": "El Salvador", "ar": "السلفادور" }, "code": "sv" },
+            {
+                "name": { "en": "Equatorial Guinea", "ar": "غينيا الإستوائية" },
+                "code": "gq"
+            },
+            { "name": { "en": "Eritrea", "ar": "إريتريا" }, "code": "er" },
+            { "name": { "en": "Estonia", "ar": "إستونيا" }, "code": "ee" },
+            { "name": { "en": "Ethiopia", "ar": "أثيوبيا" }, "code": "et" },
+            {
+                "name": {
+                    "en": "Falkland Islands (Malvinas)",
+                    "ar": "جزر فوكلاند (مالفيناس)"
+                },
+                "code": "fk"
+            },
+            { "name": { "en": "Faroe Islands", "ar": "جزر فاروس" }, "code": "fo" },
+            { "name": { "en": "Fiji", "ar": "فيجي" }, "code": "fj" },
+            { "name": { "en": "Finland", "ar": "فنلندا" }, "code": "fi" },
+            { "name": { "en": "France", "ar": "فرنسا" }, "code": "fr" },
+            { "name": { "en": "French Guiana", "ar": "غيانا الفرنسية" }, "code": "gf" },
+            {
+                "name": { "en": "French Polynesia", "ar": "بولينيزيا الفرنسية" },
+                "code": "pf"
+            },
+            {
+                "name": {
+                    "en": "French Southern Territories",
+                    "ar": "المناطق الجنوبية لفرنسا"
+                },
+                "code": "tf"
+            },
+            { "name": { "en": "Gabon", "ar": "غابون" }, "code": "ga" },
+            { "name": { "en": "Gambia", "ar": "غامبيا" }, "code": "gm" },
+            { "name": { "en": "Georgia", "ar": "جورجيا" }, "code": "ge" },
+            { "name": { "en": "Germany", "ar": "ألمانيا" }, "code": "de" },
+            { "name": { "en": "Ghana", "ar": "غانا" }, "code": "gh" },
+            { "name": { "en": "Gibraltar", "ar": "جبل طارق" }, "code": "gi" },
+            { "name": { "en": "Greece", "ar": "اليونان" }, "code": "gr" },
+            { "name": { "en": "Greenland", "ar": "الأرض الخضراء" }, "code": "gl" },
+            { "name": { "en": "Grenada", "ar": "غرينادا" }, "code": "gd" },
+            { "name": { "en": "Guadeloupe", "ar": "جوادلوب" }, "code": "gp" },
+            { "name": { "en": "Guam", "ar": "غوام" }, "code": "gu" },
+            { "name": { "en": "Guatemala", "ar": "غواتيمالا" }, "code": "gt" },
+            { "name": { "en": "Guernsey", "ar": "غيرنسي" }, "code": "gg" },
+            { "name": { "en": "Guinea", "ar": "غينيا" }, "code": "gn" },
+            { "name": { "en": "Guinea-Bissau", "ar": "غينيا بيساو" }, "code": "gw" },
+            { "name": { "en": "Guyana", "ar": "غيانا" }, "code": "gy" },
+            { "name": { "en": "Haiti", "ar": "هايتي" }, "code": "ht" },
+            {
+                "name": {
+                    "en": "Heard Island and Mcdonald Islands",
+                    "ar": "قلب الجزيرة وجزر ماكدونالز"
+                },
+                "code": "hm"
+            },
+            {
+                "name": {
+                    "en": "Holy See (Vatican City State)",
+                    "ar": "الكرسي الرسولي (دولة الفاتيكان)"
+                },
+                "code": "va"
+            },
+            { "name": { "en": "Honduras", "ar": "هندوراس" }, "code": "hn" },
+            { "name": { "en": "Hong Kong", "ar": "هونغ كونغ" }, "code": "hk" },
+            { "name": { "en": "Hungary", "ar": "هنغاريا" }, "code": "hu" },
+            { "name": { "en": "Iceland", "ar": "أيسلندا" }, "code": "is" },
+            { "name": { "en": "India", "ar": "الهند" }, "code": "in" },
+            { "name": { "en": "Indonesia", "ar": "إندونيسيا" }, "code": "id" },
+            {
+                "name": {
+                    "en": "Iran, Islamic Republic Of",
+                    "ar": "جمهورية إيران الإسلامية"
+                },
+                "code": "ir"
+            },
+            { "name": { "en": "Iraq", "ar": "العراق" }, "code": "IQ" },
+            { "name": { "en": "Ireland", "ar": "أيرلندا" }, "code": "IE" },
+            { "name": { "en": "Isle of Man", "ar": "جزيرة آيل أوف مان" }, "code": "IM" },
+            { "name": { "en": "Israel", "ar": "إسرائيل" }, "code": "IL" },
+            { "name": { "en": "Italy", "ar": "إيطاليا" }, "code": "IT" },
+            { "name": { "en": "Jamaica", "ar": "جامايكا" }, "code": "JM" },
+            { "name": { "en": "Japan", "ar": "اليابان" }, "code": "JP" },
+            { "name": { "en": "Jersey", "ar": "جيرسي" }, "code": "JE" },
+            { "name": { "en": "Jordan", "ar": "الأردن" }, "code": "JO" },
+            { "name": { "en": "Kazakhstan", "ar": "كازاخستان" }, "code": "KZ" },
+            { "name": { "en": "Kenya", "ar": "كينيا" }, "code": "KE" },
+            { "name": { "en": "Kiribati", "ar": "كيريباتي" }, "code": "KI" },
+            {
+                "name": {
+                    "en": "Korea, Democratic People\"S Republic of",
+                    "ar": "كوريا، الجمهورية الشعبية الديمقراطية"
+                },
+                "code": "KP"
+            },
+            {
+                "name": { "en": "Korea, Republic of", "ar": "جمهورية كوريا" },
+                "code": "KR"
+            },
+            { "name": { "en": "Kuwait", "ar": "الكويت" }, "code": "KW" },
+            { "name": { "en": "Kyrgyzstan", "ar": "قيرغيزستان" }, "code": "KG" },
+            {
+                "name": {
+                    "en": "Lao People\"S Democratic Republic",
+                    "ar": "جمهورية لاو الديمقراطية"
+                },
+                "code": "LA"
+            },
+            { "name": { "en": "Latvia", "ar": "لاتفيا" }, "code": "LV" },
+            { "name": { "en": "Lebanon", "ar": "لبنان" }, "code": "LB" },
+            { "name": { "en": "Lesotho", "ar": "ليسوتو" }, "code": "LS" },
+            { "name": { "en": "Liberia", "ar": "ليبيريا" }, "code": "LR" },
+            {
+                "name": {
+                    "en": "Libyan Arab Jamahiriya",
+                    "ar": "الجماهيرية العربية الليبية"
+                },
+                "code": "LY"
+            },
+            { "name": { "en": "Liechtenstein", "ar": "ليختنشتاين" }, "code": "LI" },
+            { "name": { "en": "Lithuania", "ar": "ليتوانيا" }, "code": "LT" },
+            { "name": { "en": "Luxembourg", "ar": "لوكسمبورغ" }, "code": "LU" },
+            { "name": { "en": "Macao", "ar": "ماكاو" }, "code": "MO" },
+            {
+                "name": {
+                    "en": "Macedonia, The Former Yugoslav Republic of",
+                    "ar": "مقدونيا ، جمهورية يوغوسلافيا السابقة"
+                },
+                "code": "MK"
+            },
+            { "name": { "en": "Madagascar", "ar": "مدغشقر" }, "code": "MG" },
+            { "name": { "en": "Malawi", "ar": "ملاوي" }, "code": "MW" },
+            { "name": { "en": "Malaysia", "ar": "ماليزيا" }, "code": "MY" },
+            { "name": { "en": "Maldives", "ar": "ملديف" }, "code": "MV" },
+            { "name": { "en": "Mali", "ar": "مالي" }, "code": "ML" },
+            { "name": { "en": "Malta", "ar": "مالطا" }, "code": "MT" },
+            { "name": { "en": "Marshall Islands", "ar": "جزر مارشال" }, "code": "MH" },
+            { "name": { "en": "Martinique", "ar": "مارتينيك" }, "code": "MQ" },
+            { "name": { "en": "Mauritania", "ar": "موريتانيا" }, "code": "MR" },
+            { "name": { "en": "Mauritius", "ar": "موريشيوس" }, "code": "MU" },
+            { "name": { "en": "Mayotte", "ar": "مايوت" }, "code": "YT" },
+            { "name": { "en": "Mexico", "ar": "المكسيك" }, "code": "MX" },
+            {
+                "name": {
+                    "en": "Micronesia, Federated States of",
+                    "ar": "ولايات ميكرونيزيا الموحدة"
+                },
+                "code": "FM"
+            },
+            {
+                "name": { "en": "Moldova, Republic of", "ar": "جمهورية مولدوفا" },
+                "code": "MD"
+            },
+            { "name": { "en": "Monaco", "ar": "موناكو" }, "code": "MC" },
+            { "name": { "en": "Mongolia", "ar": "منغوليا" }, "code": "MN" },
+            { "name": { "en": "Montserrat", "ar": "مونتسيرات" }, "code": "MS" },
+            { "name": { "en": "Morocco", "ar": "المغرب" }, "code": "MA" },
+            { "name": { "en": "Mozambique", "ar": "موزامبيق" }, "code": "MZ" },
+            { "name": { "en": "Myanmar", "ar": "ميانمار" }, "code": "MM" },
+            { "name": { "en": "Namibia", "ar": "ناميبيا" }, "code": "NA" },
+            { "name": { "en": "Nauru", "ar": "ناورو" }, "code": "NR" },
+            { "name": { "en": "Nepal", "ar": "نيبال" }, "code": "NP" },
+            { "name": { "en": "Netherlands", "ar": "هولندا" }, "code": "NL" },
+            {
+                "name": { "en": "Netherlands Antilles", "ar": "جزر الأنتيل الهولندية" },
+                "code": "AN"
+            },
+            {
+                "name": { "en": "New Caledonia", "ar": "كاليدونيا الجديدة" },
+                "code": "NC"
+            },
+            { "name": { "en": "New Zealand", "ar": "نيوزيلاندا" }, "code": "NZ" },
+            { "name": { "en": "Nicaragua", "ar": "نيكاراغوا" }, "code": "NI" },
+            { "name": { "en": "Niger", "ar": "النيجر" }, "code": "NE" },
+            { "name": { "en": "Nigeria", "ar": "نيجيريا" }, "code": "NG" },
+            { "name": { "en": "Niue", "ar": "نيوي" }, "code": "NU" },
+            { "name": { "en": "Norfolk Island", "ar": "جزيرة نورفولك" }, "code": "NF" },
+            {
+                "name": { "en": "Northern Mariana Islands", "ar": "جزر مريانا الشمالية" },
+                "code": "MP"
+            },
+            { "name": { "en": "Norway", "ar": "النرويج" }, "code": "NO" },
+            { "name": { "en": "Oman", "ar": "سلطنة عمان" }, "code": "OM" },
+            { "name": { "en": "Pakistan", "ar": "باكستان" }, "code": "PK" },
+            { "name": { "en": "Palau", "ar": "بالاو" }, "code": "PW" },
+            {
+                "name": {
+                    "en": "Palestinian Territory, Occupied",
+                    "ar": "الأراضي الفلسطينية المحتلة"
+                },
+                "code": "PS"
+            },
+            { "name": { "en": "Panama", "ar": "بنما" }, "code": "PA" },
+            {
+                "name": { "en": "Papua New Guinea", "ar": "بابوا غينيا الجديدة" },
+                "code": "PG"
+            },
+            { "name": { "en": "Paraguay", "ar": "باراغواي" }, "code": "PY" },
+            { "name": { "en": "Peru", "ar": "بيرو" }, "code": "PE" },
+            { "name": { "en": "Philippines", "ar": "فيلبيني" }, "code": "PH" },
+            { "name": { "en": "Pitcairn", "ar": "بيتكيرن" }, "code": "PN" },
+            { "name": { "en": "Poland", "ar": "بولندا" }, "code": "PL" },
+            { "name": { "en": "Portugal", "ar": "البرتغال" }, "code": "PT" },
+            { "name": { "en": "Puerto Rico", "ar": "بورتوريكو" }, "code": "PR" },
+            { "name": { "en": "Qatar", "ar": "دولة قطر" }, "code": "QA" },
+            { "name": { "en": "Reunion", "ar": "جمع شمل" }, "code": "RE" },
+            { "name": { "en": "Romania", "ar": "رومانيا" }, "code": "RO" },
+            {
+                "name": { "en": "Russian Federation", "ar": "الاتحاد الروسي" },
+                "code": "RU"
+            },
+            { "name": { "en": "RWANDA", "ar": "رواندا" }, "code": "RW" },
+            { "name": { "en": "Saint Helena", "ar": "سانت هيلانة" }, "code": "SH" },
+            {
+                "name": { "en": "Saint Kitts and Nevis", "ar": "سانت كيتس ونيفيس" },
+                "code": "KN"
+            },
+            { "name": { "en": "Saint Lucia", "ar": "القديسة لوسيا" }, "code": "LC" },
+            {
+                "name": { "en": "Saint Pierre and Miquelon", "ar": "سانت بيير وميكلون" },
+                "code": "PM"
+            },
+            {
+                "name": {
+                    "en": "Saint Vincent and the Grenadines",
+                    "ar": "سانت فنسنت وجزر غرينادين"
+                },
+                "code": "VC"
+            },
+            { "name": { "en": "Samoa", "ar": "ساموا" }, "code": "WS" },
+            { "name": { "en": "San Marino", "ar": "سان مارينو" }, "code": "SM" },
+            {
+                "name": { "en": "Sao Tome and Principe", "ar": "سان تومي وبرينسيبي" },
+                "code": "ST"
+            },
+            {
+                "name": { "en": "Saudi Arabia", "ar": "المملكة العربية السعودية" },
+                "code": "SA"
+            },
+            { "name": { "en": "Senegal", "ar": "السنغال" }, "code": "SN" },
+            {
+                "name": { "en": "Serbia and Montenegro", "ar": "صربيا والجبل الأسود" },
+                "code": "CS"
+            },
+            { "name": { "en": "Seychelles", "ar": "سيشيل" }, "code": "SC" },
+            { "name": { "en": "Sierra Leone", "ar": "سيرا ليون" }, "code": "SL" },
+            { "name": { "en": "Singapore", "ar": "سنغافورة" }, "code": "SG" },
+            { "name": { "en": "Slovakia", "ar": "سلوفاكيا" }, "code": "SK" },
+            { "name": { "en": "Slovenia", "ar": "سلوفينيا" }, "code": "SI" },
+            { "name": { "en": "Solomon Islands", "ar": "جزر سليمان" }, "code": "SB" },
+            { "name": { "en": "Somalia", "ar": "الصومال" }, "code": "SO" },
+            { "name": { "en": "South Africa", "ar": "جنوب أفريقيا" }, "code": "ZA" },
+            {
+                "name": {
+                    "en": "South Georgia and the South Sandwich Islands",
+                    "ar": "جورجيا الجنوبية وجزر ساندويتش الجنوبية"
+                },
+                "code": "GS"
+            },
+            { "name": { "en": "Spain", "ar": "إسبانيا" }, "code": "ES" },
+            { "name": { "en": "Sri Lanka", "ar": "سيريلانكا" }, "code": "LK" },
+            { "name": { "en": "Sudan", "ar": "السودان" }, "code": "SD" },
+            { "name": { "en": "Suriname", "ar": "سورينام" }, "code": "SR" },
+            {
+                "name": { "en": "Svalbard and Jan Mayen", "ar": "سفالبارد وجان ماين" },
+                "code": "SJ"
+            },
+            { "name": { "en": "Swaziland", "ar": "سوازيلند" }, "code": "SZ" },
+            { "name": { "en": "Sweden", "ar": "السويد" }, "code": "SE" },
+            { "name": { "en": "Switzerland", "ar": "سويسرا" }, "code": "CH" },
+            {
+                "name": { "en": "Syrian Arab Republic", "ar": "الجمهورية العربية السورية" },
+                "code": "SY"
+            },
+            {
+                "name": {
+                    "en": "Taiwan, Province of China",
+                    "ar": "مقاطعة تايوان الصينية"
+                },
+                "code": "TW"
+            },
+            { "name": { "en": "Tajikistan", "ar": "طاجيكستان" }, "code": "TJ" },
+            {
+                "name": {
+                    "en": "Tanzania, United Republic of",
+                    "ar": "جمهورية تنزانيا المتحدة"
+                },
+                "code": "TZ"
+            },
+            { "name": { "en": "Thailand", "ar": "تايلاند" }, "code": "TH" },
+            { "name": { "en": "Timor-Leste", "ar": "تيمور - ليشتي" }, "code": "TL" },
+            { "name": { "en": "Togo", "ar": "توجو" }, "code": "TG" },
+            { "name": { "en": "Tokelau", "ar": "توكيلاو" }, "code": "TK" },
+            { "name": { "en": "Tonga", "ar": "تونغا" }, "code": "TO" },
+            {
+                "name": { "en": "Trinidad and Tobago", "ar": "ترينداد وتوباغو" },
+                "code": "TT"
+            },
+            { "name": { "en": "Tunisia", "ar": "تونس" }, "code": "TN" },
+            { "name": { "en": "Turkey", "ar": "ديك رومى" }, "code": "TR" },
+            { "name": { "en": "Turkmenistan", "ar": "تركمانستان" }, "code": "TM" },
+            {
+                "name": { "en": "Turks and Caicos Islands", "ar": "جزر تركس وكايكوس" },
+                "code": "TC"
+            },
+            { "name": { "en": "Tuvalu", "ar": "توفالو" }, "code": "TV" },
+            { "name": { "en": "Uganda", "ar": "أوغندا" }, "code": "UG" },
+            { "name": { "en": "Ukraine", "ar": "أوكرانيا" }, "code": "UA" },
+            {
+                "name": { "en": "United Arab Emirates", "ar": "الإمارات العربية المتحدة" },
+                "code": "AE"
+            },
+            { "name": { "en": "United Kingdom", "ar": "المملكة المتحدة" }, "code": "GB" },
+            {
+                "name": { "en": "United States", "ar": "الولايات المتحدة الأمريكية" },
+                "code": "US"
+            },
+            {
+                "name": {
+                    "en": "United States Minor Outlying Islands",
+                    "ar": "جزر الولايات المتحدة البعيدة الصغرى"
+                },
+                "code": "UM"
+            },
+            { "name": { "en": "Uruguay", "ar": "أوروغواي" }, "code": "UY" },
+            { "name": { "en": "Uzbekistan", "ar": "أوزبكستان" }, "code": "UZ" },
+            { "name": { "en": "Vanuatu", "ar": "فانواتو" }, "code": "VU" },
+            { "name": { "en": "Venezuela", "ar": "فنزويلا" }, "code": "VE" },
+            { "name": { "en": "Viet Nam", "ar": "فييت نام" }, "code": "VN" },
+            {
+                "name": { "en": "Virgin Islands, British", "ar": "جزر العذراء البريطانية" },
+                "code": "VG"
+            },
+            {
+                "name": {
+                    "en": "Virgin Islands, U.S.",
+                    "ar": "جزر فيرجن ، الولايات المتحدة"
+                },
+                "code": "VI"
+            },
+            {
+                "name": { "en": "Wallis and Futuna", "ar": "واليس وفوتونا" },
+                "code": "WF"
+            },
+            { "name": { "en": "Western Sahara", "ar": "الصحراء الغربية" }, "code": "EH" },
+            { "name": { "en": "Yemen", "ar": "اليمن" }, "code": "YE" },
+            { "name": { "en": "Zambia", "ar": "زامبيا" }, "code": "ZM" },
+            { "name": { "en": "Zimbabwe", "ar": "زمبابوي" }, "code": "ZW" }
         ]);
 
 
@@ -268,7 +475,8 @@ const NationalityComponent = props => {
             }
             else {
                 _filteredCountries = countries.filter((country) => {
-                    return country.name.toLowerCase().startsWith(event.query.toLowerCase());
+                    const lng = props.currentLocale === 'en' ? 'en' : 'ar';
+                    return country.name[lng].toLowerCase().startsWith(event.query.toLowerCase());
                 });
             }
 
@@ -280,7 +488,7 @@ const NationalityComponent = props => {
         return (
             <div className={'countryItem'} key={i}>
                 <span className={`flag-icon flag-icon-${item.code.toLowerCase()}`} />
-                <div>{item.name}</div>
+                <div>{props.currentLocale === 'en' ? item.name.en : item.name.ar}</div>
             </div>
         );
     }
@@ -303,11 +511,12 @@ const NationalityComponent = props => {
                     value={selectedCountry}
                     suggestions={filteredCountries}
                     completeMethod={searchCountry}
-                    field="name"
+                    field={props.currentLocale === 'en' ? 'name.en' : 'name.ar'}
                     forceSelection
                     itemTemplate={itemTemplate}
                     onChange={(e) => onAutoCompleteChanged(e)}
                     placeholder={'Search Country'}
+                    dropdown
                 />
                 {selectedCountry &&
                     <Link to="/takePhoto" className="btnAction" onClick={onNext}>{translate("pages.button.next")}</Link>
@@ -317,8 +526,9 @@ const NationalityComponent = props => {
     );
 }
 
-const mapStateToProps = ({ nationality }: IRootState) => ({
-    currentNationality: nationality
+const mapStateToProps = ({ nationality, locale }: IRootState) => ({
+    currentNationality: nationality,
+    currentLocale: locale.currentLocale
 });
 const mapDispatchToProps = { setNationality };
 

@@ -175,12 +175,27 @@ header {
 .userForm {
   text-align: left;
   width: 100%;
+
   label {
     font: 2em/40px 'RTA-bold';
     color: #222222;
     display: block;
     text-align: left;
     padding-bottom: 8px;
+    position: relative;
+    &.icon {
+      .keyboardIcon {
+        background: url('../content/images/keyboard.png') no-repeat center;
+        width: 50px;
+        height: 64px;
+        position: absolute;
+        bottom: -64px;
+        right: 0;
+        border-radius: 0 4px 4px 0;
+        z-index: 99;
+        cursor: pointer;
+      }
+    }
   }
   input {
     width: 100%;
@@ -201,6 +216,31 @@ header {
   }
   .p-autocomplete {
     width: 100%;
+    &.p-inputwrapper-focus {
+      border: 0.5px solid #171c8f !important;
+      background: #fbfbfb !important;
+      box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 19%);
+      -webkit-box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 19%);
+      -moz-box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 19%);
+      border-radius: 4px;
+    }
+    .p-autocomplete-dropdown {
+      border-radius: 0 4px 4px 0;
+      border: 0.5px solid #d7d7d7 !important;
+      background: #fbfbfb !important;
+      border-left: 0 !important;
+      width: 50px;
+      &:focus {
+        outline: 0;
+      }
+    }
+    input {
+      border-right: 0;
+      &:focus {
+        border: 0;
+        box-shadow: none;
+      }
+    }
   }
   .btnAction {
     display: inline-block;
@@ -221,6 +261,12 @@ header {
   border-top: 0;
   margin-top: 16px;
   background: #fff;
+}
+
+.p-autocomplete-panel {
+  // padding-top: 17px;
+  margin-top: 2px;
+  max-height: 350px !important;
 }
 
 .countryItem {
@@ -994,6 +1040,10 @@ header {
         margin: 8px auto;
         border-radius: 100%;
       }
+      h2 {
+        color: #222;
+        font: 1em/30px 'RTA';
+      }
       p {
         color: #333;
         font: 1.3em/21px 'RTA-bold';
@@ -1302,6 +1352,10 @@ header {
       p {
         color: #333;
         font: 1.3em/21px 'RTA-bold';
+      }
+      h2 {
+        color: #222;
+        font: 1em/30px 'RTA';
       }
     }
     &.car {

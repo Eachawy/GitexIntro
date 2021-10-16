@@ -1,108 +1,108 @@
 {
   "pages": {
     "button": {
-      "getStarted": "ابدء",
+      "getStarted": "إبدء",
       "next": "التالي",
       "edit": "تعديل",
-      "submit": "إرسال",
+      "submit": "تأكيد",
       "continue": "استمر",
-      "bookYourRoad": "احجز اختبار الطريق الخاص بك",
-      "selectCar": "اختر سيارة",
-      "done": "انتهى"
+      "bookYourRoad": "إحجز موعد فحص الطريق",
+      "selectCar": "إختر مركبة",
+      "done": "تم"
     },
     "intro": {
-      "swiftDrive": "هيئة الطرق والمواصلات سويفت درايف",
-      "startDriving": "ابدأ القيادة في دبي في غضون 3 أيام باستخدام منصتنا المدعومة من blockchain!"
+      "swiftDrive": "الترخيص الذكي",
+      "startDriving": "إبدء قيادة مركبة في دبي خلال ٣ أيام من خلال منصتنا بتقنية البوكتشين!"
     },
     "user": {
-      "name": "الأسم",
-      "enterYourName": "أدخل أسمك",
+      "name": "الاسم",
+      "enterYourName": "ادخل اسمك",
       "nationality": "الجنسية"
     },
     "photo": {
       "takePhoto": "التقاط صورة",
-      "launchCamera": "شغل الكاميرا",
-      "chooseAvatar": "أو اختر صورة رمزية"
+      "launchCamera": "Launch camera",
+      "chooseAvatar": "اختر الشخصية"
     },
     "upload": {
-      "uploadlicense": "حمل الرخصه",
-      "takePhoto": "التقط صورة لرخصة القيادة في بلدك"
+      "uploadlicense": "حمل رخصة القيادة",
+      "takePhoto": "التقط صورة لرخصة القيادة"
     },
     "thankYou": {
-      "yourLearner": "ملف المتعلم الخاص بك",
-      "trafficCode": "رمز المرور",
+      "yourLearner": "ملف التعلم الخاص بك",
+      "trafficCode": "الرمز المروري",
       "license": "الرخصة",
-      "thankYou": "شكرا لك،"
+      "thankYou": "شكراً،"
     },
 
     "ypurJourney": {
-      "journeyObtaining": "رحلتك للحصول على رخصة قيادة دبي",
-      "theoryLessons": "دروس نظرية",
-      "completeYour": "أكمل دروسك لمدة 8 ساعات عبر الإنترنت",
-      "knowledgeTest": "اختبار المعرفة",
-      "bookPass": "احجز واجتياز اختبار المعرفة التابع لهيئة الطرق والمواصلات عبر الإنترنت",
-      "eyeTest": "اختبار النظر",
-      "yourEyes": "قم بفحص عينيك في المراكز المعتمدة لهيئة الطرق والمواصلات في دبي",
-      "roadTest": "اختبار الطريق",
-      "bookAhead": "احجز مسبقًا واجتاز اختبار الطريق الخاص بهيئة الطرق والمواصلات في دبي",
+      "journeyObtaining": "رحلتك للحصول على رخصة القيادة",
+      "theoryLessons": "التدريب النظري",
+      "completeYour": "إستكمل ٨ ساعات تدريب نظري أونلاين",
+      "knowledgeTest": "فحص المعرفة",
+      "bookPass": "إحجز وإجتاز فحص المعرفة أونلاين",
+      "eyeTest": "فحص النظر",
+      "yourEyes": "إفحص نظرك عند احد الوكلاء المعتمدين للهيئة",
+      "roadTest": "فحص الطريق",
+      "bookAhead": "إحجز مسبقاً وإجتاز فحص الطريق في دبي",
       "obtainDriving": "الحصول على رخصة القيادة"
     },
     "finishLessons": {
-      "finishAll": "أنهِ جميع دروسك <br /> وأنت مستريح <br /> في منزلك"
+      "finishAll": "احصل على التدريب النظري <br /> من مكانك <br /> في المنزل"
     },
     "yourLectures": {
-      "overviewRTA": "لمحة عامة عن 8 محاضرات إلزامية لهيئة الطرق والمواصلات",
-      "lecture1": "محاضرة 1",
-      "attitudeResponsibilities": "موقف ومسؤوليات السائق",
-      "lecture2": "محاضرة ٢",
-      "knowledgeTraffic": "معرفة قواعد وأنظمة المرور",
-      "lecture3": "محاضرة ٣",
-      "characteristics": "خصائص مستخدمي الطريق",
-      "lecture4": "محاضرة ٤",
+      "overviewRTA": "نظرة عن محتوى ٨ ساعات تدريب نظري",
+      "lecture1": "المحاضرة 1",
+      "attitudeResponsibilities": "سلوكيات ومسؤوليات السائق",
+      "lecture2": "المحاضرة 2",
+      "knowledgeTraffic": "نظرة عن قواعد و",
+      "lecture3": "المحاضرة 3",
+      "characteristics": "فئات مستخدمي الطريق",
+      "lecture4": "المحاضرة 4",
       "driverCondition": "حالة السائق",
-      "lecture5": "محاضرة ٥",
+      "lecture5": "المحاضرة 5",
       "drivingEnvironment": "بيئة القيادة",
-      "lecture6": "محاضرة ٦",
-      "freewaysTraffic": "القيادة على الطرق السريعة والمخالفات المرورية وتخطيط الطريق",
-      "lecture7": "محاضرة ٧",
-      "lecture8": "محاضرة ٨",
-      "trafficAccidents": "حوادث المرور ودراسات الحالة وما يجب القيام به في حالة وقوع حادث"
+      "lecture6": "المحاضرة 6",
+      "freewaysTraffic": "القيادة في الطرق السريعة، وتخطيط الرحلات",
+      "lecture7": "المحاضرة 7",
+      "lecture8": "المحاضرة 8",
+      "trafficAccidents": "حوادث الطريق وكيفية التعامل معها"
     },
     "takeYourTest": {
-      "fromYourOwn": "خذ اختبارك <br /> من جهازك ، <br /> في أي مكان."
+      "fromYourOwn": "احصل علي الفحص<br /> باستخدام<br /> جهازك,<br /> في أي مكان."
     },
     "wellDone": {
-      "youDid": "أحسنت! <br /> لقد فعلتها في المحاولة الأولى."
+      "youDid": "أحسنت!<br />لقد إجتزت الاختبار من المحاولة الأولى."
     },
     "yourAllSet": {
-      "wellPick": "أنت الآن على أتم استعداد. <be /> سننقلك لإجراء اختبار العين والطريق."
+      "wellPick": "إستعد. <br />سيتم التواصل معك لتوصيلك للحصول على<br />فحص النظر وفحص الطريق."
     },
     "congratulations": {
-      "yourDubai": "تهانينا على حصولك على <br /> رخصة القيادة في دبي",
-      "tryService": "استخدم هذه الخدمة على RTA.ae"
+      "yourDubai": "تهانينا للحصول على<br /> رخصة القيادة الخاصة بك من دبى",
+      "tryService": "يمكنك تجربة الخدمة من خلال موقعنا الإلكتروني RTA.ae"
     },
     "afterYourLicense": {
-      "yourCarRightAway": "بعد الحصول على ترخيصك ، احصل على <br /> سيارتك على الفور"
+      "yourCarRightAway": "بعد حصولك على الرخصة<br /> yيمكنك الحصول على مركبتك مباشرة"
     },
     "selectYourPage": {
-      "yourRTAProfile": "ملفك الشخصي في هيئة الطرق والمواصلات",
-      "carOne": "سيارة ١",
-      "carTwo": "سيارة ٢",
-      "carThree": "سيارة ٣",
-      "rent": "تأجير",
+      "yourRTAProfile": "ملفك الشخصي",
+      "carOne": "المركبة الأولى",
+      "carTwo": "المركبة الثانية",
+      "carThree": "المركبة الثالثة",
+      "rent": "استأجر",
       "buy": "شراء",
-      "from1": "من {{amount}} درهم إماراتي",
-      "from2": "من {{amount}} درهم إماراتي"
+      "from1": "تبدأ من {{amount}}",
+      "from2": "إلى {{amount}}"
     },
     "selectPlate": {
-      "selectPlateNumber": "حدد رقم اللوحة",
-      "personalised": "لوحات مخصصة لك",
-      "paid": "دفع",
-      "free": "مجاني",
-      "regularPlates": "اللوحات العادية"
+      "selectPlateNumber": "إختر لوحة الأرقام",
+      "personalised": "مصممة خصيصاً لك",
+      "paid": "مدفوعة",
+      "free": "مجانية",
+      "regularPlates": "أرقام اخرى"
     },
     "driveSafe": {
-      "driveSafepar": "قد بأمان ، <br />"
+      "driveSafepar": "تمتع بقيادة أمنة. <br />"
     }
   }
 }

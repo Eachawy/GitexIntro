@@ -37,7 +37,7 @@ const CongratulationsComponent = props => {
                         }
                         <span className="userName">{props.username ? props.username : null}</span>
                         <span className="licenseNo">12345</span>
-                        <span className="nationality">{props.nationality.name}</span>
+                        <span className="nationality">{props.currentLocale === 'en' ? props.nationality.name.en : props.nationality.name.ar}</span>
                         <span className="dateBirth">22/05/1990</span>
                         <span className="issueDate">11/12/2021</span>
                         <span className="exDate">11/12/2023</span>

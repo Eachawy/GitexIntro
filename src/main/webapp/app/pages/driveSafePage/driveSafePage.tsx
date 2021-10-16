@@ -28,7 +28,7 @@ const DriveSafeComponent = props => {
                         <span className="plateType">--</span>
                         <span className="tcNo">12345678</span>
                         <span className="username">{props.username ? props.username : null}</span>
-                        <span className="nationality">{props.nationality.name}</span>
+                        <span className="nationality">{props.currentLocale === 'en' ? props.nationality.name.en : props.nationality.name.ar}</span>
 
 
                         <span className="regData">11/11/2012</span>
@@ -57,10 +57,11 @@ const DriveSafeComponent = props => {
     );
 }
 
-const mapStateToProps = ({ profileimage, username, nationality }: IRootState) => ({
+const mapStateToProps = ({ profileimage, username, nationality, locale }: IRootState) => ({
     imageprofile: profileimage.currentImage,
     username: username.currentUsarName,
-    nationality: nationality.currentNationality
+    nationality: nationality.currentNationality,
+    currentLocale: locale.currentLocale
 });
 
 type StateProps = ReturnType<typeof mapStateToProps>;
