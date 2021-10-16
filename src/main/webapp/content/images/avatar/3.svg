@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="92px" height="108px" viewBox="0 0 92 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #DB3B34;">
+<svg width="92px" height="108px" viewBox="0 0 92 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #7fc7cf;">
     <title>GTX/Avatar/Character/3</title>
     <defs>
         <rect id="path-1" x="0" y="0" width="92" height="108"></rect>
     </defs>
     <g id="GTX/Avatar/Character/3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect fill="#DB3B34" x="0" y="0" width="92" height="108"></rect>
+        <rect fill="#7fc7cf" x="0" y="0" width="92" height="108"></rect>
         <mask id="mask-2" fill="white">
             <use xlink:href="#path-1"></use>
         </mask>

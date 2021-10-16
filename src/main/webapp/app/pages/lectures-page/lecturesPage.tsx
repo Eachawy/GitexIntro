@@ -108,7 +108,7 @@ const LecturesComponent = props => {
                     </div>
                     <div>
                         <Link to="/takeYourTest" className="lec continue">
-                            <h3>{translate("pages.button.continue")}</h3>
+                            <h6>{translate("pages.button.continue")}</h6>
                         </Link>
                     </div>
                     <div>

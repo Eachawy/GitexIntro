@@ -135,6 +135,9 @@ html[dir='rtl'] {
     .continue,
     .empty {
       text-align: right;
+      p {
+        font: 0.8em/21px 'RTA';
+      }
     }
     .continue {
       text-align: center;

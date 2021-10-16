@@ -23,7 +23,7 @@ import SelectYourCarPage from 'app/pages/selectYourCar-page/selectYourCarPage';
 import driveSafePage from 'app/pages/driveSafePage/driveSafePage';
 import selectPlatePage from 'app/pages/selectPlate-page/selectPlatePage';
 import PreviewPage from 'app/pages/preview-page/previewPage';
-
+import DriveSafeNoVehiclePage from 'app/pages/driveSafeNoVehicle-page/driveSafeNoVehiclePage';
 const Routes = () => (
   <div className="view-routes">
     <Switch>
@@ -41,6 +41,9 @@ const Routes = () => (
       <ErrorBoundaryRoute exact path="/wellDone" component={WellDonePage} />
       <ErrorBoundaryRoute exact path="/youreAllSet" component={YoureAllSetPage} />
       <ErrorBoundaryRoute exact path="/congratulations" component={CongratulationsPage} />
+      <ErrorBoundaryRoute exact path="/DriveSafeNoVehicle" component={DriveSafeNoVehiclePage} />
+
+
       <ErrorBoundaryRoute exact path="/afterYourLicense" component={AfterYourLicensePage} />
       <ErrorBoundaryRoute exact path="/selectYourCar" component={SelectYourCarPage} />
       <ErrorBoundaryRoute exact path="/selectPlate" component={selectPlatePage} />

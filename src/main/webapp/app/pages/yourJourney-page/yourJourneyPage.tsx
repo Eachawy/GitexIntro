@@ -81,7 +81,7 @@ const YourJourneyComponent = props => {
                     </div>
                     <div>
                         <Link to="/finishLessons" className="continue">
-                            <h3>{translate("pages.button.continue")}</h3>
+                            <h6>{translate("pages.button.continue")}</h6>
                         </Link>
                     </div>
 

@@ -19,10 +19,10 @@ const baseHref = document.querySelector('base').getAttribute('href').replace(/\/
 export interface IAppProps extends StateProps, DispatchProps { }
 
 export const App = (props: IAppProps) => {
-  let global = 40;
+  let global = 400;
 
   const resetGlobal = () => {
-    global = 40;
+    global = 400;
   }
 
   useEffect(() => {

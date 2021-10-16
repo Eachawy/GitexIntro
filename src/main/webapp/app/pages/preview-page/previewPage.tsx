@@ -18,8 +18,6 @@ const PreviewComponent = props => {
                             <img src={props.imageprofile} />
                         }
                         <p>{props.username ? props.username : null}</p>
-                        <p>+971 52 123 45 67</p>
-                        <p>gmomal@gmail.com</p>
                     </div>
                     <div className="card car">
                         <img src="../../../content/images/vehicles/vehicle1.jpeg" />

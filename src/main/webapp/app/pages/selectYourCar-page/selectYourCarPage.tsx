@@ -55,8 +55,6 @@ const SelectYourCarComponent = props => {
                                 <img src={props.imageprofile} />
                             }
                             <p>{props.username ? props.username : null}</p>
-                            <p>+971 52 123 45 67</p>
-                            <p>gmomal@gmail.com</p>
                         </div>
                     </div>
                     <div>
@@ -66,7 +64,7 @@ const SelectYourCarComponent = props => {
                                 {translate("pages.selectYourPage.carOne")}
                                 <span>2021</span>
                             </h6>
-                            <Link to="/congratulations" className="rent">
+                            <Link to="/DriveSafeNoVehicle" className="rent">
                                 <h6>{translate("pages.selectYourPage.rent")}</h6>
                                 <p>{translate("pages.selectYourPage.from1", {
                                     amount: "2,200"
@@ -87,7 +85,7 @@ const SelectYourCarComponent = props => {
                                 {translate("pages.selectYourPage.carOne")}
                                 <span>2021</span>
                             </h6>
-                            <Link to="/congratulations" className="rent">
+                            <Link to="/DriveSafeNoVehicle" className="rent">
                                 <h6>{translate("pages.selectYourPage.rent")}</h6>
                                 <p>{translate("pages.selectYourPage.from1", {
                                     amount: "2,200"
@@ -108,7 +106,7 @@ const SelectYourCarComponent = props => {
                                 {translate("pages.selectYourPage.carThree")}
                                 <span>2021</span>
                             </h6>
-                            <Link to="/congratulations" className="rent">
+                            <Link to="/DriveSafeNoVehicle" className="rent">
                                 <h6>{translate("pages.selectYourPage.rent")}</h6>
                                 <p>{translate("pages.selectYourPage.from1", {
                                     amount: "2,200"
@@ -129,7 +127,7 @@ const SelectYourCarComponent = props => {
                                 {translate("pages.selectYourPage.carOne")}
                                 <span>2021</span>
                             </h6>
-                            <Link to="/congratulations" className="rent">
+                            <Link to="/DriveSafeNoVehicle" className="rent">
                                 <h6>{translate("pages.selectYourPage.rent")}</h6>
                                 <p>{translate("pages.selectYourPage.from1", {
                                     amount: "2,200"
@@ -150,7 +148,7 @@ const SelectYourCarComponent = props => {
                                 {translate("pages.selectYourPage.carTwo")}
                                 <span>2021</span>
                             </h6>
-                            <Link to="/congratulations" className="rent">
+                            <Link to="/DriveSafeNoVehicle" className="rent">
                                 <h6>{translate("pages.selectYourPage.rent")}</h6>
                                 <p>{translate("pages.selectYourPage.from1", {
                                     amount: "2,200"
@@ -171,7 +169,7 @@ const SelectYourCarComponent = props => {
                                 {translate("pages.selectYourPage.carThree")}
                                 <span>2021</span>
                             </h6>
-                            <Link to="/congratulations" className="rent">
+                            <Link to="/DriveSafeNoVehicle" className="rent">
                                 <h6>{translate("pages.selectYourPage.rent")}</h6>
                                 <p>{translate("pages.selectYourPage.from1", {
                                     amount: "2,200"

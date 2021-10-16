@@ -41,6 +41,7 @@ const CongratulationsComponent = props => {
                         <span className="dateBirth">22/05/1990</span>
                         <span className="issueDate">11/12/2021</span>
                         <span className="exDate">11/12/2023</span>
+                        <span className="palceIssue">{props.currentLocale === 'en' ? 'Dubai' : 'دبي'}</span>
                     </div>
 
                     <Player
@@ -59,10 +60,11 @@ const CongratulationsComponent = props => {
 }
 
 
-const mapStateToProps = ({ profileimage, username, nationality }: IRootState) => ({
+const mapStateToProps = ({ profileimage, username, nationality, locale }: IRootState) => ({
     imageprofile: profileimage.currentImage,
     username: username.currentUsarName,
-    nationality: nationality.currentNationality
+    nationality: nationality.currentNationality,
+    currentLocale: locale.currentLocale
 });
 
 type StateProps = ReturnType<typeof mapStateToProps>;

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="92px" height="108px" viewBox="0 0 92 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #DB3B34;">
+<svg width="92px" height="108px" viewBox="0 0 92 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #e9a9c6;">
     <title>GTX/Avatar/Character/2</title>
     <defs>
         <rect id="path-1" x="0" y="0" width="92" height="108"></rect>
         <polygon id="path-3" points="0 -6.66945984e-15 84 -6.66945984e-15 84 35.5144976 0 35.5144976"></polygon>
     </defs>
     <g id="GTX/Avatar/Character/2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect fill="#DB3B34" x="0" y="0" width="92" height="108"></rect>
+        <rect fill="#e9a9c6" x="0" y="0" width="92" height="108"></rect>
         <mask id="mask-2" fill="white">
             <use xlink:href="#path-1"></use>
         </mask>
         <use id="Rectangle" fill="#EAA8C6" xlink:href="#path-1"></use>
         <g id="Group-66" mask="url(#mask-2)">
             <g transform="translate(4.000000, 5.000000)">
-                <path d="M1.4079634,103.106643 C1.28204558,84.5215107 16.2440154,70.6342872 34.8291473,70.5075703 L48.7116777,70.4090128 C67.2968096,70.282296 82.465281,83.9630181 82.5919978,102.54815" id="Fill-1" fill="#DB3B34"></path>
+                <path d="M1.4079634,103.106643 C1.28204558,84.5215107 16.2440154,70.6342872 34.8291473,70.5075703 L48.7116777,70.4090128 C67.2968096,70.282296 82.465281,83.9630181 82.5919978,102.54815" id="Fill-1" fill="#e9a9c6"></path>
                 <g id="Group-5" stroke-width="1" fill="none" transform="translate(0.000000, 69.000110)">
                     <mask id="mask-4" fill="white">
                         <use xlink:href="#path-3"></use>

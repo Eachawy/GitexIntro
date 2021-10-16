@@ -24,6 +24,40 @@ const SelectPlateComponent = props => {
     const [R14, setR14] = React.useState(false);
     const [R15, setR15] = React.useState(false);
 
+    const [n1, setN1] = React.useState(null);
+    const [n2, setN2] = React.useState(null);
+    const [n3, setN3] = React.useState(null);
+    const [n4, setN4] = React.useState(null);
+    const [n5, setN5] = React.useState(null);
+    const [n6, setN6] = React.useState(null);
+    const [n7, setN7] = React.useState(null);
+    const [n8, setN8] = React.useState(null);
+    const [n9, setN9] = React.useState(null);
+    const [n10, setN10] = React.useState(null);
+    const [n11, setN11] = React.useState(null);
+    const [n12, setN12] = React.useState(null);
+    const [n13, setN13] = React.useState(null);
+    const [n14, setN14] = React.useState(null);
+    const [n15, setN15] = React.useState(null);
+
+    React.useEffect(() => {
+        setN1(Math.floor(1000 + Math.random() * 9000));
+        setN2(Math.floor(1000 + Math.random() * 9000));
+        setN3(Math.floor(1000 + Math.random() * 9000));
+        setN4(Math.floor(10000 + Math.random() * 9000));
+        setN5(Math.floor(10000 + Math.random() * 9000));
+        setN6(Math.floor(10000 + Math.random() * 9000));
+        setN7(Math.floor(10000 + Math.random() * 9000));
+        setN8(Math.floor(10000 + Math.random() * 9000));
+        setN9(Math.floor(10000 + Math.random() * 9000));
+        setN10(Math.floor(10000 + Math.random() * 9000));
+        setN11(Math.floor(10000 + Math.random() * 9000));
+        setN12(Math.floor(10000 + Math.random() * 9000));
+        setN13(Math.floor(10000 + Math.random() * 9000));
+        setN14(Math.floor(10000 + Math.random() * 9000));
+        setN15(Math.floor(10000 + Math.random() * 9000));
+    }, []);
+
     const reset = () => {
         setR1(false);
         setR2(false);
@@ -131,8 +165,6 @@ const SelectPlateComponent = props => {
                             <img src={props.imageprofile} />
                         }
                         <p>{props.username ? props.username : null}</p>
-                        <p>+971 52 123 45 67</p>
-                        <p>gmomal@gmail.com</p>
                     </div>
                 </div>
                 <div className="rightSide">
@@ -153,7 +185,7 @@ const SelectPlateComponent = props => {
                                 </div>
                                 <div className="plate expo luxu">
                                     <span>AA</span>
-                                    <div>24876</div>
+                                    <div>{n1}</div>
                                 </div>
                                 <span className="lbl">{translate("pages.selectPlate.paid")}</span>
                             </div>
@@ -170,7 +202,7 @@ const SelectPlateComponent = props => {
                                 </div>
                                 <div className="plate coloured luxu">
                                     <span>AA</span>
-                                    <div>24876</div>
+                                    <div>{n2}</div>
                                 </div>
                                 <span className="lbl">{translate("pages.selectPlate.paid")}</span>
                             </div>
@@ -187,7 +219,7 @@ const SelectPlateComponent = props => {
                                 </div>
                                 <div className="plate luxu">
                                     <span>AA</span>
-                                    <div>24876</div>
+                                    <div>{n3}</div>
                                 </div>
                                 <span className="lbl">{translate("pages.selectPlate.paid")}</span>
                             </div>
@@ -207,7 +239,7 @@ const SelectPlateComponent = props => {
                                 </div>
                                 <div className="plate luxu">
                                     <span>AA</span>
-                                    <div>12345</div>
+                                    <div>{n4}</div>
                                 </div>
                                 <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
@@ -224,7 +256,7 @@ const SelectPlateComponent = props => {
                                 </div>
                                 <div className="plate luxu">
                                     <span>AA</span>
-                                    <div>12345</div>
+                                    <div>{n5}</div>
                                 </div>
                                 <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
@@ -241,7 +273,7 @@ const SelectPlateComponent = props => {
                                 </div>
                                 <div className="plate luxu">
                                     <span>AA</span>
-                                    <div>12345</div>
+                                    <div>{n6}</div>
                                 </div>
                                 <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
@@ -258,7 +290,7 @@ const SelectPlateComponent = props => {
                                 </div>
                                 <div className="plate luxu">
                                     <span>AA</span>
-                                    <div>12345</div>
+                                    <div>{n7}</div>
                                 </div>
                                 <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
@@ -275,7 +307,7 @@ const SelectPlateComponent = props => {
                                 </div>
                                 <div className="plate luxu">
                                     <span>AA</span>
-                                    <div>12345</div>
+                                    <div>{n8}</div>
                                 </div>
                                 <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
@@ -292,7 +324,7 @@ const SelectPlateComponent = props => {
                                 </div>
                                 <div className="plate luxu">
                                     <span>AA</span>
-                                    <div>12345</div>
+                                    <div>{n9}</div>
                                 </div>
                                 <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
@@ -309,7 +341,7 @@ const SelectPlateComponent = props => {
                                 </div>
                                 <div className="plate luxu">
                                     <span>AA</span>
-                                    <div>12345</div>
+                                    <div>{n10}</div>
                                 </div>
                                 <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
@@ -326,7 +358,7 @@ const SelectPlateComponent = props => {
                                 </div>
                                 <div className="plate luxu">
                                     <span>AA</span>
-                                    <div>12345</div>
+                                    <div>{n11}</div>
                                 </div>
                                 <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
@@ -343,7 +375,7 @@ const SelectPlateComponent = props => {
                                 </div>
                                 <div className="plate luxu">
                                     <span>AA</span>
-                                    <div>12345</div>
+                                    <div>{n12}</div>
                                 </div>
                                 <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
@@ -360,7 +392,7 @@ const SelectPlateComponent = props => {
                                 </div>
                                 <div className="plate luxu">
                                     <span>AA</span>
-                                    <div>12345</div>
+                                    <div>{n13}</div>
                                 </div>
                                 <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
@@ -377,7 +409,7 @@ const SelectPlateComponent = props => {
                                 </div>
                                 <div className="plate luxu">
                                     <span>AA</span>
-                                    <div>12345</div>
+                                    <div>{n14}</div>
                                 </div>
                                 <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
@@ -394,7 +426,7 @@ const SelectPlateComponent = props => {
                                 </div>
                                 <div className="plate luxu">
                                     <span>AA</span>
-                                    <div>12345</div>
+                                    <div>{n15}</div>
                                 </div>
                                 <span className="lbl">{translate("pages.selectPlate.free")}</span>
                             </div>
