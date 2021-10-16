@@ -31,9 +31,9 @@ const PreviewComponent = props => {
                     </div>
                     <div className="card">
                         <div className="plateComponent">
-                            <div className="plate expo luxu">
+                            <div className={props.selectedPlate.class}>
                                 <span>AA</span>
-                                <div>24876</div>
+                                <div>{props.selectedPlate.value}</div>
                             </div>
                             <span className="lbl">{translate("pages.selectPlate.paid")}</span>
                         </div>
@@ -46,10 +46,11 @@ const PreviewComponent = props => {
 }
 
 
-const mapStateToProps = ({ profileimage, username, nationality }: IRootState) => ({
+const mapStateToProps = ({ profileimage, username, nationality, selectedPlate }: IRootState) => ({
     imageprofile: profileimage.currentImage,
     username: username.currentUsarName,
-    nationality: nationality.currentNationality
+    nationality: nationality.currentNationality,
+    selectedPlate: selectedPlate.currentplate
 });
 
 type StateProps = ReturnType<typeof mapStateToProps>;

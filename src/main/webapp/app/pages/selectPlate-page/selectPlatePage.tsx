@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { IRootState } from 'app/shared/reducers';
 import { Link } from 'react-router-dom';
 import { translate } from 'react-jhipster';
+import { setPlate } from 'app/pages/selectPlate-page/selectPlate.reducer';
 
 
 const SelectPlateComponent = props => {
@@ -76,7 +77,13 @@ const SelectPlateComponent = props => {
         setR15(false);
     }
 
-    const onRadioChange = (e: any, f: any) => {
+    const onRadioChange = async (e: any, f: any) => {
+        const elClass = e.target.parentElement.parentElement.querySelector('.plate').attributes[0].nodeValue;
+        const elValue = e.target.parentElement.parentElement.querySelector('.plate > div').innerText;
+        await props.setPlate({
+            'class': elClass,
+            'value': elValue
+        });
         switch (f) {
             case 'R1':
                 reset();
@@ -447,6 +454,10 @@ const mapStateToProps = ({ profileimage, username, nationality }: IRootState) =>
     nationality: nationality.currentNationality
 });
 
-type StateProps = ReturnType<typeof mapStateToProps>;
+const mapDispatchToProps = { setPlate };
 
-export default connect(mapStateToProps, null)(SelectPlateComponent);
+type StateProps = ReturnType<typeof mapStateToProps>;
+type DispatchProps = typeof mapDispatchToProps;
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(SelectPlateComponent);
