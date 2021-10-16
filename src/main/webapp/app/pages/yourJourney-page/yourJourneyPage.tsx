@@ -3,6 +3,8 @@ import { translate } from "react-jhipster";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 
+import { connect } from 'react-redux';
+import { IRootState } from 'app/shared/reducers';
 
 
 const YourJourneyComponent = props => {
@@ -11,16 +13,16 @@ const YourJourneyComponent = props => {
     const settings = {
         dots: false,
         infinite: false,
-        className: "center",
+        // className: "center",
         speed: 700,
         slidesToShow: 7,
-        slidesToScroll: 7,
+        slidesToScroll: 1,
         responsive: [
             {
                 breakpoint: 1400,
                 settings: {
                     slidesToShow: 5,
-                    slidesToScroll: 5,
+                    slidesToScroll: 1,
                 },
             },
             {
@@ -38,6 +40,7 @@ const YourJourneyComponent = props => {
                 },
             },
         ],
+        // rtl: props.currentLocale === "ar" ? true : false
     }
 
     return (
@@ -94,4 +97,13 @@ const YourJourneyComponent = props => {
     );
 }
 
-export default YourJourneyComponent;
+
+const mapStateToProps = ({ username, locale }: IRootState) => ({
+    currentUser: username,
+    currentLocale: locale.currentLocale
+});
+
+
+type StateProps = ReturnType<typeof mapStateToProps>;
+
+export default connect(mapStateToProps, null)(YourJourneyComponent);

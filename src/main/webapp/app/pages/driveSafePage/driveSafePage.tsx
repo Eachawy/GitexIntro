@@ -28,8 +28,9 @@ const DriveSafeComponent = props => {
                         <span className="plateType">--</span>
                         <span className="tcNo">12345678</span>
                         <span className="username">{props.username ? props.username : null}</span>
-                        <span className="nationality">{props.currentLocale === 'en' ? props.nationality.name.en : props.nationality.name.ar}</span>
-
+                        {props.nationality &&
+                            <span className="nationality">{props.currentLocale === 'en' ? props.nationality.name.en : props.nationality.name.ar}</span>
+                        }
 
                         <span className="regData">11/11/2012</span>
                         <span className="expDate">11/11/2012</span>
@@ -38,10 +39,6 @@ const DriveSafeComponent = props => {
                         <span className="insType">--</span>
                         <span className="policeNo">33984</span>
                         <span className="mortagege">--</span>
-
-
-
-
                     </div>
                     <Link to="/" className="btnAction">{translate("pages.button.done")}</Link>
                 </div>

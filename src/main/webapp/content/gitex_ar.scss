@@ -349,9 +349,20 @@ html[dir='rtl'] {
       }
     }
   }
-  .slick-slide {
-    float: left !important;
+  .yourLectures {
+    .slick-slider {
+      transform: rotateY(180deg);
+      .lec {
+        transform: rotateY(-180deg);
+      }
+    }
   }
+  .yourCar {
+    .slick-slide {
+      float: left !important;
+    }
+  }
+
   .hg-theme-default * {
     direction: ltr;
     font: 1em/21px 'RTA';

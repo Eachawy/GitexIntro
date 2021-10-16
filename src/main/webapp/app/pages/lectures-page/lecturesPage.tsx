@@ -4,19 +4,22 @@ import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import $ from 'jquery';
 
+import { connect } from 'react-redux';
+import { IRootState } from 'app/shared/reducers';
+
 const LecturesComponent = props => {
     const [slider, setSlider] = React.useState(null);
     const settings = {
         dots: false,
         infinite: false,
         className: "center",
-        speed: 700,
+        speed: 1500,
         slidesToShow: 7,
         slidesToScroll: 1,
         /*eslint object-shorthand: "error"*/
         beforeChange: (currentSlide: any, nextSlide: any) => {
             $(`.slick-track > div[data-index="${nextSlide}"]`).find('.lec').addClass('active');
-            nextSlide === 7 ? $(`.slick-track > div[data-index="${nextSlide + 1}"]`).find('.lec').addClass('active') : null;
+            nextSlide === 8 ? $(`.slick-track > div[data-index="${nextSlide + 1}"]`).find('.lec').addClass('active') : null;
         },
         responsive: [
             {
@@ -41,6 +44,7 @@ const LecturesComponent = props => {
                 },
             },
         ],
+        rtl: props.currentLocale === "ar" ? true : false
     }
 
     const intervalFN = setInterval(() => {
@@ -48,13 +52,16 @@ const LecturesComponent = props => {
     }, 1000);
     setTimeout(() => {
         clearInterval(intervalFN);
-    }, 10000);
+    }, 20000);
     return (
         <>
             <Link to="/finishLessons" className="backAction" />
             <div className="yourLectures">
                 <h2>{translate("pages.yourLectures.overviewRTA")}</h2>
                 <Slider ref={(slide: any) => { setSlider(slide) }} {...settings}>
+                    <div>
+                        <div className="empty" />
+                    </div>
                     <div>
                         <div className="empty" />
                     </div>
@@ -129,4 +136,12 @@ const LecturesComponent = props => {
     );
 }
 
-export default LecturesComponent;
+const mapStateToProps = ({ username, locale }: IRootState) => ({
+    currentUser: username,
+    currentLocale: locale.currentLocale
+});
+
+
+type StateProps = ReturnType<typeof mapStateToProps>;
+
+export default connect(mapStateToProps, null)(LecturesComponent);

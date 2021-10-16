@@ -38,6 +38,7 @@ const SelectYourCarComponent = props => {
                 },
             },
         ],
+        // rtl: props.currentLocale === "ar" ? true : false
     }
 
     return (
@@ -196,10 +197,11 @@ const SelectYourCarComponent = props => {
 }
 
 
-const mapStateToProps = ({ profileimage, username, nationality }: IRootState) => ({
+const mapStateToProps = ({ profileimage, username, nationality, locale }: IRootState) => ({
     imageprofile: profileimage.currentImage,
     username: username.currentUsarName,
-    nationality: nationality.currentNationality
+    nationality: nationality.currentNationality,
+    currentLocale: locale.currentLocale
 });
 
 type StateProps = ReturnType<typeof mapStateToProps>;
