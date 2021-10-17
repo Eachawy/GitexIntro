@@ -13,7 +13,7 @@ const LecturesComponent = props => {
         dots: false,
         infinite: false,
         className: "center",
-        speed: 1500,
+        speed: 800,
         slidesToShow: 7,
         slidesToScroll: 1,
         /*eslint object-shorthand: "error"*/
@@ -50,9 +50,17 @@ const LecturesComponent = props => {
     const intervalFN = setInterval(() => {
         slider ? slider.slickNext() : null;
     }, 1000);
+
+    React.useEffect(() => {
+        return () => {
+            clearInterval(intervalFN);
+        }
+    }, []);
+
+
     setTimeout(() => {
         clearInterval(intervalFN);
-    }, 20000);
+    }, 13000);
     return (
         <>
             <Link to="/finishLessons" className="backAction" />

@@ -19,7 +19,7 @@ const DriveSafeComponent = props => {
     return (
         <>
             <Link to="/Preview" className="backAction" />
-            <div className="row driveSafe">
+            <div className="row driveSafe centerPosition">
                 <div className="col">
                     <h1>{translate("pages.driveSafe.driveSafepar")}{props.username ? props.username : null}</h1>
                     <div className="vehicleLicense">

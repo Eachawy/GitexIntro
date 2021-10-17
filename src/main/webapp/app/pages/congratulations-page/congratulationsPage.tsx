@@ -21,41 +21,43 @@ const CongratulationsComponent = props => {
     return (
         <>
             <Link to="/youreAllSet" className="backAction" />
-            <div className="congratulations">
-                <h1>{translate("pages.congratulations.yourDubai")}</h1>
-                <Link to="/afterYourLicense" className="btnAction">{translate("pages.button.continue")}</Link>
-            </div>
-            <div className="row">
-                <div className="col-3">
-                    <p>{translate("pages.congratulations.tryService")}</p>
-                    <div className="qrCode" />
+            <div className="centerPosition">
+                <div className="congratulations">
+                    <h1>{translate("pages.congratulations.yourDubai")}</h1>
+                    <Link to="/afterYourLicense" className="btnAction">{translate("pages.button.continue")}</Link>
                 </div>
-                <div className="col-9">
-                    <div className="drivingLicens">
-                        {props.imageprofile &&
-                            <img src={props.imageprofile} />
-                        }
-                        <span className="userName">{props.username ? props.username : null}</span>
-                        <span className="licenseNo">12345</span>
-                        {props.nationality &&
-                            <span className="nationality">{props.currentLocale === 'en' ? props.nationality.name.en : props.nationality.name.ar}</span>
-                        }
-                        <span className="dateBirth">22/05/1990</span>
-                        <span className="issueDate">11/12/2021</span>
-                        <span className="exDate">11/12/2023</span>
-                        <span className="palceIssue">{props.currentLocale === 'en' ? 'Dubai' : 'دبي'}</span>
+                <div className="row">
+                    <div className="col-3">
+                        <p>{translate("pages.congratulations.tryService")}</p>
+                        <div className="qrCode" />
+                    </div>
+                    <div className="col-9">
+                        <div className="drivingLicens">
+                            {props.imageprofile &&
+                                <img src={props.imageprofile} />
+                            }
+                            <span className="userName">{props.username ? props.username : null}</span>
+                            <span className="licenseNo">12345</span>
+                            {props.nationality &&
+                                <span className="nationality">{props.currentLocale === 'en' ? props.nationality.name.en : props.nationality.name.ar}</span>
+                            }
+                            <span className="dateBirth">22/05/1990</span>
+                            <span className="issueDate">11/12/2021</span>
+                            <span className="exDate">11/12/2023</span>
+                            <span className="palceIssue">{props.currentLocale === 'en' ? 'Dubai' : 'دبي'}</span>
+                        </div>
+
+                        <Player
+                            autoplay
+                            loop
+                            className="congratulationsAnim"
+                            src={AnimationFile2}
+                            background="transparent">
+                        </Player>
+
                     </div>
 
-                    <Player
-                        autoplay
-                        loop
-                        className="congratulationsAnim"
-                        src={AnimationFile2}
-                        background="transparent">
-                    </Player>
-
                 </div>
-
             </div>
         </>
     );

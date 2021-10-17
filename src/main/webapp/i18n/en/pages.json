@@ -32,7 +32,7 @@
       "yourLearner": "Your learner’s profile",
       "trafficCode": "Traffic code",
       "license": "License",
-      "thankYou": "Thank you,"
+      "thankYou": "Thank you <br/>for providing <br/> your details,<br />"
     },
 
     "ypurJourney": {
@@ -48,7 +48,7 @@
       "obtainDriving": "Obtain Driving License"
     },
     "finishLessons": {
-      "finishAll": "Finish all your lessons <br /> from the comfort of <br /> your home"
+      "finishAll": "Finish all your <br /> lessons from <br /> the comfort of <br /> your home"
     },
     "yourLectures": {
       "overviewRTA": "Overview of the 8 RTA mandatory lectures",
@@ -72,7 +72,7 @@
       "fromYourOwn": "Take your test<br /> from your own<br /> device,<br /> anywhere."
     },
     "wellDone": {
-      "youDid": "Well done!<br />You did it on your first try."
+      "youDid": "Well done for <br />passing your <br />knowledge <br />test on your <br />first try."
     },
     "yourAllSet": {
       "wellPick": "You’re all set. <br />We’ll pick you up for your <br />eye and road test."
@@ -82,7 +82,7 @@
       "tryService": "Try this service on RTA.ae"
     },
     "afterYourLicense": {
-      "yourCarRightAway": "After your license, get<br /> your car right away"
+      "yourCarRightAway": "After your <br />license, get <br />your car right <br />away"
     },
     "selectYourPage": {
       "yourRTAProfile": "Your RTA profile",

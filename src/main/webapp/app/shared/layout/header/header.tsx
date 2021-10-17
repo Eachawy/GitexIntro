@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 export interface IHeaderProps {
   currentLocale: string;
   onLocaleChange: Function;
+  onClickRTALogo: Function;
+
 }
 
 const Header = (props: IHeaderProps) => {
@@ -25,7 +27,7 @@ const Header = (props: IHeaderProps) => {
   return (
     <header>
       <div className="logos">
-        <div className="RTA" />
+        <div className="RTA" onClick={(e) => props.onClickRTALogo(e)} />
         <div className="Dubai" />
       </div>
       <div className="menu">
@@ -34,8 +36,6 @@ const Header = (props: IHeaderProps) => {
           {translate('global.language')}
         </div>
       </div>
-
-
     </header>
   );
 };

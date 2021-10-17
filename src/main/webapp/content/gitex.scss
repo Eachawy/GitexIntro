@@ -849,7 +849,7 @@ header {
   padding-left: 110px;
   position: relative;
   h1 {
-    font: 4em/60px 'RTA-bold';
+    font: 4em/85px 'RTA-bold';
     color: #222222;
     margin-bottom: 16px;
     padding-right: 300px;
@@ -1404,6 +1404,155 @@ header {
 
 .hg-theme-default * {
   font: 1em/21px 'RTA';
+}
+
+.finishAll {
+  top: 0 !important;
+  left: 20% !important;
+  img {
+    height: 650px;
+  }
+}
+
+.centerPosition {
+  margin: 0 auto;
+  width: 1400px;
+}
+
+.p-calendar {
+  width: 65% !important;
+  display: block;
+
+  .p-datepicker-inline {
+    padding: 0;
+  }
+
+  .p-datepicker {
+    background-color: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  .p-datepicker-calendar {
+    tr {
+      th,
+      td {
+        padding: 0 0 5px 0 !important;
+        text-align: center;
+
+        span {
+          margin: 2px 5px;
+          display: inline-block;
+          padding: 13px 13px 9px 13px;
+          font: 0.9em/30px 'RTA-bold';
+          width: 61px;
+          border-radius: 4px;
+
+          @media (min-width: 990px) and (max-width: 1200px) {
+            margin: 0;
+            padding: 8px 8px 4px 8px;
+            width: 40px;
+          }
+
+          @media (max-width: 500px) {
+            margin: 0;
+            padding: 8px 8px 4px 8px;
+            width: 40px;
+          }
+        }
+      }
+
+      th {
+        span {
+          background: #222222;
+          color: #fff;
+        }
+      }
+
+      td {
+        span {
+          background: #fff;
+          color: #171c8f;
+          border: 1px solid #171c8f;
+
+          &:hover {
+            background: #171c8f !important;
+            color: #fff !important;
+          }
+
+          &.p-disabled {
+            border-color: #dddddd;
+            pointer-events: none;
+            cursor: default;
+            color: #222;
+          }
+
+          &.p-highlight {
+            background: #171c8f;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .p-datepicker-header {
+    background-color: none !important;
+    padding: 0;
+
+    button {
+      display: none;
+    }
+
+    select {
+      margin: 0;
+      border: 0;
+      background: #fff;
+      padding: 15px 10px;
+      margin-right: 5px;
+      font: 1em/25px 'RTA' !important;
+      height: 60px;
+
+      option {
+        font: 1em/25px 'RTA' !important;
+      }
+
+      &:nth-child(even) {
+        margin: 0 0 0 5px;
+      }
+    }
+
+    .p-datepicker-year {
+      width: 35%;
+    }
+
+    .p-datepicker-month {
+      width: 61%;
+    }
+  }
+
+  .p-datepicker-title {
+    width: 100%;
+    .p-datepicker-month,
+    .p-datepicker-year {
+      display: inline-block;
+    }
+    .p-datepicker-month {
+      width: 61%;
+      margin: 16px 7px;
+    }
+    .p-datepicker-year {
+      width: 33%;
+    }
+  }
+}
+
+.afterYourlicense {
+  top: 60px !important;
+  left: -100px !important;
+  img {
+    height: 420px;
+  }
 }
 
 @import './gitex_ar.scss';

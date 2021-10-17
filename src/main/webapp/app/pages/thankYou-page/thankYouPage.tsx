@@ -64,7 +64,7 @@ const ThankYouComponent = props => {
                     </div>
                 </div>
                 <div className="message">
-                    <h1>{translate("pages.thankYou.thankYou")}<br />{props.username ? props.username : null}</h1>
+                    <h1>{translate("pages.thankYou.thankYou")}{props.username ? props.username : null}</h1>
                     <Link to="/yourJourney" className="btnAction">{translate("pages.button.continue")}</Link>
                 </div>
             </div>

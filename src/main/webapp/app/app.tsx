@@ -19,39 +19,31 @@ const baseHref = document.querySelector('base').getAttribute('href').replace(/\/
 export interface IAppProps extends StateProps, DispatchProps { }
 
 export const App = (props: IAppProps) => {
-  let global = 400;
 
-  const resetGlobal = () => {
-    global = 400;
-  }
+  const [video, setVideo] = React.useState(false);
+
+
 
   useEffect(() => {
     $('html').on("mousemove", (event: any) => {
-      resetGlobal();
       $('.screenSever').fadeOut();
+      setVideo(false);
     });
     $('html').on("keypress", (event: any) => {
       $('.screenSever').fadeOut();
+      setVideo(false);
     });
     $('html').on("touchend", (event: any) => {
       $('.screenSever').fadeOut();
+      setVideo(false);
     });
   }, []);
 
 
-
-  const noMovement = () => {
-    if (global === 0) {
-      $('.screenSever').fadeIn();
-      resetGlobal();
-    } else {
-      global--;
-    }
+  const openScreenServer = (e) => {
+    setVideo(true);
+    $('.screenSever').fadeIn();
   }
-
-
-
-  setInterval(() => { noMovement() }, 1000);
 
   return (
     <Router basename={baseHref}>
@@ -61,6 +53,7 @@ export const App = (props: IAppProps) => {
           <Header
             currentLocale={props.currentLocale}
             onLocaleChange={props.setLocale}
+            onClickRTALogo={openScreenServer}
           />
         </ErrorBoundary>
         <div className="gitexContainer" id="app-view-container">
@@ -69,9 +62,12 @@ export const App = (props: IAppProps) => {
           </ErrorBoundary>
         </div>
         <div className="screenSever">
-          <video width="100%" height="100%" autoPlay muted loop>
-            <source src="../content/Videos/video.mp4" type="video/mp4" />
-          </video>
+          {
+            video &&
+            <video width="100%" height="100%" autoPlay muted loop>
+              <source src="../content/Videos/video_ar_en.mp4" type="video/mp4" />
+            </video>
+          }
         </div>
       </div>
     </Router>

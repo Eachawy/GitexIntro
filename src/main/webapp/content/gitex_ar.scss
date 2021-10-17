@@ -367,4 +367,14 @@ html[dir='rtl'] {
     direction: ltr;
     font: 1em/21px 'RTA';
   }
+
+  .finishAll {
+    left: auto !important;
+    right: 20% !important;
+  }
+
+  .afterYourlicense {
+    left: auto !important;
+    right: -100px !important;
+  }
 }
