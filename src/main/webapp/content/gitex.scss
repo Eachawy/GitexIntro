@@ -249,10 +249,14 @@ header {
     padding: 24px 11% 16px 11%;
     min-width: auto;
   }
-  &.active {
+  &.active,
+  .active {
     .p-autocomplete {
-      width: 68%;
+      width: 74%;
     }
+  }
+  .part {
+    margin-bottom: 100px;
   }
 }
 
@@ -1001,7 +1005,11 @@ header {
     }
     p {
       color: #333;
-      font: 1.3em/30px 'RTA-bold';
+      font: 1.3em/37px 'RTA-bold';
+      &.note {
+        font: 1em/25px 'RTA';
+        color: #555;
+      }
     }
   }
 }
@@ -1046,7 +1054,11 @@ header {
       }
       p {
         color: #333;
-        font: 1.3em/21px 'RTA-bold';
+        font: 1.3em/37px 'RTA-bold';
+        &.note {
+          font: 1em/25px 'RTA';
+          color: #555;
+        }
       }
     }
     &.car {
@@ -1351,7 +1363,11 @@ header {
       }
       p {
         color: #333;
-        font: 1.3em/21px 'RTA-bold';
+        font: 1.3em/37px 'RTA-bold';
+        &.note {
+          font: 1em/25px 'RTA';
+          color: #555;
+        }
       }
       h2 {
         color: #222;
@@ -1410,7 +1426,15 @@ header {
   top: 0 !important;
   left: 20% !important;
   img {
-    height: 650px;
+    height: 600px;
+  }
+}
+
+.youAreAllSet {
+  top: -30px !important;
+  left: -50px !important;
+  img {
+    height: 600px;
   }
 }
 
@@ -1533,13 +1557,15 @@ header {
 
   .p-datepicker-title {
     width: 100%;
+    background: #fff;
+    margin: 10px 4px;
     .p-datepicker-month,
     .p-datepicker-year {
       display: inline-block;
     }
     .p-datepicker-month {
       width: 61%;
-      margin: 16px 7px;
+      margin: 0 7px;
     }
     .p-datepicker-year {
       width: 33%;

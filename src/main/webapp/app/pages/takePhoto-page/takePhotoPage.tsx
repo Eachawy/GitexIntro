@@ -24,7 +24,7 @@ const TakePhotoComponent = props => {
 
     return (
         <>
-            <Link to="/nationality" className="backAction" />
+            <Link to="/username" className="backAction" />
             <div className="takePhoto">
                 <h1>{translate("pages.photo.takePhoto")}</h1>
                 {!avatar &&

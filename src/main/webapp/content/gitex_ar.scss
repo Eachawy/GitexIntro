@@ -377,4 +377,21 @@ html[dir='rtl'] {
     left: auto !important;
     right: -100px !important;
   }
+
+  .p-calendar {
+    .p-datepicker-header {
+      select {
+        margin-left: 0;
+        margin-right: 5px;
+        &:nth-child(even) {
+          margin: 0 5px 0 0;
+        }
+      }
+    }
+    .p-datepicker-title {
+      .p-datepicker-month {
+        width: 64%;
+      }
+    }
+  }
 }

@@ -172,6 +172,12 @@ const SelectPlateComponent = props => {
                             <img src={props.imageprofile} />
                         }
                         <p>{props.username ? props.username : null}</p>
+                        <p className="note">{props.nationality ?
+                            props.currentLocale === 'en' ?
+                                props.nationality.name.en :
+                                props.nationality.name.ar
+                            : null}</p>
+                        <p className="note">123456</p>
                     </div>
                 </div>
                 <div className="rightSide">
@@ -448,10 +454,11 @@ const SelectPlateComponent = props => {
 }
 
 
-const mapStateToProps = ({ profileimage, username, nationality }: IRootState) => ({
+const mapStateToProps = ({ profileimage, username, nationality, locale }: IRootState) => ({
     imageprofile: profileimage.currentImage,
     username: username.currentUsarName,
-    nationality: nationality.currentNationality
+    nationality: nationality.currentNationality,
+    currentLocale: locale.currentLocale
 });
 
 const mapDispatchToProps = { setPlate };

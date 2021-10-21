@@ -18,15 +18,18 @@ const PreviewComponent = props => {
                             <img src={props.imageprofile} />
                         }
                         <p>{props.username ? props.username : null}</p>
+                        <p className="note">{props.nationality ?
+                            props.currentLocale === 'en' ?
+                                props.nationality.name.en :
+                                props.nationality.name.ar
+                            : null}</p>
+                        <p className="note">123456</p>
                     </div>
                     <div className="card car">
                         <img src="../../../content/images/vehicles/vehicle1.jpeg" />
                         <h6>
                             {translate("pages.selectYourPage.carOne")}
                             <span>2021</span>
-                            <p>{translate("pages.selectYourPage.from1", {
-                                amount: "60,000"
-                            })}</p>
                         </h6>
                     </div>
                     <div className="card">
@@ -35,7 +38,6 @@ const PreviewComponent = props => {
                                 <span>AA</span>
                                 <div>{props.selectedPlate.value}</div>
                             </div>
-                            <span className="lbl">{translate("pages.selectPlate.paid")}</span>
                         </div>
                     </div>
                 </div>
@@ -46,11 +48,12 @@ const PreviewComponent = props => {
 }
 
 
-const mapStateToProps = ({ profileimage, username, nationality, selectedPlate }: IRootState) => ({
+const mapStateToProps = ({ profileimage, username, nationality, selectedPlate, locale }: IRootState) => ({
     imageprofile: profileimage.currentImage,
     username: username.currentUsarName,
     nationality: nationality.currentNationality,
-    selectedPlate: selectedPlate.currentplate
+    selectedPlate: selectedPlate.currentplate,
+    currentLocale: locale.currentLocale
 });
 
 type StateProps = ReturnType<typeof mapStateToProps>;

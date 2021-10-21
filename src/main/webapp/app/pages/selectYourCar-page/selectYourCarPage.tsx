@@ -56,6 +56,12 @@ const SelectYourCarComponent = props => {
                                 <img src={props.imageprofile} />
                             }
                             <p>{props.username ? props.username : null}</p>
+                            <p className="note">{props.nationality ?
+                                props.currentLocale === 'en' ?
+                                    props.nationality.name.en :
+                                    props.nationality.name.ar
+                                : null}</p>
+                            <p className="note">123456</p>
                         </div>
                     </div>
                     <div>

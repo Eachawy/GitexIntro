@@ -21,8 +21,8 @@ const WellDoneComponent = props => {
 
     const onSelectedDay = e => {
         setAppointmentDates(e.value);
-        props.onSelectedDate(e);
-        $('.listOfAppointment > div').removeClass('selected');
+        // props.onSelectedDate(e);
+        // $('.listOfAppointment > div').removeClass('selected');
     };
 
     return (
@@ -43,7 +43,7 @@ const WellDoneComponent = props => {
                         yearRange="2010:2030"
                         disabledDates={notAvalibaleDates}
                         disabledDays={[7]}
-                        minDate={dateFrom ? dateFrom : new Date(moment('11-01-2021').format('MM-DD-YYYY'))}
+                        minDate={dateFrom ? dateFrom : new Date(moment('10-01-2021').format('MM-DD-YYYY'))}
                         maxDate={dateTo ? dateTo : new Date(moment('12-31-2022').format('MM-DD-YYYY'))}
                     />
                     <Link to="/youreAllSet" className="btnAction">{translate("pages.button.bookYourRoad")}</Link>
